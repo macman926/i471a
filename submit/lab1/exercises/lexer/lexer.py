@@ -14,9 +14,9 @@ from collections import namedtuple
 #should be ignored, kind should be returned as None.
 #note that m.group() gives lexeme after a successful match
 def next_match(text):
-    if (m := re.compile(r'\s+').match(text)) :
+    if ((m := re.compile(r'[\/.\s+]*\s+').match(text)) or (m := re.compile(r'\s+').match(text))) :
         return (m, None)  #None kind means ignore
-    if (m := re.compile(r'[A-za-z_+]').match(text)) :
+    if (m := re.compile(r'[A-za-z_+][\w]*').match(text)) :
         return (m, 'ID')
     if (m := re.compile(r'\d+').match(text)) :
         return (m, 'INT')
@@ -30,12 +30,13 @@ def scan(text):
     tokens = []
     while (len(text) > 0):
 
-        if (m := re.compile(r'\s+').match(text)) :
+        if ((m := re.compile(r'[\/.\s+]*\s+').match(text)) or (m := re.compile(r'\s+').match(text))) :
             pass  # ignore whitespace
-        elif (m := re.compile(r'[A-Za-z_+]').match(text)) :
+        elif (m := re.compile(r'[A-Za-z_+][\w]*').match(text)) :
+            tokens.append(Token('ID', m.group()))
         elif (m := re.compile(r'\d+').match(text)) :
             tokens.append(Token('INT', m.group()))
-	else :
+        else :
             #must be last: match any char
             m = re.compile(r'.').match(text)
             tokens.append(Token(m.group(), m.group()))
