@@ -11,7 +11,7 @@ program
   | #empty
   ;
 expr
-  : term ( ( '+' | '-' ) term )*
+  : (term ( ( '+' | '-' ) term ) '**' term)*
   ;
 term
   : '-' term
@@ -52,16 +52,21 @@ def parse(text):
         return values
 
     def expr():
-        t = term()
-        while (check('+') or (check('-'))):
-            kind = lookahead.kind
-            match(kind)
-            t1 = term()
-            t += (t1 if (kind == '+') else -t1)
-        return t
+       t = term()
+       while (check('+') or (check('-'))):
+          kind = lookahead.kind
+          match(kind)
+          t1 = term()
+          t += (t1 if (kind == '+') else -t1)
+       return t
 
     def term():
-        if (check('-')):
+        if (check('**')):
+            #term1 = term()
+            match('**')
+            #term2 = term()
+            return **term()
+        elif (check('-')):
             match('-')
             return - term()
         else:
@@ -90,6 +95,8 @@ def parse(text):
 
 def scan(text):
     def next_match(text):
+        m = re.compile(r'\*\*').match(text)
+        if (m): return (m, '**')
         m = re.compile(r'\s+').match(text)
         if (m): return (m, None)
         m = re.compile(r'\d+').match(text)
