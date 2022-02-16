@@ -24,8 +24,12 @@ def lexer(language):
 	for l in language:
 		#Is directive line
 		if(l.find("#ifndef") != -1):
-			result = ["IFNDEF", l[(l.find("#ifndef")):]]
+			result = ["IFNDEF", l[(l.find("#ifndef")) : l.find("#ifndef")+7]]
 			pairs.append(result)
+			#Add sym
+			if(l.find("_")  != -1 or l[l.find("#ifndef") + 8].isalpha()):
+				sym = ["SYM", l[(l.find("#ifndef"))+8 : l.find(" ",l.find("#ifndef ")+8)]]
+				pairs.append(sym)
 			last = "directive"
 			continue
 		if(l.find("#else") != -1):
@@ -35,14 +39,22 @@ def lexer(language):
 			continue
 
 		if(l.find("#ifdef") != -1):
-			result = ["IFDEF", l[(l.find("#ifdef")):]]
+			result = ["IFDEF", l[(l.find("#ifdef")):l.find("ifdef")+6]]
 			pairs.append(result)
+			#Add sym
+			if(l.find("_") != -1 or l[l.find("#ifdef") + 7].isalpha()):
+				sym = ["SYM", l[(l.find("#ifdef"))+7 : l.find(" ", l.find("#ifdef ")+7)]]
+				pairs.append(sym)
 			last = "directive"
 			continue
 
 		if(l.find("#elif") != -1):
-			result = ["ELIF", l[(l.find("#elif")):]]
+			result = ["ELIF", l[(l.find("#elif")):l.find("#elif")+5]]
 			pairs.append(result)
+			#Add sym
+			if(l.find("_") != -1 or l[l.find("#elif")+6].isalpha()):
+				sym = ["SYM", l[(l.find("#elif"))+6 : l.find(" ", l.find("#elif ")+6)]]
+				pairs.append(sym)
 			last = "directive"
 			continue
 
@@ -56,8 +68,9 @@ def lexer(language):
 			result = ["TEXT", l]
 			if(last == "text"):
 				concatenated = pairs[-1][1]
-				concateneated = concatenated + l
-				pairs[-1][1] = concatenated
+				#concateneated = concatenated + l
+				#print(concatenated)
+				pairs[-1][1] = concatenated + "\n" + " " + l + "\n"
 				last = "text"
 				continue
 			else:
