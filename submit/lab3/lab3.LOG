@@ -1,0 +1,776 @@
+Script started on 2022-02-17 15:28:08-05:00 [TERM="xterm" TTY="/dev/pts/8" COLUMNS="117" LINES="62"]
+[?2004hcmcborr1@remote07:~/projects/i471a/submit/lab3$ ls[K[Kgit add .
+[?2004l[?2004hcmcborr1@remote07:~/projects/i471a/submit/lab3$ git commit -m "completed [K[K[K[K[K[K[K[K[K[Kstat[Krted lab"
+[?2004l[lab3 de35c75] started lab
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 submit/lab3/lab3.LOG
+[?2004hcmcborr1@remote07:~/projects/i471a/submit/lab3$ git psu[K[Kush 
+[?2004lfatal: The current branch lab3 has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin lab3
+
+[?2004hcmcborr1@remote07:~/projects/i471a/submit/lab3$ git push -i[Ku origin lab3
+[?2004lUsername for 'https://github.com': christianmcborrough@gmail.com
+Password for 'https://christianmcborrough@gmail.com@github.com': 
+Enumerating objects: 7, done.
+Counting objects:  14% (1/7)Counting objects:  28% (2/7)Counting objects:  42% (3/7)Counting objects:  57% (4/7)Counting objects:  71% (5/7)Counting objects:  85% (6/7)Counting objects: 100% (7/7)Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects:  33% (1/3)Compressing objects:  66% (2/3)Compressing objects: 100% (3/3)Compressing objects: 100% (3/3), done.
+Writing objects:  20% (1/5)Writing objects:  40% (2/5)Writing objects:  60% (3/5)Writing objects:  80% (4/5)Writing objects: 100% (5/5)Writing objects: 100% (5/5), 370 bytes | 370.00 KiB/s, done.
+Total 5 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas:   0% (0/2)[Kremote: Resolving deltas:  50% (1/2)[Kremote: Resolving deltas: 100% (2/2)[Kremote: Resolving deltas: 100% (2/2), completed with 2 local objects.[K
+remote: 
+remote: Create a pull request for 'lab3' on GitHub by visiting:[K
+remote:      https://github.com/macman926/i471a/pull/new/lab3[K
+remote: 
+To https://github.com/macman926/i471a.git
+ * [new branch]      lab3 -> lab3
+Branch 'lab3' set up to track remote branch 'lab3' from 'origin'.
+[?2004hcmcborr1@remote07:~/projects/i471a/submit/lab3$ ls
+[?2004llab3.LOG
+[?2004hcmcborr1@remote07:~/projects/i471a/submit/lab3$ racket
+[?2004lWelcome to Racket v7.9 [bc].
+> (_> ([K=> ([K+1(/1 2) (/1 3) (/ 1 4) (/1 5))
+; /1: undefined;
+;  cannot reference an identifier before its definition
+;   in module: top-level
+; [,bt for context]
+> > (+1(/1 2) (/1 3) (/ 1 4) (/1 5))[6G[1@ (> (+[P > (+[1@1 > (+[1@ 1
+; /1: undefined;
+;  cannot reference an identifier before its definition
+;   in module: top-level
+; [,bt for context]
+> > (+ 1 (/1 2) (/1 3) (/ 1 4) (/1 5))[17G[1@ 1[10G[1@ 11 2) (/ 1 3) (/ 1 4) (/1[34G[1@ 1
+137/60
+> > (+ 1 (/ 1 2) (/ 1 3) (/ 1 4) (/ 1 5))[7G[1@. [8G[1@2 
+2.4833333333333334
+> 3> [K*e> *[K> [K(expt 1[9G[K2 3)
+8
+> (*> ([K> [K+> [K(+ (3x[8G[K[7G[K*3[8G[K 3(expt 3[10G[1@ ((expt[17G[17G4[19G[19G3[20G)[22G[21G[21G)[23G[23G-[25G[24G[23G[K[22G[22G)[24G[24G-[26G[26G2[26G[K[26G([26G[K[25G[24G[K[24G([25G0[25G[K[25G-[27G[27G([28G2[29Gx[29G[K[28G[K[28G*[30G[30G2[31G([31G[K[32G[32G([33Gx[33G[K[33G4[33G[K[34G[34G4[34G[K[33G[34G[33G[34G[34Ge[35Gx[36Gp[37Gt[37G[K[33Gexp[Kexp[36Gt[38G[38G4[40G[40G2[41G([41G[K[41G)[42G) (- (* 2 (expt 4 2)) [43G)[45G[45G+[45G[K[45G([46G+[47G4[47G[K[48G[48G([49G*[51G[51G4[51G[K[51G4[53G[53G4[54G)[48G[1@-([49G[1@1([50G[1@ ([50G[P([50G[1@ ((* 4 4) [58G)
+192
+-32
+15
+> > (+ (* 3 (expt 4 3))) (- (* 2 (expt 4 2))) (+ -1 (* 4 4))3 (expt 4 3)))[22G[P  ([23G[P--[23G[P  [24G[1@-((* 2 (expt 4 2))) [41G[P  ([42G[P++[42G[P [42G[P- -1 
+; +: contract violation
+;   expected: number?
+;   given: #<procedure:->
+;   argument position: 2nd
+; [,bt for context]
+> > (+ (* 3 (expt 4 3))  -(* 2 (expt 4 2)) -1 (* 4 4))[43G[1@ 1[43G[P1-1 (*1[43G[P [42G[P [42G[P([42G[1@ (3))  -[24G[P((* [27G[1@-22 (expt 4 2))  (* 4 4)[50G )[51G-)[52G1)
+175
+> 1000[6G[K> 10[K> 1[K> [K(* 1000*[10G[K (_+[13G[K+[13G[K[12G[K+1[13G[K 1 (/ r[19G[K\[19G[K0.06[22G[K5 1))) 1000 ( [12G[1@(+[12G[1@e([13G[1@x([14G[1@o([14G[P([14G[1@p([15G[1@t([16G[1@ ((+ 1 (/ 0.05 1))))+ 1 (/ 0.05 1)))[34G )[34G)[K[33G ))[34G())[37G)[35G*)))[36G )))[37G1)))[38G )))[39G5))))))
+1276.2815625000003
+> (define list1 '(1 2 3 4 5))
+> (define list2 '(a b c d e))
+> car> ca[K> c[K> [K(car list1)
+1
+> car> ca[K> c[K> [K9> [K(cdr list1)
+'(2 3 4 5)
+> cd> c[Kar([6G[K> ca[K> c[K> [K(car list2[12G[K2) [14G
+'a
+> c> [K(cdr) list2[8G[Pl[7G[Pll[7G[1@ llist2)
+'(b c d e)
+> (car([7G[K (cdr (cdr kuist[22G[K[21G[K[20G[K[19G[K[18G[Klist1)))
+3
+> ca> c[K> [K(caddr list1)
+3
+> (append list1 list2)
+'(1 2 3 4 5 a b c d e)
+> (car list1
+  (car list)
+  
+  dasda[7G[K[6G[K  da[K  d[K  [Kcdr
+  
+  
+  
+  )
+; car: contract violation
+;   expected: pair?
+;   given: #<procedure:list>
+; [,bt for context]
+> c> [Kcdr> cd[K> c[K> [K(> [Kcdr list2
+#<procedure:cdr>
+'(a b c d e)
+> c> [Kcar list2
+#<procedure:car>
+'(a b c d e)
+> car  lis[10G[K[9G[K[8G[K[7Glist 2
+#<procedure:car>
+#<procedure:list>
+2
+> l> [Kcar list 2
+#<procedure:car>
+#<procedure:list>
+2
+> car list2
+#<procedure:car>
+'(a b c d e)
+> cdr list2
+#<procedure:cdr>
+'(a b c d e)
+> cdr [6G> cd[K> c[K> [K*> [K(cdr list2)
+'(b c d e)
+> (cdr (cdr list2))
+'(c d e)
+> ca> c[K> [K(car list2)
+'a
+> (car car[10G[K[9G[K[8G[K( [9Gcar list2))
+; car: contract violation
+;   expected: pair?
+;   given: 'a
+; [,bt for context]
+> > (car (car list2))))[19G[K[18G[K[17G[K[16G[K[15G[K[14G[K[13G[K[12G[11G[K[10G[K[9G[K[8G[K[7G[6G[K> (c[K> ([K> [K(defin[8G[K[7G[K[6G[Kfine (seconds lst([23G[K)[23G[K[22G[K[21G[K[20G[K[19G[18G[K[17G[K[16G[K[15G[K[14G[K[13G[K[12G[K[11G[K[10G[9G[K[8G[K[7G[K[6G[K> (d[K> ([K> [K(map cadr list2)
+; cadr: contract violation
+;   expected: (cons/c any/c pair?)
+;   given: 'a
+; [,bt for context]
+> > (map cadr list2)> [Kdef> de[K> d[K> [K(define (seconds list2)
+  *  [K(map cadr list2))
+> 
+    (define (seconds list2)
+  (map cadr list2))
+> > (define (seconds list2)
+  (map cadr list2))[A> [K
+[K[A> seconds[9G[K[8G[K[7G[K[6G[K> se[K> s[K> [K(e> ([Kseconds list2)
+; cadr: contract violation
+;   expected: (cons/c any/c pair?)
+;   given: 'a
+; [,bt for context]
+> > (seconds list2)> [K> (seconds list2)[17G[K[16G[K[15G[K[14G[K[13G[K[12G[K[11G[10G[K[9G[K[8G[K[7G[K[6G[K> (s[K> ([K> [K(map second list2)
+; second: contract violation
+;   expected: list?
+;   given: 'a
+; [,bt for context]
+> c> [K(car list2)
+'a
+> (map list[11G[K[10G[K[9G[K[8G[K[7G second list2)
+; second: contract violation
+;   expected: list?
+;   given: 'a
+; [,bt for context]
+> > (map second list2)[14G[1@s 
+; map: contract violation
+;   expected: list?
+;   given: 'a
+; [,bt for context]
+> > (map seconds list2)2[14G[P 
+; second: contract violation
+;   expected: list?
+;   given: 'a
+; [,bt for context]
+> > (map second list2)t2)[20G[K[19G[K[18G[K[17G[K[16G[K[15G[K[14G[13G[K[12G[K[11G[K[10G[K[9G[K[8G[K2nd c[12G[Klist2()[18G[K[17G[K)
+; 2nd: undefined;
+;  cannot reference an identifier before its definition
+;   in module: top-level
+; [,bt for context]
+> > (map 2nd list2)[17G[K[16G[K[15G[K[14G[K[13G[K[12G[K[11G[10G[K[9G[K[8G[K[7G[6G[K> (m[K> ([K2> ([K> [K*def[6G[K> *d[K> *[K> [K(de> (d[K> ([K2 (- [8G[7G[K[6G[K> (2> ([K> [K(define (nth n l)
+    (if (or (> n (length l)) (< n 0))
+      (error "Index out of bounds.")
+      (if (eq? n 0)
+        (car l)
+        (nth (- n 1) (cdr l)))))
+> (nth 3 [8G[K[8G2[10G[10Gl[11Gi[12Gs[12G[K[11G[K[10G[K[9G[8G[K[8G1[10G[10Gl[11Gi[12Gs[13Gt[14G2[15G([15G[K[15G)
+'b
+> (> [K(define  list3 [11G[Pl list3 '(list2[23G[K=[23G[K[22G[K[21G[K[20G[K[19G[K(nth 3 list2) (nth4[37G[K 4 list2)([46G[K)
+  
+  
+  
+  ds
+  
+  
+  
+  
+  
+  
+  d
+  
+  
+  stop
+  e  [K)
+; readline-input:57:0: define: bad syntax (multiple expressions after
+;   identifier)
+;   in: (define list3 (quote ((nth 3 list2) (nth 4 list2))) ds d stop)
+; [,bt for context]
+> > (define list3 '((nth 3 list2) (nth 4 list2))
+  ds
+  d
+  stop
+  )[4A> (nth 1 list2)[K
+[K
+[K
+[K
+[K[4A[16G> (define (nth n l)
+    (if (or (> n (length l)) (< n 0))
+      (error "Index out of bounds.")
+      (if (eq? n 0)
+        (car l)
+        (nth (- n 1) (cdr l)))))[5A> (nth 1 list2)[K
+[K
+[K
+[K
+[K
+[K[5A[16G> (define list3 '((nth 3 list2) (nth 4 list2))
+  ds
+  d
+  stop
+  )[4A> (nth 1 list2)[K
+[K
+[K
+[K
+[K[4A[16G> (define list3 '((nth 3 list2) (nth 4 list2))
+  ds
+  d
+  stop
+  )  [K [K[A[7G[6G[K  st[K  s[K  [K [K[A  d  [K [K[A  ds  d[K  [K [K[A[47G)
+> 
+  
+  
+  )
+; readline-input:77:0: read-syntax: unexpected `)` [,bt for context]
+> > )> (define list3 '((nth 3 list2) (nth 4 list2))))
+; readline-input:78:45: read-syntax: unexpected `)` [,bt for context]
+> > (define list3 '((nth 3 list2) (nth 4 list2))))[48G[Kt2) (nth 4 l
+> car list 3
+#<procedure:car>
+#<procedure:list>
+3
+> (c> ([K> [K(car list [12G3 l[14G[K[13G)
+'(nth 3 list2)
+> > (car list3)> [P[11G 3> (define list3 '((nth 3 list2) (nth 4 list2)))[48G)> )[K> (define list3 '((nth 3 list2) (nth 4 list2))
+  ds
+  d
+  stop
+  )[4A> )[K
+[K
+[K
+[K
+[K[4A> )> (define list3 '((nth 3 list2) (nth 4 list2))))[48G[K> car list 3[K> [1@([12G3)> [K> (car list3)> [P[11G 3> [1@([12G3)> [K> > > (car list3)> [P[11G 3> (define list3 '((nth 3 list2) (nth 4 list2)))st2)2)[47G[K[44G))[K[43G))[K[42G))[K[41G))[K[40G))[K[39G))[K[38G))[K[37G))[K[36G))[K[35G))[K[34G))[K[33G))[K[32G))[K))
+> (define list 4[16G[K[15G4 ;[17G[K'(nt[20G[K[19G[K(nth 4 list[19G[Pnnth [15G3 '((nth 3 list2)))[15G4 '(nth 4 list[Kt2([30G[K))
+> appene[8G[K[7G[Knd[8G[K[7G[K[6G[K> ap[K> a[K> [K(appened[10G[K[9G[Kd list3 list4)
+'((nth 3 list2) nth 4 list2)
+> define fir[12G[Krst[14G[K[13G[K[12G[K[11G[K[10G[K[9G[8G[K[7G[K[6G[K> de[K> d[K> [K(define first nth [20G[19G[K[18G[K[17G[K[16G'[16G[K [16G[15G[K[14G[K[13G[K[12G[K[11G[Ktest ;[16G[K' a[18G[K[17Ga a b [22G[21G[K[20G ' b[23G[K[22G[21G[Kb[21G[K'b c)[25G[K[24G[K[23G[22G[K[21G[K[20G[19G[K[18G[17G[K[16G[K[15G[14G[K[13G[K[12G[K[11G[K[10G[9G[K[8G[K[7G[K[6G[K> (d[K> ([K> [K(nth list2[12G[K[11G[K[10G[K[9G[K[8G[K[7G 3 list2)
+'d
+> > (nth 3 list2)> [Kdefine[8G[K[7G[K[6G[K> de[K> d[K> [K8> [K(define (ce[13G[K[12G[K[11G[K*[11G[K(last2)
+  (  [Klist[6G[K  li[K  l[K  [Kdefine[8G[K[7G[K[6G[K  de[K  d[K  [K(define list [15G[14G[K[13G[K[12G[K[11G[K[10G t1 [13G[12G[K[11G[K[10G[9G[K[8G[K[7G[K[6G[K  (d[K  ([Klet (x nt[12G[K[11G[K*[11G[K())[12Gn))[13Gt))[14Gh))[15G ))[16G3))[10G[1@1  (nth 3[18G ))[19Gl))[20Gi))[21Gs))[22Gt))[23G2))))
+  (let[6G[K  (l[K  ([K  [K)
+  le  l[K  [K(e  ([Klet (x2)[11G[K (([13G[Knth 4 list2)))
+  (define l[11G[Kfinal *[17G[K([17G[K'x1 x2)
+  )
+; readline-input:87:0: let: bad syntax (missing binding pairs or body)
+;   in: (let (x1 (nth 3 list2)))
+; [,bt for context]
+> > (define (last2)
+  (let (x1 (nth 3 list2))
+  )
+  (let (x2 (nth 4 list2)))
+  (define final 'x1 x2)
+  )[5A> ([2Pnth 3 li
+[K
+[K
+[K
+[K
+[K[5A[16G> ([2@define (la
+  (let (x1 (nth 3 list2))
+  )
+  (let (x2 (nth 4 list2)))
+  (define final 'x1 x2)
+  )[A[24G[4A> ([2Pnth 3 li
+[K
+[K
+[K
+[K
+[K[5A[16G> ([2@define (la
+  (let (x1 (nth 3 list2))
+  )
+  (let (x2 (nth 4 list2)))
+  (define final 'x1 x2)
+  )[A[24G[A[27G[A  ) )[A[26G[A> ([2Pnth 3 li
+[K
+[K
+[K
+[K
+[K[5A[16G> ([2@define (la
+  (let (x1 (nth 3 list2))
+  )
+  (let (x2 (nth 4 list2)))
+  (define final 'x1 x2)
+  )[A[24G[A[27G (x2 ([A  )  [K[A[26G[A> [K
+[K
+[K
+[K
+[K
+[K[5A> > (define (last2)
+  (let (x1 (nth 3 list2))
+  )
+  (let (x2 (nth 4 list2)))
+  (define final 'x1 x2)
+  )[A[24G[A[27G)[26G[K[A  )  [K   (let (x2 (nth 4 list2))
+  (define final 'x1 x2)[K
+  )[K
+[K[4A[26G
+
+
+
+  
+  las2
+  last2
+  )
+  )
+; readline-input:93:8: let: bad syntax (not an identifier and expression for a
+;   binding)
+;   at: x1
+;   in: (let (x1 (nth 3 list2)) (let (x2 (nth 4 list2)) (define final (quote
+;     x1) x2)) las2 last2)
+; [,bt for context]
+> > (define (last2)
+  (let (x1 (nth 3 list2))
+  (let (x2 (nth 4 list2))
+  (define final 'x1 x2)
+  )
+  las2
+  last2
+  )
+  )[A  )  [K   )
+[K[2A[8G[7G[K[6G[K  la[K  l[K  [K   )
+[K[2A[7G[6G[K  la[K  l[K  [K   )
+[K[2A  )[A[24G final[15G[P [14G[P  '[15G[Px[14G[Px[13G[Px[12G[Px[11G[Px[10G[Px[9G[Px[8G[Px[7G[Px[6G[Px  (d[Px  ([Px  ([1@lx  (l[1@ix[6G[1@sx[7G[1@tx[8G[1@ x[3A> [K
+[K
+[K
+[K
+[K
+[K[5A> > (define (last2)
+  (let (x1 (nth 3 list2))
+  (let (x2 (nth 4 list2))
+  (define final 'x1 x2)
+  )
+  las2
+  last2
+  )
+  ))  [K [K[A  )  [K [K[A[8G[7G[K[6G[K  la[K  l[K  [K [K[A[7G[6G[K  la[K  l[K  [K [K[A  )  [K [K[A[24G[23G[K[22G[K[21G[K[20G[19G[K[18G[K[17G[K[16G[15G[K[14G[K[13G[K[12G[K[11G[K[10G[9G[K[8G[K[7G[K[6G[K  (d[K  ([Klist x1 x2))
+  _
+  )
+  )
+; readline-input:103:8: let: bad syntax (not an identifier and expression for a
+;   binding)
+;   at: x1
+;   in: (let (x1 (nth 3 list2)) (let (x2 (nth 4 list2)) (list x1 x2)) _)
+; [,bt for context]
+> > (define (last2)
+  (let (x1 (nth 3 list2))
+  (let (x2 (nth 4 list2))
+  (list x1 x2))
+  _
+  )
+  )  [K [K[A  )  [K [K[A  _  [K [K[A[16G[A[26G[26G)[A[26G)[26G)
+  (let (x2 (nth 4 list2)))
+  (
+; readline-input:110:2: let: bad syntax (missing binding pairs or body)
+;   in: (let (x1 (nth 3 list2)))
+; [,bt for context]
+> > (define (last2)
+  (let (x1 (nth 3 list2)))
+  (let (x2 (nth 4 list2)))
+  (list x1 x2))  (list x1 x2))t x1 [A[27G)
+
+; readline-input:114:2: let: bad syntax (missing binding pairs or body)
+;   in: (let (x1 (nth 3 list2)))
+; [,bt for context]
+> > (define (last2)
+  (let (x1 (nth 3 list2)))
+  (let (x2 (nth 4 list2)))
+  (list x1 x2))[A[27G
+  (lis[A[27G[6G[P   (l[P   ([P   [P  (x2 (nt  [P((x2 (nth 4 list2)))
+ [A[22G[21G[K[A[27Gist2)[26G[K[7G[P([6G[P(  (l[P(  ([P(  ([Px
+
+
+> car> ca[K> c[K> [K> (define (last2)
+  (x1 (nth 3 list2))
+  (x2 (nth 4 list2))
+  (list x1 x2))[7G[P [6G[P   (l[P   ([P   ([1@d   (d[1@e [6G[1@f [7G[1@i [8G[1@n [9G[1@e  x[11G[1@lx[12G[1@ix[13G[1@sx[14G[1@tx[15G[1@ x[16G[1@3xx[15G[P33[15G[Px[14G[Px[13G[Px[12G[Px[11G[Px[11G[1@lx[12G[1@ax[13G[1@sx[14G[1@2x[15G[1@ x[14G[P [13G[P [12G[P [12G[1@2  x1[14G[1@'x
+; readline-input:124:2: define: bad syntax (multiple expressions after
+;   identifier)
+;   in: (define l2 (quote x1) x2)
+; [,bt for context]
+> > (define (last2)
+  (x1 (nth 3 list2))
+  (x2 (nth 4 list2))
+  (define l2 'x1 x2)))2 [12G[P [11G[P [11G[1@l [11G[P [11G[1@l [12G[1@2  'x[15G[1@(xx1 x2)[23G)
+; readline-input:125:0: begin (possibly implicit): no expression after a
+;   sequence of internal definitions
+;   in: (begin (x1 (nth 3 list2)) (x2 (nth 4 list2)) (define l2 (quote (x1
+;     x2))))
+; [,bt for context]
+> > (define (last2)
+  (x1 (nth 3 list2))
+  (x2 (nth 4 list2))
+  (define l2 '(x1 x2)))[23G[K
+  
+  
+  
+  )
+; readline-input:129:0: begin (possibly implicit): no expression after a
+;   sequence of internal definitions
+;   in: (begin (x1 (nth 3 list2)) (x2 (nth 4 list2)) (define l2 (quote (x1
+;     x2))))
+; [,bt for context]
+> ,
+  ,bt
+Unknown command: (unquote bt)
+> > ,
+  ,bt[A> (define (last2)
+  (x1 (nth 3 list2))
+  (x2 (nth 4 list2))
+  (define l2 '(x1 x2))
+  ) )[K)[K)[K[K[A[23G
+    (define (last2)
+  (x1 (nth 3 list2))
+  (x2 (nth 4 list2))
+  (define l2 '(x1 x2))[3A  [K
+[K
+[K
+[K[3A  
+  
+  )
+; readline-input:139:0: begin (possibly implicit): no expression after a
+;   sequence of internal definitions
+;   in: (begin (x1 (nth 3 list2)) (x2 (nth 4 list2)) (define l2 (quote (x1
+;     x2))))
+; [,bt for context]
+> > (define (last2)
+  (x1 (nth 3 list2))
+  (x2 (nth 4 list2))
+  (define l2 '(x1 x2))
+  ) )[K)[K[A[23G)
+[K[A[23G)
+; readline-input:146:0: begin (possibly implicit): no expression after a
+;   sequence of internal definitions
+;   in: (begin (x1 (nth 3 list2)) (x2 (nth 4 list2)) (define l2 (quote (x1
+;     x2))))
+; [,bt for context]
+> > (define (last2)
+  (x1 (nth 3 list2))
+  (x2 (nth 4 list2))
+  (define l2 '(x1 x2))) car l2
+; readline-input:150:0: begin (possibly implicit): no expression after a
+;   sequence of internal definitions
+;   in: (begin (x1 (nth 3 list2)) (x2 (nth 4 list2)) (define l2 (quote (x1
+;     x2))))
+; [,bt for context]
+#<procedure:car>
+; l2: undefined;
+;  cannot reference an identifier before its definition
+;   in module: top-level
+; [,bt for context]
+> car l2
+#<procedure:car>
+; l2: undefined;
+;  cannot reference an identifier before its definition
+;   in module: top-level
+; [,bt for context]
+> ca> c[Kdr l2
+#<procedure:cdr>
+; l2: undefined;
+;  cannot reference an identifier before its definition
+;   in module: top-level
+; [,bt for context]
+> > cdr l2> car l2> (define (last2)
+  (x1 (nth 3 list2))
+  (x2 (nth 4 list2))
+  (define l2 '(x1 x2))) car l2
+; readline-input:156:0: begin (possibly implicit): no expression after a
+;   sequence of internal definitions
+;   in: (begin (x1 (nth 3 list2)) (x2 (nth 4 list2)) (define l2 (quote (x1
+;     x2))))
+; [,bt for context]
+#<procedure:car>
+; l2: undefined;
+;  cannot reference an identifier before its definition
+;   in module: top-level
+; [,bt for context]
+> > (define (last2)
+  (x1 (nth 3 list2))
+  (x2 (nth 4 list2))
+  (define l2 '(x1 x2))) car l2[30G[K[29G[K[28G[27G[K[26G[Kd[26G[K[25G[K(car l2)
+; readline-input:160:0: begin (possibly implicit): no expression after a
+;   sequence of internal definitions
+;   in: (begin (x1 (nth 3 list2)) (x2 (nth 4 list2)) (define l2 (quote (x1
+;     x2))))
+; [,bt for context]
+; l2: undefined;
+;  cannot reference an identifier before its definition
+;   in module: top-level
+; [,bt for context]
+> ; user break [,bt for context]
+^[[A^[[A^[[A            
+
+> > (define (last2)
+  (x1 (nth 3 list2))
+  (x2 (nth 4 list2))
+  (define l2 '(x1 x2))) (car l2)[3A> [K
+[K
+[K
+[K[3A> (last2)
+; x1: undefined;
+;  cannot reference an identifier before its definition
+;   in module: top-level
+; [,bt for context]
+> > (last2)> ([8@define (l
+  (x1 (nth 3 list2))
+  (x2 (nth 4 list2))
+  (define l2 '(x1 x2))) (car l2)[A[21G  ([1@lx  (l[1@ex[6G[1@tx[7G[1@ x[A[21G(  ([1@lx  (l[1@ex[6G[1@tx[7G[1@ x
+
+
+; readline-input:167:2: let: bad syntax (missing body)
+;   in: (let x1 (nth 3 list2))
+; [,bt for context]
+; l2: undefined;
+;  cannot reference an identifier before its definition
+;   in module: top-level
+; [,bt for context]
+> > (define (last2)
+  (let x1 (nth 3 list2))
+  (let x2 (nth 4 list2))
+  (define l2 '(x1 x2))) (car l2)fine l[3A> [K
+[K
+[K
+[K[3A> cla> cl[Kear
+; clear: undefined;
+;  cannot reference an identifier before its definition
+;   in module: top-level
+; [,bt for context]
+> > clear> (define (last2)
+  (let x1 (nth 3 list2))
+  (let x2 (nth 4 list2))
+  (define l2 '(x1 x2))) (car l2)[3A> clear[K
+[K
+[K
+[K[3A[8G> (define (last2)
+  (let x1 (nth 3 list2))
+  (let x2 (nth 4 list2))
+  (define l2 '(x1 x2))) (car l2)
+; readline-input:172:2: let: bad syntax (missing body)
+;   in: (let x1 (nth 3 list2))
+; [,bt for context]
+; l2: undefined;
+;  cannot reference an identifier before its definition
+;   in module: top-level
+; [,bt for context]
+> > (define (last2)
+  (let x1 (nth 3 list2))
+  (let x2 (nth 4 list2))
+  (define l2 '(x1 x2))) (car l2)[A[25G [8G[1@(xx2 (nth 4 list2))[26G)[A[25G[8G[1@(xx1 (nth 3 list2))[26G)
+
+
+; readline-input:176:2: let: bad syntax (missing binding pairs or body)
+;   in: (let (x1 (nth 3 list2)))
+; [,bt for context]
+; l2: undefined;
+;  cannot reference an identifier before its definition
+;   in module: top-level
+; [,bt for context]
+> > (define (last2)
+  (let (x1 (nth 3 list2)))
+  (let (x2 (nth 4 list2)))
+  (define l2 '(x1 x2))) (car l2)[32G[K[31G[K[30G[K[29G[28G[K[27G[K[26G[K[25G[K[24G
+; readline-input:180:2: let: bad syntax (missing binding pairs or body)
+;   in: (let (x1 (nth 3 list2)))
+; [,bt for context]
+> > (define (last2)
+  (let (x1 (nth 3 list2)))
+  (let (x2 (nth 4 list2)))
+  (define l2 '(x1 x2)))[A[27G2[A[27G[26G[K[26G)
+
+
+; readline-input:184:2: let: bad syntax (missing binding pairs or body)
+;   in: (let (x1 (nth 3 list2)))
+; [,bt for context]
+> ; user break [,bt for context]
+
+
+> let> le[K> l[K> [K(let x1 ([11G[K(*[12G[Knth3[15G[K 3 list2))[24G[K)
+; readline-input:188:0: let: bad syntax (missing body)
+;   in: (let x1 (nth 3 list2))
+; [,bt for context]
+> > (let x1 (nth 3 list2))t[6G[P > (l[P > ([P > ([1@l > (l[1@a [6G[1@m [7G[1@b [8G[1@d [9G[1@a 
+#<procedure>
+> (lambda x2 (nth 4 list2))
+#<procedure>
+> append[8G[K[7G[K[6G[K> ap[K> a[K> [K(append x1 x2)
+; x1: undefined;
+;  cannot reference an identifier before its definition
+;   in module: top-level
+; [,bt for context]
+> (list whatever ;[18G[K'x1 x2)
+; whatever: undefined;
+;  cannot reference an identifier before its definition
+;   in module: top-level
+; [,bt for context]
+> def> de[K> d[K> [K(define l[11G[Klas2[14G[Kt2 x1 x2)
+; readline-input:193:0: define: bad syntax (multiple expressions after
+;   identifier)
+;   in: (define last2 x1 x2)
+; [,bt for context]
+> > (define last2 x1 x2) [17G[1@'x
+; readline-input:194:0: define: bad syntax (multiple expressions after
+;   identifier)
+;   in: (define last2 (quote x1) x2)
+; [,bt for context]
+> > (define last2 'x1 x2)[18G[1@(xx1 x2[25G)
+> l> [Kcar last2
+#<procedure:car>
+'(x1 x2)
+> def> de[K> d[K> [K(define x1 nth[16G[K[15G[K[14G[K[13G nth[16G[K[15G[K[14G[K(nth 3 list2))
+> (define x2([13G[K (nth 4)[20G[K list2))
+> (define MYLIST ([18G[K'(x1 x2))
+> car m[7G[KMY[9GLIST 
+#<procedure:car>
+'(x1 x2)
+> cd> c[K> [K> car MYLIST> (define MYLIST '(x1 x2))[18G[P(
+; application: not a procedure;
+;  expected a procedure that can be applied to arguments
+;   given: 'd
+; [,bt for context]
+> > (define MYLIST (x1 x2))[25G[K[24G[K[23G[K[22G[K[21G[20G[K[19G[K[18G[K[17G[16G[K[15G[K[14G[K[13G[K[12G[K[11G[K[10G[9G[K[8G[K[7G[K[6G[K> (d[K> ([K> [K(x1 nth[9G[K[8G[K[7G[K(nth  3 [14G[13G[K[12G3 list2))
+; application: not a procedure;
+;  expected a procedure that can be applied to arguments
+;   given: 'd
+; [,bt for context]
+> > (x1 (nth 3 list2))> ([1@(x> ([1@l(> (l[1@e([6G[1@y([6G[P([6G[1@t([7G[1@ ((x1 (nth 3 list2)))
+; readline-input:203:0: let: bad syntax (missing binding pairs or body)
+;   in: (let (x1 (nth 3 list2)))
+; [,bt for context]
+> (let ((x 10)
+        (y 20))
+    (+ x y))
+30
+> (let ([8G[KMYLIST)
+; readline-input:207:0: let: bad syntax (missing binding pairs or body)
+;   in: (let MYLIST)
+; [,bt for context]
+> > (let MYLIST)[8G((x 10)
+        (y 20))
+    (+ x y))[2A[9Gx1 (nth 3 list2)))
+[K
+[K[2A[27G> ([5P[19G))[K> (define MYLIST (x1 x2))> car MYLIST[K> (define MYLIST '(x1 x2))[11Gx2 (nth 4 list2))[12G1 (nth 3[28G> car last2[K> (define last2 '(x1 x2))[18G[P[23G)[K[17G[Px[23G> ([2@list whatever '[25G> ([8Pappend [17G> (lambda x2 (nth 4 list2))[12G1 (nth 3[28G> (l[3Pet[25G> (define (last2)[K
+  (let (x1 (nth 3 list2)))
+  (let (x2 (nth 4 list2)))
+  (define l2 '(x1 x2)))[25G(car l2)[24G[K; user break [,bt for context]
+fd  
+
+; readline-input:209:2: let: bad syntax (missing binding pairs or body)
+;   in: (let (x1 (nth 3 list2)))
+; [,bt for context]
+> 
+    (define (last2)
+  (let (x1 (nth 3 list2)))
+  (let (x2 (nth 4 list2)))
+  (define l2 '(x1 x2)))[3A  [K
+[K
+[K
+[K[3A  
+  )
+; readline-input:214:0: read-syntax: unexpected `)` [,bt for context]
+> (define list1 '(1 2 3 4 5))
+> (define list2 '(a b c d e))
+> (define (nth n l)
+    (if (or (> n (length l)) (< n 0))
+      (error "Index out of bounds.")
+      (if (eq? n 0)
+        (car l)
+        (nth (- n 1) (cdr l)))))
+> (define x1 (nth 3 list2))
+> (define x2 (nth 4 list2))
+> (list x1 x2)
+'(d e)
+> (define x2> (define xda[13G[K[12G[K[11G[Kt1 (nth 3t1[21G[K[20G[K[19G[K2 list1()[27G[K[26G[K))
+> d> [K(defin [9Ge t1[12G[K2 (nth 3 list2)[26G[K[25G[K1))
+> (define t3( [14G [14G[13G[K (nth 4 list1))
+> (list t1 t2 t3 x1 x2)
+'(3 4 5 d e)
+> (define rec[13G[K[12G[K[11G[K[10G([10G[K (rect-perm[20G[Kim e[23G[Klen[25G[K[24G[K[23G[Kwidth height))[36G[K
+  2  [K(2  ([K+ (*2[8G[K w[9G[K2 width) (* 2 length[28G[K[27G[K[26G[K[25G[K[24G[K[23G[Kheight))
+  )
+> rect[6G[K> re[K> r[K> [K(rect-[9Gperim 4 5)
+18
+> def> de[K> d[K> [K(define ( re[14G[K[13G[K[12Gline [16G-length o[24G[K[23G)[23G[K x1 x2[28G[K[27G[Ky1 x2 y2))[36G[K
+  (sqrt (expt (x[16G[Kxi[17G[K[16G[Kx1-x2[20G[K[19G[K[18G[K[17G[K[16G[K- x1 x2) 2_[26G[K)[9G[1@+([9G[1@(++[11G[1@ ((expt (- x1 x2) 2) (expt ( -) (expt ( -[39G[K[38G- y1 y2) 2))))
+> li> li
+lib                      list->mutable-set        list->weak-seteq         list1                   
+liberal-define-context?  list->mutable-seteq      list->weak-seteqv        list2                   
+line-length              list->mutable-seteqv     list-contract?           list3                   
+link                     list->set                list-prefix?             list4                   
+link-exists?             list->seteq              list-ref                 list?                   
+list                     list->seteqv             list-set                 listen-port-number?     
+list*                    list->string             list-tail                listof                  
+list*of                  list->vector             list-update             
+list->bytes              list->weak-set           list/c                  
+[K> li> l[K> [K(line[8G-length 7 4 10 8)
+5
+> (define (line-length [23G[22G[K[21G[K[20G[K[19G[K[18G[K[17G[K[16G[K[15G[K[14G[K[13G[K[12G[K[11G[K[10G[9G[K[8G[K[7G[K[6G[K> (d[K> ([K> [K> (line-length 7 4 10 8)h [16G[1@(77 4 10 8)> ([8@define ([24Gx1 y1 x2 y2)
+  (sqrt (+ (expt (- x1 x2) 2) (expt (- y1 y2) 2))))[A> ([8P[16G7 4 10 8)[K
+[K[A[25G[24G[K[23G[K[22G[21G[K[20G[K[19G[18G[K[17G[16G[K[15G[14G[K[13G[K[12G[K[11G[K[10G[K[9G[K[8G[K[7G[K[6G[K> (l[K> ([Kdefine -[11G[K[10G line [15G[14G[K[13G[K[12G[K[11G[K[10G[9G[K[8G[K[7G[K[6G[K> (d[K> ([K> [K> (define (line-length x1 y1 x2 y2)
+  (sqrt (+ (expt (- x1 x2) 2) (expt (- y1 y2) 2))))[A> (rect-perim 4 5)[K
+[K[A[19G> (define (line-length x1 y1 x2 y2)
+  (sqrt (+ (expt (- x1 x2) 2) (expt (- y1 y2) 2))))[A> ([8P[16G7 4 10 8)[K
+[K[A[25G> ([8@define ([24Gx1 y1 x2 y2)
+  (sqrt (+ (expt (- x1 x2) 2) (expt (- y1 y2) 2))))[A[36Gy1[29G[1@)  [24G[1@(x[24G[1@'((x1 y1) x2 y2[39G)[33G[1@(x[33G[1@'((x2 yy2))
+  (sqrt (+ (expt (- x1x[21G[1@(xx1 x2[28G[1@) [21G[1@c([22G[1@a([23G[1@r([21G[1@(ccar(x1 x2))[33G[1@) )[34G[1@( [35G[1@c [36G[1@d [37G[1@r [38G[1@) [38G[1@ )[39G[1@()[40G[1@c)[40G[P)[41G[1@) [40G[1@x)[41G[1@1)[42G[1@ )[43G[1@x)[44G[1@2))) 2) (expt (- y[60G[1@(y[61G[1@)y[61G[Pyy1[61G[1@cy[62G[1@ay[63G[1@ry[64G[1@(yy1 y2))[71G[1@) [73G[1@ 2[73G[1@( [74G[1@c [75G[1@d [76G[1@r [77G[1@( [78G[1@t [78G[P [78G[1@) [78G[1@y)[79G[1@1)[80G[1@ )[81G[1@y)[82G[1@2))
+  ; user break [,bt for context]
+
+
+> 
+  
+  
+  )
+; readline-input:243:0: read-syntax: unexpected `)` [,bt for context]
+>  (define (line-length c1 c2)
+    (sqrt (+ (expt (- (car(c1)))(cdr (c1) 2) (expt (- (car(c2)) (cdr(c2) 2))))))
+   (line-length '(7 4) '(10 8))
+  
+  
+  
+  
+  
+  
+  
+  )
+> .> [K(> [K'(10,7[8G[K8)
+'(10 ,8)
+> hi
+; hi: undefined;
+;  cannot reference an identifier before its definition
+;   in module: top-level
+; [,bt for context]
+> '> [K'> [K(define l1 ;[14G[K'(10,[18G[K 8)[20G[K[19G[K[18G[17G[K[16G[K[15G[K[14G[K[13G[12G[K[11G[K[10G[9G[K[8G[K[7G[K[6G[K> (d[K> ([K> [K; user break [,bt for context]
+^C; user break [,bt for context]
+
+
+>  (define (line-length c1 c2)
+    (sqrt (+ (expt (- (car(c1)) (cdr (c1)) 2) (expt (- (car(c2) (cdr(c2)))) 2))))
+   (line-length '(7 4) '(10 8))
+  
+  
+  
+  
+  
+  
+  
+  d
+  )
+>  (define (line-length c1 c2)
+    (sqrt (+ (expt (- (car(c1)) (cdr (c1)) 2) (expt (- (car(c2) (cdr(c2)))) 2)))))
+>  (line-length '(7 4) '(10 8))
+; application: not a procedure;
+;  expected a procedure that can be applied to arguments
+;   given: '(7 4)
+; [,bt for context]
+> (define (mult args)
+    (if (null? args)
+        1
+        (* (car args) (mult (cdr args)))))
+> 
+  (mult '(2 4 8 16)) => 1024t [7G[P [6G[P   (m[P   ([P   ([1@s   (s[1@u [6G[1@m   (define (mult args)[K
+    (if (null? args)
+        1
+        (* (car args) (mult (cdr a
