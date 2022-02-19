@@ -1,8 +1,13 @@
-Some text
-more text
-    #else stuff ignored
-    #ifndef _123 ignored
-    # ifdef text line
-    #elif 2222 note 2222 not a sym
-more text
-and more
+This is a test for a ifdef containing multiple #elif without any #else.
+  #ifdef _123Sym ignore
+Text internal #ifdef not recognized
+#elif sym_231
+First #elif text
+#elif sym3_2 ignore rest line
+Second #elif text
+some more text
+#endif
+Some more text without
+any recognized #ifdef, #ifndef, #elif or #else
+
+
