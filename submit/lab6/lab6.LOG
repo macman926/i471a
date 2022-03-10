@@ -1,0 +1,188 @@
+Script started on 2022-03-10 15:34:23-05:00 [TERM="xterm" TTY="/dev/pts/28" COLUMNS="117" LINES="62"]
+[?2004hcmcborr1@remote04:~/projects/i471a/submit/lab6$ git add . 
+[?2004l[?2004hcmcborr1@remote04:~/projects/i471a/submit/lab6$ git commit -m" [K[K "starte4d lab[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kls
+[?2004llab6.LOG
+[?2004hcmcborr1@remote04:~/projects/i471a/submit/lab6$ nano lab6-sol.pro
+[?2004l[?2004h[?1049h[22;0;0t[1;62r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[60;53H(B[0;7m[ New File ](B[m[H(B[0;7m  GNU nano 5.4                                         lab6-sol.pro                                                  [1;116H(B[m[61d(B[0;7m^G(B[m Help[61;17H(B[0;7m^O(B[m Write Out    (B[0;7m^W(B[m Where Is     (B[0;7m^K(B[m Cut[61;65H(B[0;7m^T(B[m Execute[81G(B[0;7m^C(B[m Location     (B[0;7mM-U(B[m Undo[62d(B[0;7m^X(B[m Exit[62;17H(B[0;7m^R(B[m Read File    (B[0;7m^\(B[m Replace[49G(B[0;7m^U(B[m Paste[62;65H(B[0;7m^J(B[m Justify[81G(B[0;7m^_(B[m Go To Line   (B[0;7mM-E(B[m Redo[2d[?12l[?25h[?25l[60;52H(B[0;7m[ Writing... ](B[m[1;116H[60;51H(B[0;7m[ Wrote 0 lines ](B[m[2d[?12l[?25h[?25l[60;34H(B[0;7m[ line 1/1 (100%), col 1/1 (100%), char 0/0 (0%) ](B[m[2d[?12l[?25h[?25l[1;69H(B[0;7m*[116G(B[m[2d;[?12l[?25h[?25ls[?12l[?25h[?25l [?12l[?25h[?25l[K[?12l[?25h[?25ll[?12l[?25h[?25ls[?12l[?25h[?25l[3d[?12l[?25h[?25l[Als[?12l[?25h[?25l [?12l[?25h[?25l[K[?12l[?25h[?25l[?12l[?25h[?25l[60;51H[1K (B[0;7m[ Writing... ](B[m[K[1;69H(B[0;7m [116G(B[m[60;51H(B[0;7m[ Wrote 1 line ](B[m[2d[?12l[?25h[?25l[60d[J[62d[?12l[?25h[62;1H[?1049l[23;0;0t[?1l>[?2004l[?2004hcmcborr1@remote04:~/projects/i471a/submit/lab6$ s[Kl[Kls
+[?2004llab6.LOG  lab6-sol.pro
+[?2004hcmcborr1@remote04:~/projects/i471a/submit/lab6$ lsnano lab6-sol.prols[Kgit add . 
+[?2004l[?2004hcmcborr1@remote04:~/projects/i471a/submit/lab6$ git add . ls[Knano lab6-sol.prols[Knano lab6-sol.prols[Kgit add . [3Pracket[Cy [3@git add .[Cls[Knano lab6-sol.prols[Kgit add . [Kgit commit -m"started [K lab"
+[?2004l[lab6 13a54b0] started lab
+ 2 files changed, 1 insertion(+)
+ create mode 100644 submit/lab6/lab6-sol.pro
+ create mode 100644 submit/lab6/lab6.LOG
+[?2004hcmcborr1@remote04:~/projects/i471a/submit/lab6$ git push 
+[?2004lfatal: The current branch lab6 has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin lab6
+
+[?2004hcmcborr1@remote04:~/projects/i471a/submit/lab6$ git push -origin [K[K[K[K[K[K[K[Korigin lab6
+[?2004lUsername for 'https://github.com': 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                                        chrisi tianmcborrough@gmail.com
+Password for 'https://christianmcborrough@gmail.com@github.com': 
+Enumerating objects: 8, done.
+Counting objects:  12% (1/8)Counting objects:  25% (2/8)Counting objects:  37% (3/8)Counting objects:  50% (4/8)Counting objects:  62% (5/8)Counting objects:  75% (6/8)Counting objects:  87% (7/8)Counting objects: 100% (8/8)Counting objects: 100% (8/8), done.
+Delta compression using up to 8 threads
+Compressing objects:  25% (1/4)Compressing objects:  50% (2/4)Compressing objects:  75% (3/4)Compressing objects: 100% (4/4)Compressing objects: 100% (4/4), done.
+Writing objects:  16% (1/6)Writing objects:  33% (2/6)Writing objects:  50% (3/6)Writing objects:  66% (4/6)Writing objects:  83% (5/6)Writing objects: 100% (6/6)Writing objects: 100% (6/6), 416 bytes | 138.00 KiB/s, done.
+Total 6 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas:   0% (0/2)[Kremote: Resolving deltas:  50% (1/2)[Kremote: Resolving deltas: 100% (2/2)[Kremote: Resolving deltas: 100% (2/2), completed with 2 local objects.[K
+remote: 
+remote: Create a pull request for 'lab6' on GitHub by visiting:[K
+remote:      https://github.com/macman926/i471a/pull/new/lab6[K
+remote: 
+To https://github.com/macman926/i471a.git
+ * [new branch]      lab6 -> lab6
+[?2004hcmcborr1@remote04:~/projects/i471a/submit/lab6$ ls
+[?2004llab6.LOG  lab6-sol.pro
+[?2004hcmcborr1@remote04:~/projects/i471a/submit/lab6$ jaj0mpaa[K[K[K[K[K[K[K[Kprolog
+[?2004lWelcome to SWI-Prolog (threaded, 64 bits, version 8.2.4)
+SWI-Prolog comes with ABSOLUTELY NO WARRANTY. This is free software.
+Please run ?- license. for legal details.
+
+For online help and background, visit https://www.swi-prolog.org
+For built-in help, use ?- help(Topic). or ?- apropos(Word).
+
+?- f(X, a[10G)[5G[11G = f(a, Y[20G)[15G[21G
+|    .
+X = Y, Y = a.
+
+?- f(X, a[10G)[5G[11G = f(a, X[20G)[15G[21G.
+X = a.
+
+?- f(X, a[10G)[5G[11G = f(b, X[20G)[15G[21G.
+[1;31mfalse.[0m
+
+?- f(X, Y[10G)[5G[11G = f(a, a[20G)[15G[21G, g(X, Y[29G)[24G[30G = g(a, b[39G)[34G[40G.
+[1;31mfalse.[0m
+
+?- f(X, a[10G)[5G[11G = f(a, Y[20G)[15G[21G.
+X = Y, Y = a.
+
+?- f(1 2 [9G[8G[K[7G, 2 ,[11G[K[10G, zz[13G[K[13G)[5G[14G = da[18G[K[17G[Kf[18G)[18G[K(_.[20G[K, _, X[26G)[18G[27G
+|    .
+X = z.
+
+?- exit
+|    ^D[1;31mERROR: Stream user_input:27:5 Syntax error: Unexpected end of file
+[0m?- ^C
+Action (h for help) ? Options:
+a:           abort         b:           break
+c:           continue      e:           exit
+g:           goals         s:           C-backtrace
+t:           trace         p:		  Show PID
+h (?):       help
+Action (h for help) ? Unknown option (h for help)
+Action (h for help) ? Options:
+a:           abort         b:           break
+c:           continue      e:           exit
+g:           goals         s:           C-backtrace
+t:           trace         p:		  Show PID
+h (?):       help
+Action (h for help) ? abort
+[32m% Execution Aborted
+[0m?- bo?- b[K?- [Kabot[7G[Krt[8G[K[7G[K[6G[K?- a[K?- [Ke
+|    .
+[1;31mERROR: Unknown procedure: e/0 (DWIM could not correct goal)
+[0m?- e..[6G[K
+[1;31mERROR: Unknown procedure: e/0 (DWIM could not correct goal)
+[0m?- e?- [Kh
+|    .
+[1;31mERROR: Unknown procedure: h/0 (DWIM could not correct goal)
+[0m?- h.
+[1;31mERROR: Unknown procedure: h/0 (DWIM could not correct goal)
+[0m?- h
+|    .
+[1;31mERROR: Unknown procedure: h/0 (DWIM could not correct goal)
+[0m?- help
+|    e[6G[Kexit.
+[1;31mERROR: Syntax error: Operator expected
+ERROR: help
+ERROR: ** here **
+ERROR: 
+exit . 
+[0m?- exit.
+[1;31mERROR: Unknown procedure: exit/0 (DWIM could not correct goal)
+[0m?- ^D
+[32m% halt
+[0m[?2004hcmcborr1@remote04:~/projects/i471a/submit/lab6$ ls
+[?2004llab6.LOG  lab6-sol.pro
+[?2004hcmcborr1@remote04:~/projects/i471a/submit/lab6$ nano lab6^C[?2004l[?2004h[?2004l
+[?2004hcmcborr1@remote04:~/projects/i471a/submit/lab6$ lsprolog[4Pls[Knano ;a[K[Klab6.S[K-[K-s[K[K[K-sol.pro 
+[?2004l[?2004h[?1049h[22;0;0t[1;62r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[60;52H(B[0;7m[ Reading... ](B[m[60;58H(B[0;7m 1 line ](B[m[H(B[0;7m  GNU nano 5.4                                         lab6-sol.pro                                                  [1;116H(B[m[61d(B[0;7m^G(B[m Help[61;17H(B[0;7m^O(B[m Write Out    (B[0;7m^W(B[m Where Is     (B[0;7m^K(B[m Cut[61;65H(B[0;7m^T(B[m Execute[81G(B[0;7m^C(B[m Location     (B[0;7mM-U(B[m Undo[62d(B[0;7m^X(B[m Exit[62;17H(B[0;7m^R(B[m Read File    (B[0;7m^\(B[m Replace[49G(B[0;7m^U(B[m Paste[62;65H(B[0;7m^J(B[m Justify[81G(B[0;7m^_(B[m Go To Line   (B[0;7mM-E(B[m Redo[2d[?12l[?25h[?25l[1;69H(B[0;7m*[60d(B[m[K[1;116H[2d f(1, 2, z) = f(_, _, X)[3d[?12l[?25h[?25l[4d[?12l[?25h[?25l[60;52H(B[0;7m[ Writing... ](B[m[1;69H(B[0;7m [116G(B[m[60;51H(B[0;7m[ Wrote 2 lines ](B[m[4d[?12l[?25h[?25l[60d[J[62d[?12l[?25h[62;1H[?1049l[23;0;0t[?1l>[?2004l[?2004hcmcborr1@remote04:~/projects/i471a/submit/lab6$ nano lab6-sol.pro ls[Knano lab6-sol.pro [Kprogo[K[Klog
+[?2004lWelcome to SWI-Prolog (threaded, 64 bits, version 8.2.4)
+SWI-Prolog comes with ABSOLUTELY NO WARRANTY. This is free software.
+Please run ?- license. for legal details.
+
+For online help and background, visit https://www.swi-prolog.org
+For built-in help, use ?- help(Topic). or ?- apropos(Word).
+
+?- ehad*[8G[K[7G[K[6G[K?- e[K?- [Khead(a,[10G[K, tail(z,b[19G[Kb[19G[Kb[19G[Kb[19G[KB[20G)[16G[21G, Y([24G[K[24G)[8G[25G = ([28G[Khead( [33G_ .[35G[K, tail(X,_[45G)[41G[46G, Y[49G)[32G[50G[48G)[K[48G_)
+|    .
+X = z.
+
+?- ^C
+Action (h for help) ? EOF: exit (status 4)
+[?2004hcmcborr1@remote04:~/projects/i471a/submit/lab6$ ls
+[?2004llab6.LOG  lab6-sol.pro
+[?2004hcmcborr1@remote04:~/projects/i471a/submit/lab6$ nano lab6-s
+[?2004l[?2004h[?1049h[22;0;0t[1;62r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[60;53H(B[0;7m[ New File ](B[m[H(B[0;7m  GNU nano 5.4                                            lab6-s                                                     [1;116H(B[m[61d(B[0;7m^G(B[m Help[61;17H(B[0;7m^O(B[m Write Out    (B[0;7m^W(B[m Where Is     (B[0;7m^K(B[m Cut[61;65H(B[0;7m^T(B[m Execute[81G(B[0;7m^C(B[m Location     (B[0;7mM-U(B[m Undo[62d(B[0;7m^X(B[m Exit[62;17H(B[0;7m^R(B[m Read File    (B[0;7m^\(B[m Replace[49G(B[0;7m^U(B[m Paste[62;65H(B[0;7m^J(B[m Justify[81G(B[0;7m^_(B[m Go To Line   (B[0;7mM-E(B[m Redo[2d[?12l[?25h[?25l[60d[J[62d[?12l[?25h[62;1H[?1049l[23;0;0t[?1l>[?2004l[?2004hcmcborr1@remote04:~/projects/i471a/submit/lab6$ nano lab6-sol.pro 
+[?2004l[?2004h[?1049h[22;0;0t[1;62r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[60;52H(B[0;7m[ Reading... ](B[m[60;51H(B[0;7m[ Read 2 lines ](B[m[H(B[0;7m  GNU nano 5.4                                         lab6-sol.pro                                                  [1;116H(B[m[61d(B[0;7m^G(B[m Help[61;17H(B[0;7m^O(B[m Write Out    (B[0;7m^W(B[m Where Is     (B[0;7m^K(B[m Cut[61;65H(B[0;7m^T(B[m Execute[81G(B[0;7m^C(B[m Location     (B[0;7mM-U(B[m Undo[62d(B[0;7m^X(B[m Exit[62;17H(B[0;7m^R(B[m Read File    (B[0;7m^\(B[m Replace[49G(B[0;7m^U(B[m Paste[62;65H(B[0;7m^J(B[m Justify[81G(B[0;7m^_(B[m Go To Line   (B[0;7mM-E(B[m Redo[2d f(1, 2, z) = f(_, _, X)[?12l[?25h[?25l[3d[?12l[?25h[?25l[A[?12l[?25h[?25l[3d[?12l[?25h[?25l[1;69H(B[0;7m*[60d(B[m[K[1;116H[3dhead(a, tail(z,B), Y) = head(_ , tail(X,_), _)[4d|    .[5d[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[4d[?12l[?25h[?25l|[?12l[?25h[?25l [?12l[?25h[?25l [?12l[?25h[?25l [?12l[?25h[?25l.[K[?12l[?25h[?25l.[K[?12l[?25h[?25l.[K[?12l[?25h[?25l .[K[?12l[?25h[?25l[3;48H.[4d[K[3;47H[?12l[?25h[?25l [?12l[?25h[?25l.[K[?12l[?25h[?25l[2;25H[?12l[?25h[?25l.[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l [?12l[?25h[?25l[1P[?12l[?25h[?25l[3d[?12l[?25h[?25l[4d[?12l[?25h[?25l[60;52H(B[0;7m[ Writing... ](B[m[1;69H(B[0;7m [116G(B[m[60;51H(B[0;7m[ Wrote 3 lines ](B[m[4d[?12l[?25h[?25l[60d[J[62d[?12l[?25h[62;1H[?1049l[23;0;0t[?1l>[?2004l[?2004hcmcborr1@remote04:~/projects/i471a/submit/lab6$ nano lab6-sol.pro [Kol.pro [Knano lab6-sol.pro [Kls[Kprolognano lab6-sol.pro [12Pprolog
+[?2004lWelcome to SWI-Prolog (threaded, 64 bits, version 8.2.4)
+SWI-Prolog comes with ABSOLUTELY NO WARRANTY. This is free software.
+Please run ?- license. for legal details.
+
+For online help and background, visit https://www.swi-prolog.org
+For built-in help, use ?- help(Topic). or ?- apropos(Word).
+
+?- cons(a [10G, cons(b, cons*c[25G[K[24G[K(c,z[28G)[24G[29G[29G)[16G[30G[30G)[8G[31G - [33G[32G[K =[33G[K[32G= .[34G[K([34G[Kcons9[38G[K(_, cons(_.[48G[K, [49G cons(c[55G[K_,z[57G[KX[58G)[54G[59G[59G)[46G[60G[60G)[38G[61G.
+X = z.
+
+?- ^C
+Action (h for help) ? EOF: exit (status 4)
+[?2004hcmcborr1@remote04:~/projects/i471a/submit/lab6$ nano s[Kpr[K[Ks[Klab6s-[K[K-sol.pro 
+[?2004l[?2004h[?1049h[22;0;0t[1;62r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[60;52H(B[0;7m[ Reading... ](B[m[60;51H(B[0;7m[ Read 3 lines ](B[m[H(B[0;7m  GNU nano 5.4                                         lab6-sol.pro                                                  [1;116H(B[m[61d(B[0;7m^G(B[m Help[61;17H(B[0;7m^O(B[m Write Out    (B[0;7m^W(B[m Where Is     (B[0;7m^K(B[m Cut[61;65H(B[0;7m^T(B[m Execute[81G(B[0;7m^C(B[m Location     (B[0;7mM-U(B[m Undo[62d(B[0;7m^X(B[m Exit[62;17H(B[0;7m^R(B[m Read File    (B[0;7m^\(B[m Replace[49G(B[0;7m^U(B[m Paste[62;65H(B[0;7m^J(B[m Justify[81G(B[0;7m^_(B[m Go To Line   (B[0;7mM-E(B[m Redo[2df(1, 2, z) = f(_, _, X).[3dhead(a, tail(z,B), Y) = head(_ , tail(X,_), _).[A[?12l[?25h[?25l[3d[?12l[?25h[?25l[4d[?12l[?25h[?25l[1;69H(B[0;7m*[60d(B[m[K[1;116H[4dcons(a, cons(b, cons(c,z))) = cons(_, cons(_, cons(_,X))).[5d[?12l[?25h[?25l[6d[?12l[?25h[?25l[60;52H(B[0;7m[ Writing... ](B[m[1;69H(B[0;7m [116G(B[m[60;51H(B[0;7m[ Wrote 4 lines ](B[m[6d[?12l[?25h[?25l[60d[J[62d[?12l[?25h[62;1H[?1049l[23;0;0t[?1l>[?2004l[?2004hcmcborr1@remote04:~/projects/i471a/submit/lab6$ nano lab6-sol.pro [12Pprolog
+[?2004lWelcome to SWI-Prolog (threaded, 64 bits, version 8.2.4)
+SWI-Prolog comes with ABSOLUTELY NO WARRANTY. This is free software.
+Please run ?- license. for legal details.
+
+For online help and background, visit https://www.swi-prolog.org
+For built-in help, use ?- help(Topic). or ?- apropos(Word).
+
+?- [a. b[9G][4G[10G/[10G[K.
+[1;31m
+ERROR: Syntax error: Operator expected
+ERROR: [a
+ERROR: ** here **
+ERROR:  . 
+[0m[1;31mERROR: Syntax error: Illegal start of term
+ERROR: 
+ERROR: ** here **
+ERROR: b] . 
+[0m?- [a [6G, v[8G[Kv[8G[Kb[9G][4G[10G/[10G[K/[10G[K.
+[1;31mERROR: source_sink `a' does not exist
+[0m[1;31mERROR: source_sink `b' does not exist
+[0m[1mtrue.[0m
+
+?- ?- ]a?- ][K?- [K[a|v[7G[Kb[8G][4G[9G.
+[1;31mERROR: Type error: `list' expected, found `b' (an atom)
+ERROR: In:
+ERROR:   [16] throw(error(type_error(list,b),_19286))
+ERROR:   [13] '$load_files'([a|b],user,[expand(true)]) at /usr/lib/swi-prolog/boot/init.pl:2102
+ERROR:    [9] <user>
+ERROR: 
+ERROR: Note: some frames are missing due to last-call optimization.
+ERROR: Re-run your program in debug mode (:- debug.) to get more detail.
+[0m?- ?- [a|b].[9G].[4G[9G[7G[b]].
+[1;31mERROR: source_sink `a' does not exist
+[0m[1;31mERROR: source_sink `b' does not exist
+[0m[1mtrue.[0m
+
+?- ?- '[|[7G][8G'[4G[9G[9G)x.[11G[K[10G[K[9G[K(X,Y[13G)[9G[14G
+|    .
+[1;31mERROR: Arguments are not sufficiently instantiated
+ERROR: In:
+ERROR:   [15] throw(error(instantiation_error,_23640))
+ERROR:    [9] <user>
+ERROR: 
+ERROR: Note: some frames are missing due to last-call optimizati
