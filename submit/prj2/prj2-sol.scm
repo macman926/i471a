@@ -6,3 +6,10 @@
     (cons 's (int->unary (- n 1)))
      'z)
 )
+
+(define (unary->int ls) 
+	(cond 
+		((eq? ls 'z ) 0) 
+		(else (+ 1 (unary->int(cdr ls)))
+      ) )
+)
