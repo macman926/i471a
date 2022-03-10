@@ -10,6 +10,13 @@
 (define (unary->int ls) 
 	(cond 
 		((eq? ls 'z ) 0) 
-		(else (+ 1 (unary->int(cdr ls)))
-      ) )
+		(else (+ 1 (unary->int(cdr ls)))) 
+	)
+)
+
+(define (unary-add m n) 
+	(cond 
+		((eq? m 'z) n) 
+		(else (cons (car m) (unary-add (cdr m) n)))
+  	)
 )
