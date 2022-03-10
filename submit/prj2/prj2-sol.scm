@@ -1,11 +1,3 @@
-(define (int->unary n)
-  (if (= 0 n)
-    'z
-   )  
-  (if (> n 0)
-    (cons 's (int->unary (- n 1)))
-     'z)
-)
 
 (define (unary->int ls) 
 	(cond 
@@ -19,4 +11,15 @@
 		((eq? m 'z) n) 
 		(else (cons (car m) (unary-add (cdr m) n)))
   	)
+)
+
+(define (unary-add-tr m n) 
+	(cond 
+		((eq? m 'z) n) 
+		(else (cons (car m) (unary-add (cdr m) n))) 
+	) 
+)
+
+(define (int->unary n) 
+	(if (= 0 n) 'z (cons 's (int->unary (- n 1))))
 )
