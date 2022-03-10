@@ -23,3 +23,17 @@
 (define (int->unary n) 
 	(if (= 0 n) 'z (cons 's (int->unary (- n 1))))
 )
+
+
+(define (unary-mul m n)
+    (if (= (unary->int n) 0)
+        'z (mul-help m n m)
+      )
+  )
+(define (mul-help m n s)
+    (if (= (unary->int n) 1)
+        s
+        (mul-help m (cdr n) (unary-add m s))
+    )
+  )
+
