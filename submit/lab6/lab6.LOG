@@ -185,4 +185,1243 @@ ERROR: In:
 ERROR:   [15] throw(error(instantiation_error,_23640))
 ERROR:    [9] <user>
 ERROR: 
-ERROR: Note: some frames are missing due to last-call optimizati
+ERROR: Note: some frames are missing due to last-call optimization.
+ERROR: Re-run your program in debug mode (:- debug.) to get more detail.
+[0m?- ?- '[|]'(X,Y).[12G Y).
+[1;31mERROR: Arguments are not sufficiently instantiated
+ERROR: In:
+ERROR:   [15] throw(error(instantiation_error,_24914))
+ERROR:    [9] <user>
+ERROR: 
+ERROR: Note: some frames are missing due to last-call optimization.
+ERROR: Re-run your program in debug mode (:- debug.) to get more detail.
+[0m?- ?- '[|]'(X, Y).?- [K[?- [][]?- [a]][6G|][7G[][9G][][9Gb][9G][K[8Gb]]]].
+[1;31mERROR: source_sink `a' does not exist
+[0m[1;31mERROR: source_sink `b' does not exist
+[0m[1mtrue.[0m
+
+?- ?- [a|[b]].][9G|]].[10Gc]].
+[1;31mERROR: Type error: `list' expected, found `c' (an atom)
+ERROR: In:
+ERROR:   [16] throw(error(type_error(list,c),_28742))
+ERROR:   [13] '$load_files'([a,b|c],user,[expand(true)]) at /usr/lib/swi-prolog/boot/init.pl:2102
+ERROR:    [9] <user>
+ERROR: 
+ERROR: Note: some frames are missing due to last-call optimization.
+ERROR: Re-run your program in debug mode (:- debug.) to get more detail.
+[0m?- [a|[b|c[11G][7G[12G[12G][4G[13G.
+[1;31mERROR: Type error: `list' expected, found `c' (an atom)
+ERROR: In:
+ERROR:   [16] throw(error(type_error(list,c),_30524))
+ERROR:   [13] '$load_files'([a,b|c],user,[expand(true)]) at /usr/lib/swi-prolog/boot/init.pl:2102
+ERROR:    [9] <user>
+ERROR: 
+ERROR: Note: some frames are missing due to last-call optimization.
+ERROR: Re-run your program in debug mode (:- debug.) to get more detail.
+[0m?- [A|[B|C[11G][7G[12G[12G][4G[13G.
+[1;31mERROR: Arguments are not sufficiently instantiated
+ERROR: In:
+ERROR:   [16] throw(error(instantiation_error,_32376))
+ERROR:   [13] '$load_files'([_32408,_32414|_32416],user,[expand(true)]) at /usr/lib/swi-prolog/boot/init.pl:2102
+ERROR:    [9] <user>
+ERROR: 
+ERROR: Note: some frames are missing due to last-call optimization.
+ERROR: Re-run your program in debug mode (:- debug.) to get more detail.
+[0m?- [1,2,3,4[12G][4G[13G?- [A|[B|C]].?- [1,2,3,4][K = [1[17G[K_.[18G[K, 2 ,3,4[26G][16G[27G
+|    .
+[1mtrue.[0m
+
+?- ^D
+[32m% halt
+[0m[?2004hcmcborr1@remote04:~/projects/i471a/submit/lab6$ racket
+[?2004lWelcome to Racket v7.9 [bc].
+> (cddr (1,2,3,4))
+; readline-input:1:8: unquote: not in quasiquote
+;   in: (unquote 2)
+; [,bt for context]
+> > (cddr (1,2,3,4)) [9G[1@'(
+'(,3 ,4)
+> > (cddr '(1,2,3,4))[9G[P([19G> (unary-add-tr '(s s s . z) '(s s s . z))> (cddr (1,2,3,4))[K[9G[1@'([20G> [K> ^D
+[?2004hcmcborr1@remote04:~/projects/i471a/submit/lab6$ racketprolog
+[?2004lWelcome to SWI-Prolog (threaded, 64 bits, version 8.2.4)
+SWI-Prolog comes with ABSOLUTELY NO WARRANTY. This is free software.
+Please run ?- license. for legal details.
+
+For online help and background, visit https://www.swi-prolog.org
+For built-in help, use ?- help(Topic). or ?- apropos(Word).
+
+?- ?- [1,2,3,4] = [_, 2 ,3,4].?- [K^D
+[32m% halt
+[0m[?2004hcmcborr1@remote04:~/projects/i471a/submit/lab6$ racprologracket
+[?2004lWelcome to Racket v7.9 [bc].
+> caddr[7G[K[6G[K> ca[K> c[K> [K(caddr([9G[K ' [11G(1 2 [15G[14G[K[13G, 2 , [18G[17G[K[16G, 3 ,[20G[K[19G, 4))
+',3
+> (cdar '((1,2), 3,4)
+  )
+'(,2)
+> ^D
+[?2004hcmcborr1@remote04:~/projects/i471a/submit/lab6$ length/2[2Pracketprologracketprolog
+[?2004lWelcome to SWI-Prolog (threaded, 64 bits, version 8.2.4)
+SWI-Prolog comes with ABSOLUTELY NO WARRANTY. This is free software.
+Please run ?- license. for legal details.
+
+For online help and background, visit https://www.swi-prolog.org
+For built-in help, use ?- help(Topic). or ?- apropos(Word).
+
+?- length2[10G[K/2
+|    ,
+|    .
+[1;31mERROR: Syntax error: Unexpected `,' before `.'
+ERROR: length/2
+,
+ERROR: ** here **
+ERROR:  . 
+[0m?- ?- length/2
+,.,[K[K[K[A[12G[11G[K2.
+[1;31mERROR: Type error: `lambda_free' expected, found `length' (an atom)
+ERROR: In:
+ERROR:   [13] throw(error(type_error(lambda_free,length),_15562))
+ERROR:   [11] yall:lambda_free(length) at /usr/lib/swi-prolog/library/yall.pl:357
+ERROR:   [10] yall:length/(user:2) at /usr/lib/swi-prolog/library/yall.pl:276
+ERROR:    [9] <user>
+ERROR: 
+ERROR: Note: some frames are missing due to last-call optimization.
+ERROR: Re-run your program in debug mode (:- debug.) to get more detail.
+[0m?- ^D
+[32m% halt
+[0m[?2004hcmcborr1@remote04:~/projects/i471a/submit/lab6$ git add .
+[?2004l[?2004hcmcborr1@remote04:~/projects/i471a/submit/lab6$ git commit -m"completed ex1"
+[?2004l[lab6 503bd41] completed ex1
+ 2 files changed, 191 insertions(+)
+[?2004hcmcborr1@remote04:~/projects/i471a/submit/lab6$ git push 
+[?2004lfatal: The current branch lab6 has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin lab6
+
+[?2004hcmcborr1@remote04:~/projects/i471a/submit/lab6$ git push origin da[K[Klab6
+[?2004lUsername for 'https://github.com': christianmcborrough@gmail.com
+Password for 'https://christianmcborrough@gmail.com@github.com': 
+Enumerating objects: 11, done.
+Counting objects:   9% (1/11)Counting objects:  18% (2/11)Counting objects:  27% (3/11)Counting objects:  36% (4/11)Counting objects:  45% (5/11)Counting objects:  54% (6/11)Counting objects:  63% (7/11)Counting objects:  72% (8/11)Counting objects:  81% (9/11)Counting objects:  90% (10/11)Counting objects: 100% (11/11)Counting objects: 100% (11/11), done.
+Delta compression using up to 8 threads
+Compressing objects:  16% (1/6)Compressing objects:  33% (2/6)Compressing objects:  50% (3/6)Compressing objects:  66% (4/6)Compressing objects:  83% (5/6)Compressing objects: 100% (6/6)Compressing objects: 100% (6/6), done.
+Writing objects:  16% (1/6)Writing objects:  33% (2/6)Writing objects:  50% (3/6)Writing objects:  66% (4/6)Writing objects:  83% (5/6)Writing objects: 100% (6/6)Writing objects: 100% (6/6), 3.74 KiB | 1.87 MiB/s, done.
+Total 6 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas:   0% (0/2)[Kremote: Resolving deltas:  50% (1/2)[Kremote: Resolving deltas: 100% (2/2)[Kremote: Resolving deltas: 100% (2/2), completed with 2 local objects.[K
+To https://github.com/macman926/i471a.git
+   13a54b0..503bd41  lab6 -> lab6
+[?2004hcmcborr1@remote04:~/projects/i471a/submit/lab6$ prolog
+[?2004lWelcome to SWI-Prolog (threaded, 64 bits, version 8.2.4)
+SWI-Prolog comes with ABSOLUTELY NO WARRANTY. This is free software.
+Please run ?- license. for legal details.
+
+For online help and background, visit https://www.swi-prolog.org
+For built-in help, use ?- help(Topic). or ?- apropos(Word).
+
+?- rack[7G[K[6G[K?- r[K?- [K[1,23[8G[K[[8G[K,[3[10G[K[9G[K3,4[12G][4G[13G = [16G][16G[K[2.3[19G[K[18G[K,3,4\[22G[K[22G][16G[23G
+|    .
+[1;31mfalse.[0m
+
+?- ?- [1,2,3,4] = [2,3,4].[17G[1@12[18G[1@,2
+[1mtrue.[0m
+
+?- ?- [1,2,3,4] = [1,2,3,4].[16G[1@l[?- [1@l[
+[1;31mERROR: Syntax error: Operator expected
+ERROR: 
+ERROR: ** here **
+ERROR: l[1,2,3,4] = l[1,2,3,4] . 
+[0m?- ?- l[1,2,3,4] = l[1,2,3,4].1[19G[P,[19G[1@+,[19G[P,[19G[1@_,
+[1;31mERROR: Syntax error: Operator expected
+ERROR: 
+ERROR: ** here **
+ERROR: l[1,2,3,4] = l[_,2,3,4] . 
+[0m?- ?- l[1,2,3,4] = l[_,2,3,4].[13G[P [13G[1@) ?- l[P1?- l[1@(11,2,3,4) = l[_,[18G[P_[18G[1@(__,2,3,4].[26G.[K[26G).[18G[27G
+[1mtrue.[0m
+
+?- ?- l(1,2,3,4) = l(_,2,3,4)._,2,[20G[P2[19G[P2
+[1;31mfalse.[0m
+
+?- ?- l(1,2,3,4) = l(2,3,4).[19G[1@_2[20G[1@,22[21G[P,[21G[1@_,
+[1mtrue.[0m
+
+?- ?- l(1,2,3,4) = l(_,_,3,4).[22G[P3[21G[P3[20G[P3[19G[P3
+[1;31mfalse.[0m
+
+?- length(2[11G[K1,2,3,4[18G)[10G[19G/[19G[K.
+[1;31mERROR: Unknown procedure: length/4
+ERROR:     However, there are definitions for:
+ERROR:         length/2
+[0m[1;31mfalse.[0m
+
+?- ?- length(1,2,3,4).[10G[1@/([11G[1@2(
+[1;31mERROR: Syntax error: Operator expected
+ERROR: length/
+ERROR: ** here **
+ERROR: 2(1,2,3,4) . 
+[0m?- ?- length/2(1,2,3,4).2(1,2,3,4)[20G.[K[19G.[K[18G.[K[17G.[K[16G.[K[15G.[K[14G.[K[13G.[K[12G.[K[11G.[K[11G2.[12G .[13G(.[14G1.[15G .[16G2.[16G.[K[15G.[K[16G.[16G .[17G3.[17G.[K[16G.[K[16G[K[15G,.[16G .[17G2.[18G .[19G,.[20G3.[21G .[22G,.[22G.[K[21G.[K[21G,.[21G.[K[20G.[K[19G.[K[18G.[K[18G,.[19G .[20G3.[21G .[21G.[K[21G,.[22G .[23G4.[24G).[13G[25G
+[1;31mERROR: Syntax error: Operator expected
+ERROR: length/2
+ERROR: ** here **
+ERROR:  (1, 2, 3, 4) . 
+[0m?- ?- length/2 (1, 2, 3, 4).[13G[1@=([14G[1@ (
+[1;31mfalse.[0m
+
+?- ?- length/2 = (1, 2, 3, 4).[26G ).[26G).[K[26G,).[27G ).[28G5).
+[1;31mfalse.[0m
+
+?- ?- length/2 = (1, 2, 3, 4, 5).[29G.[K[29G,.[30G .[31G6.[32G).[15G[33G
+[1;31mfalse.[0m
+
+?- length (1,2,3,4[19G)[11G[20G
+|    .
+[1;31mERROR: Syntax error: Operator expected
+ERROR: length
+ERROR: ** here **
+ERROR:  (1,2,3,4) . 
+[0m?- length(3[11G[K([12G)()[12G1)[13G,)[14G )[15G2)[16G,)[17G )[18G3)[19G,)[20G4)[21G ) [21G)[K) 2[24G)[10G[25G
+|    .
+[1;31mERROR: Syntax error: Operator expected
+ERROR: length((1, 2, 3,4)
+ERROR: ** here **
+ERROR:  2) . 
+[0m?- ?- length((1, 2, 3,4) 2).[23G,2).[22G,2).[K
+[1;31mERROR: Type error: `list' expected, found `1,2,3,4' (a compound)
+ERROR: In:
+ERROR:   [11] throw(error(type_error(list,...),context(...,_27100)))
+ERROR:    [9] <user>
+ERROR: 
+ERROR: Note: some frames are missing due to last-call optimization.
+ERROR: Re-run your program in debug mode (:- debug.) to get more detail.
+[0m?- ?- length((1, 2, 3,4),2).[21G,2).[K[21G[,2).[21G,2).[K[21G],2).[11G[P1[11G[1@[1
+[1;31mfalse.[0m
+
+?- [1,2,3,4[12G][4G[13G = 3
+|    .
+[1;31mfalse.[0m
+
+?- ?- [1,2,3,4] = 3.[17G[K[16G[K[[17G][][17G4]
+|    .
+[1;31mfalse.[0m
+
+?- [1/[6G[K.[6G[K, 2, 3,4[13G[K 4,[15G[K[15G][4G[16G/[16G[K.
+[1;31mERROR: source_sink `'1'' does not exist
+[0m[1;31mERROR: source_sink `'2'' does not exist
+[0m[1;31mERROR: source_sink `'3'' does not exist
+[0m[1;31mERROR: source_sink `'4'' does not exist
+[0m[1mtrue.[0m
+
+?- id_list.
+[1;31mERROR: Unknown procedure: id_list/0
+ERROR:     However, there are definitions for:
+ERROR:         is_list/1
+[0m[1;31mfalse.[0m
+
+?- f(?- f[K?- [Kl1(1,2,2[11G[K3,4[14G)[6G[15G
+|    .
+[1;31mERROR: Unknown procedure: l1/4 (DWIM could not correct goal)
+[0m?- f(1m2[8G[K[7G[K,3,[9G[K[8G[K2,3,4[13G)[5G[14G
+|    .
+[1;31mERROR: Unknown procedure: f/4 (DWIM could not correct goal)
+[0m?- findall
+|    .
+[1;31mERROR: Unknown procedure: findall/0
+ERROR:     However, there are definitions for:
+ERROR:         findall/3
+ERROR:         findall/4
+[0m[1;31mfalse.[0m
+
+?- find([8G[K[[8G[K(1,2,3,4[16G)[8G[17G[8G[1@a([9G[1@l([10G[1@l((1,2,3,4)ll([12G[1@(1(1,2,3,4)[21G)[11G[22G[12G[1@3([13G[1@,([14G[1@ (
+|    .
+[1;31mERROR: Unknown procedure: findall/2
+ERROR:     However, there are definitions for:
+ERROR:         findall/3
+ERROR:         findall/4
+[0m[1;31mfalse.[0m
+
+?- [1,2,3,4[12G][4G[13G
+|    /[6G[K.
+[1;31mERROR: source_sink `'1'' does not exist
+[0m[1;31mERROR: source_sink `'2'' does not exist
+[0m[1;31mERROR: source_sink `'3'' does not exist
+[0m[1;31mERROR: source_sink `'4'' does not exist
+[0m[1mtrue.[0m
+
+?- L = [a,bv[12G[K,v[13G[Kc[14G][8G[15G.
+L = [a, b, c].
+
+?- Tail = [b,c[15G][11G[16G.
+Tail = [b, c].
+
+?- L = -[8G[K=[8G[K=[[9G[K[8G[K[a,[10G[K | tail|[17G[K[16G[K[15G[K[14G[K[13G[KTail[17G}[17G[K[17G][8G[18G.
+L = [a|Tail].
+
+?- [a,b,c[[10G[K[10G][4G[11G - [13G[12G[K= [x|[16G[K | [b,c[23G}[23G[K[23G][19G[24G[24G][14G[25G
+|    .
+[1;31mfalse.[0m
+
+?- ?- [a,b,c] = [x | [b,c]]. | [b,[18G[P[[17G[P[[16G[P[[15G[P[[15G[Pb[b,c][19G.[K[15G[1@ab[16G[1@,bb,[18Gc].[K[18G c].[19G|c].[20G c].[21G[c].c][24G].[14G[25G
+[1mtrue.[0m
+
+?- list_memeber(X[17G[K3, [1,3[23G[K2,3,4[[28G[K[28G][20G[29G.[29G[K[29G)[16G[30G.
+[1;31mERROR: Unknown procedure: list_memeber/2 (DWIM could not correct goal)
+[0m?- [list_basics[16G][4G[17G.
+[1;31mERROR: source_sink `list_basics' does not exist
+ERROR: In:
+ERROR:   [22] throw(error(existence_error(source_sink,list_basics),_1814))
+ERROR:   [18] '$resolve_source_path'(list_basics,_1846,[expand(false),...]) at /usr/lib/swi-prolog/boot/init.pl:2318
+ERROR:   [17] '$load_file'(list_basics,user,[expand(false),...]) at /usr/lib/swi-prolog/boot/init.pl:2292
+ERROR:    [9] <user>
+ERROR: 
+ERROR: Note: some frames are missing due to last-call optimization.
+ERROR: Re-run your program in debug mode (:- debug.) to get more detail.
+[0m?- list([8G[K_en[10G[K[9G[Kmemeber[15G[K[14G[K[13G[K[12G[Kber(x[16G[KX, [[19G[K[x[21G][x][20G][K[20GX]][22G)[15G[23G
+|    .
+[1;31mERROR: Unknown procedure: list_member/2 (DWIM could not correct goal)
+[0m?- ?- list_member(X, [X]).[22G.[K[21G.[K[20G.[K[19G.[K[18G.[K[17G.[K[16G.[K[15G.[K[14G.[K[13G.[K[12G.[K[11G.[K[10G.[K[9G.[K[8G.[K[7G.[K[6G.[K?- l.[K?- .[K.?- [Klength([1,2,3[17G][11G[18G[18G)[10G[19G
+|    .
+[1;31mERROR: Unknown procedure: length/1
+ERROR:     However, there are definitions for:
+ERROR:         length/2
+[0m[1;31mfalse.[0m
+
+?- ?- length([1,2,3]).[18G,).[19G3).
+[1mtrue.[0m
+
+?- ?- length([1,2,3],3).[19G).[K[19G2).
+[1;31mfalse.[0m
+
+?- ?- length([1,2,3],2).[21G[K[20G[K[19G[K[18G[K[17G[K[16G[K[15G[K[14G[K[13G[K[12G[K[11G[K[10G[K[9G[K[8G[K[7G[K[6G[K?- l[K?- [Kmemberchk(3, [[[18G[K1,2,3[23G][17G[24G[24G)[13G[25G
+|    .
+[1mtrue.[0m
+
+?- ?- memberchk(3, [1,2,3]).[14G[P,[14G[1@2,
+[1mtrue.[0m
+
+?- findA[8G[Kall(X,memberchk,[23G[K(X, [one,twp,threee[41G[K[40G[K[39G[K[38G[K[37G[K[36G[K[35G[K[34G[K[33G[Kwom[35G[K,thee[[40G[K[39G[K[38G[Kree[[41G[K[41G][27G[42G[42G)[23G[43Gm B[45G[K[44G[43G[K, Bag[48G)[11G[49G.
+Bag = [one].
+
+?- findall(val[14G[K[13G[K[12G[K[11G[K[10G[K[9G[K[8G[K[7G[K[6G[K?- f[K?- [Kmembercg[11G[Khk(X, [one,two,tr[27G[Khree[[32G).
+[1;31mERROR: Syntax error: Operator expected
+ERROR: memberchk(X, [one,two,thre
+ERROR: ** here **
+ERROR: e[) . 
+[0m?- ?- memberchk(X, [one,two,three[).[31G).[K[31G]).[17G[32G
+X = one.
+
+?- member(fool[14G[K,12[16G[K=[16G[K,2,X[19G[K[18G[K[17G[K[16G[K[15G[K[14G[K, [1,2,X,Y[24G][16G[25G[25G)[10G[26G
+|    ,[6G[K.
+X = foo 
+Unknown action:  (h for help)
+Action? 
+Unknown action: [ (h for help)
+Action? 
+Unknown action: A (h for help)
+Action? 
+Unknown action:  (h for help)
+Action? 
+Unknown action: [ (h for help)
+Action? 
+Unknown action: A (h for help)
+Action? 
+Unknown action:  (h for help)
+Action? 
+Unknown action: [ (h for help)
+Action? 
+Unknown action: B (h for help)
+Action? 
+Unknown action:  (h for help)
+Action? 
+Unknown action: [ (h for help)
+Action? 
+Unknown action: B (h for help)
+Action? 
+Unknown action:  (h for help)
+Action? 
+Unknown action: [ (h for help)
+Action? 
+Unknown action: D (h for help)
+Action? 
+Unknown action:  (h for help)
+Action? [1m;[0m
+Y = foo.
+
+?- member(foo, [1,2,3,4[23G[K[22G[K[21G[KX,Y[24G][16G[25G[25G)[10G[26G
+|    .
+X = foo [1m.[0m
+
+?- .;?- .[K?- [K;
+|    .
+[1;31mERROR: Unknown procedure: (;)/0
+ERROR:     However, there are definitions for:
+ERROR:         (;)/2
+[0m[1;31mfalse.[0m
+
+?-  member(foo,[1,2,X,Y[24G][16G[25G[25G)[11G[26G. member(foo,[1,2,X,Y[47G][39G[48G[48G)[34G[49G.?- [Kmember(foo,[1,2,3,[21G[K[20G[KX,Y[[23G[K[23G][15G[24G[24G)[10G[25G.
+X = foo [1m.[0m
+
+?- mmen[7G[Kmber(X,[One{[18G[K[18G][14G[19G[19G)[11G[20G.
+Correct to: "member(X,[One])"? yes
+X = One.
+
+?- 
+|    .
+[1;31m
+ERROR: Stream user_input:253:1 Syntax error: Unexpected end of clause
+[0m?- ,e,[6G[K?- ,[K?- [Kmember(X, pO[15G[K[14G[K[One, [19GTw[20G[Kwo, [23GThree[[29G)[29G[K[28G[K[28G)
+|    .
+[1;31mERROR: Syntax error: Illegal start of term
+ERROR: member(X, [One,Two,Thre
+ERROR: ** here **
+ERROR: e) . 
+[0m?- member(X,[One,Two,Three[[27G[K[27G][13G[28G[28G)[10G[29G
+|    .
+X = One [1m.[0m
+
+?- member(1,[1,2,3[18G[K1,3[[21G[K[21G][13G[22G[22G)[10G[23G
+|    .
+[1mtrue [0m[1m.[0m
+
+?- 
+|    .
+[1;31m
+ERROR: Stream user_input:271:1 Syntax error: Unexpected end of clause
+[0m?- ?- member(1,[1,2,1,3]).[11G[P,[10G[P,[10G[1@Y,[10G[P,[10G[1@(,[11G[1@Y,
+Y = 1 
+Unknown action:  (h for help)
+Action? 
+Unknown action: [ (h for help)
+Action? 
+Unknown action: A (h for help)
+Action? [1m;[0m
+Y = 2 
+Unknown action:  (h for help)
+Action? 
+Unknown action: [ (h for help)
+Action? 
+Unknown action: B (h for help)
+Action? 
+Unknown action:  (h for help)
+Action? 
+Unknown action: [ (h for help)
+Action? 
+Unknown action: A (h for help)
+Action? 
+Unknown action:  (h for help)
+Action? 
+Unknown action:  (h for help)
+Action? 
+Unknown action:  (h for help)
+Action? 
+Unknown action:  (h for help)
+Action? 
+Unknown action:  (h for help)
+Action? 
+Unknown action:  (h for help)
+Action? 
+Unknown action:  (h for help)
+Action? 
+Unknown action:  (h for help)
+Action? 
+Unknown action:  (h for help)
+Action? 
+Unknown action:  (h for help)
+Action? [1;31m
+ERROR: Type error: `character_code' expected, found `-1' (an integer)
+ERROR: In:
+ERROR:   [11] char_code(_12266,-1)
+ERROR:   [10] '$in_reply'(-1,'?h') at /usr/lib/swi-prolog/boot/init.pl:961
+[0m?- ^C
+Action (h for help) ? EOF: exit (status 4)
+[?2004hcmcborr1@remote04:~/projects/i471a/submit/lab6$ racket
+[?2004lWelcome to Racket v7.9 [bc].
+> c> [Kcddr(1[8G[Kp[8G[K[1,2,34[14G[K,4[][17G[K[16G[K])
+#<procedure:cddr>
+; readline-input:1:7: unquote: not in quasiquote
+;   in: (unquote 2)
+; [,bt for context]
+> > cddr([1,2,3,4]))> [1@(c
+; readline-input:2:8: unquote: not in quasiquote
+;   in: (unquote 2)
+; [,bt for context]
+> c> [K(cddr(1,2,3[13G[K[12G[K[11G[K[10G[K[9G[K[8G[K'(1,2,3,4))
+'(,3 ,4)
+> > (cddr'(1,2,3,4))[15G4))[K[15G 4))[13G[P3[13G[1@ 3[11G[P2[11G[1@ 2r[8G[1@ '
+'(3 4)
+> [H}> [H[K|T[[7G[K] = [amv[14G[K[13G[K,v[14G[Kv[14G[Kb,c,d]
+  .
+  G  [K.
+  H  [K^D; readline-input:5:1: read-syntax: end-of-file following `|` in symbol [,bt for
+;   context]
+> ^D
+[?2004hcmcborr1@remote04:~/projects/i471a/submit/lab6$ prolog
+[?2004lWelcome to SWI-Prolog (threaded, 64 bits, version 8.2.4)
+SWI-Prolog comes with ABSOLUTELY NO WARRANTY. This is free software.
+Please run ?- license. for legal details.
+
+For online help and background, visit https://www.swi-prolog.org
+For built-in help, use ?- help(Topic). or ?- apropos(Word).
+
+?- [G||[7G[K[6G[K?- [[KH|T[[8G[K[8G][4G[9G -[10G[K= [a b c d[20G][12G[21G
+|    .
+[1;31mERROR: Syntax error: Operator expected
+ERROR: [H|T] = [a
+ERROR: ** here **
+ERROR:  b c d] . 
+[0m?- ?- [H|T] = [a b c d].[18G, d].[16G[1@, [15G[1@,b[15G[Pb[14G[Pb[14G[1@,b[15G[1@ b
+H = a,
+T = [b, c, d].
+
+?- [H | |[9G[K[8G[7G[K[6G| [7G[6G[K?- [[K?- [KC?- [K[C?- [[K?- [K[TT|[7G[K[6G[K [6G|TT[9G][4G[10G = [T[15G][T]
+|    .
+TT = [].
+
+?- ?- [T|TT] = [T].]?- [[P|?- [[1@_||
+TT = [].
+
+?- .
+[1;31m
+ERROR: Stream user_input:24:1 Syntax error: Unexpected end of clause
+[0m?- ?- [_|TT] = [T].
+TT = [].
+
+?- T?- [KT
+|    /[6G[K.
+[32m% ... 1,000,000 ............ 10,000,000 years later
+% 
+%       >> 42 << (last release gives the question)
+[0m?- [T |[7G[K[6G?- [[KH |T[8G[K[7G[K[6G|T[8G][4G[9G = a[12G[K[a, [15Gv[15G[Kb,c,d[20G][12G[21G
+|    .
+H = a,
+T = [b, c, d].
+
+?- ?- [H|T] = [a,b,c,d].?- [[P|?- [[1@S||T[7G[P][7G[1@A]
+S = a,
+A = [b, c, d].
+
+?- ?- [S|A] = [a,b,c,d].?- [[P|?- [[1@G||A?- [[P|?- [[1@H||A[7G[P][7G[1@T][7G[1@[T[8G[1@]T[]T][8G[PTT[10G[1@] [7G[T][9G[1@|][10G[1@T][11G[1@T]
+H = a,
+T = b,
+TT = [c, d].
+
+?- ?- [H|[T|TT]] = [a,b,c,d].[24G].[K[24G4].[22G,4].[K[22G3,4].[20G[P,[20G[1@2,[18G[P,[18G[1@1,
+H = 1,
+T = 2,
+TT = [3, 4].
+
+?- ^C
+Action (h for help) ? EOF: exit (status 4)
+[?2004hcmcborr1@remote04:~/projects/i471a/submit/lab6$ ls
+[?2004llab6.LOG  lab6-sol.pro
+[?2004hcmcborr1@remote04:~/projects/i471a/submit/lab6$ nano lab6-sol.pro 
+[?2004l[?2004h[?1049h[22;0;0t[1;62r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[60;52H(B[0;7m[ Reading... ](B[m[60;51H(B[0;7m[ Read 4 lines ](B[m[H(B[0;7m  GNU nano 5.4                                         lab6-sol.pro                                                  [1;116H(B[m[61d(B[0;7m^G(B[m Help[61;17H(B[0;7m^O(B[m Write Out    (B[0;7m^W(B[m Where Is     (B[0;7m^K(B[m Cut[61;65H(B[0;7m^T(B[m Execute[81G(B[0;7m^C(B[m Location     (B[0;7mM-U(B[m Undo[62d(B[0;7m^X(B[m Exit[62;17H(B[0;7m^R(B[m Read File    (B[0;7m^\(B[m Replace[49G(B[0;7m^U(B[m Paste[62;65H(B[0;7m^J(B[m Justify[81G(B[0;7m^_(B[m Go To Line   (B[0;7mM-E(B[m Redo[2df(1, 2, z) = f(_, _, X).[3dhead(a, tail(z,B), Y) = head(_ , tail(X,_), _).[4dcons(a, cons(b, cons(c,z))) = cons(_, cons(_, cons(_,X))).[2d[?12l[?25h[?25l[3d[?12l[?25h[?25l[4d[?12l[?25h[?25l[5d[?12l[?25h[?25l[1;69H(B[0;7m*[60d(B[m[K[1;116H[5d[H|[T|TT]] = [1,2,3,4].[6d[?12l[?25h[?25l[60;52H(B[0;7m[ Writing... ](B[m[1;69H(B[0;7m [116G(B[m[60;51H(B[0;7m[ Wrote 5 lines ](B[m[6d[?12l[?25h[?25l[60d[J[62d[?12l[?25h[62;1H[?1049l[23;0;0t[?1l>[?2004l[?2004hcmcborr1@remote04:~/projects/i471a/submit/lab6$ ls
+[?2004llab6.LOG  lab6-sol.pro
+[?2004hcmcborr1@remote04:~/projects/i471a/submit/lab6$ jaj0[K[K[K[Kracket
+[?2004lWelcome to Racket v7.9 [bc].
+l> l> [Kcadd[6G[K> ca[K> c[K> [K(caddr ;[10G[K'(1,2,3,4)'[20G[K)[17G4))[K[17G 4))3 [17G4))[K[17G,4))
+',3
+> > (caddr '(1,2,3,4))> [K^D
+[?2004hcmcborr1@remote04:~/projects/i471a/submit/lab6$ prolog
+[?2004lWelcome to SWI-Prolog (threaded, 64 bits, version 8.2.4)
+SWI-Prolog comes with ABSOLUTELY NO WARRANTY. This is free software.
+Please run ?- license. for legal details.
+
+For online help and background, visit https://www.swi-prolog.org
+For built-in help, use ?- help(Topic). or ?- apropos(Word).
+
+?- [H|T[8G][4G[9G[7G][K[7G[][9G][][8GT]][9G1]][10G|]][11GT]][12G2]][11G[T2]][12G]T2]][11G[][12GT2]][KT2[16G][11G[T2]]|[T2[14G|]]][15GT]]][16G2]]][16G]]][K[16G3]]]]]] = [1,2,3,4[31G][23G[32G.
+H = 1,
+T1 = 2,
+T2 = 3,
+T3 = [4].
+
+?- ^C
+Action (h for help) ? EOF: exit (status 4)
+[?2004hcmcborr1@remote04:~/projects/i471a/submit/lab6$ a[Knano pr[K[Ks[Klab6-sol.pro 
+[?2004l[?2004h[?1049h[22;0;0t[1;62r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[60;52H(B[0;7m[ Reading... ](B[m[60;51H(B[0;7m[ Read 5 lines ](B[m[H(B[0;7m  GNU nano 5.4                                         lab6-sol.pro                                                  [1;116H(B[m[61d(B[0;7m^G(B[m Help[61;17H(B[0;7m^O(B[m Write Out    (B[0;7m^W(B[m Where Is     (B[0;7m^K(B[m Cut[61;65H(B[0;7m^T(B[m Execute[81G(B[0;7m^C(B[m Location     (B[0;7mM-U(B[m Undo[62d(B[0;7m^X(B[m Exit[62;17H(B[0;7m^R(B[m Read File    (B[0;7m^\(B[m Replace[49G(B[0;7m^U(B[m Paste[62;65H(B[0;7m^J(B[m Justify[81G(B[0;7m^_(B[m Go To Line   (B[0;7mM-E(B[m Redo[2df(1, 2, z) = f(_, _, X).[3dhead(a, tail(z,B), Y) = head(_ , tail(X,_), _).[4dcons(a, cons(b, cons(c,z))) = cons(_, cons(_, cons(_,X))).[5d[H|[T|TT]] = [1,2,3,4].[2d[?12l[?25h[?25l[3d[?12l[?25h[?25l[4d[?12l[?25h[?25l[5d[?12l[?25h[?25l[6d[?12l[?25h[?25l[1;69H(B[0;7m*[60d(B[m[K[1;116H[6d[H|[T1|[T2|T3]]] = [1,2,3,4].[7d[?12l[?25h[?25l[60;52H(B[0;7m[ Writing... ](B[m[1;69H(B[0;7m [116G(B[m[60;51H(B[0;7m[ Wrote 6 lines ](B[m[7d[?12l[?25h[?25l[60d[J[62d[?12l[?25h[62;1H[?1049l[23;0;0t[?1l>[?2004l[?2004hcmcborr1@remote04:~/projects/i471a/submit/lab6$ cadr[K[K[K[Kls
+[?2004llab6.LOG  lab6-sol.pro
+[?2004hcmcborr1@remote04:~/projects/i471a/submit/lab6$ c[Kracket
+[?2004lWelcome to Racket v7.9 [bc].
+> (cadr)[8G[K [8G '(pp1[13G[K[12G[K[11G[K[10G[K(1,2[13G[K[12G[K[11G[K(1,2), 3 [19G, 4)
+  )
+',3
+> > (cadr '((1,2), 3, 4)
+  )[A[23G
+
+',3
+> > (cadr '((1,2), 3, 4)
+  ) )[K)[K[A[23G)
+[K[A[23G
+',3
+> > (cadr '((1,2), 3, 4))[19G 4))[K[16G[P [13G[P2[13G[1@ 2
+3
+> ^D
+[?2004hcmcborr1@remote04:~/projects/i471a/submit/lab6$ las
+[?2004lbash: las: command not found
+[?2004hcmcborr1@remote04:~/projects/i471a/submit/lab6$ ls
+[?2004llab6.LOG  lab6-sol.pro
+[?2004hcmcborr1@remote04:~/projects/i471a/submit/lab6$ prolog
+[?2004lWelcome to SWI-Prolog (threaded, 64 bits, version 8.2.4)
+SWI-Prolog comes with ABSOLUTELY NO WARRANTY. This is free software.
+Please run ?- license. for legal details.
+
+For online help and background, visit https://www.swi-prolog.org
+For built-in help, use ?- help(Topic). or ?- apropos(Word).
+
+?- [H|[6G[K?- [[K?- [K[H|T[8G][4G[9G[7G[T][8G]T][]T[8GT][KT[10G][T][9G1]]][10G|]][11Gt]][11G]][K[11GT]][12G2]]]] = [[18G[K[1 2 [22G[21G[K[20G[19G[K[1 2[23G][19G[24G 1[25G[K3 4[28G][18G[29G
+|    .
+[1;31mERROR: Syntax error: Operator expected
+ERROR: [H|[T1|T2]] = [[1 2]
+ERROR: ** here **
+ERROR:  3 4] . 
+[0m?- ?- [H|[T1|T2]] = [[1 2] 3 4].[7G[1@ [[T1|T2]][15G[1@ ][15G[P]T1|T2]T2]] = [[1 [22G[P2[22G[1@,22] [25G[1@,  3[28G, 4]. 4
+H = [1, 2],
+T1 = 3,
+T2 = [4].
+
+?- ^C
+Action (h for help) ? EOF: exit (status 4)
+[?2004hcmcborr1@remote04:~/projects/i471a/submit/lab6$ ls
+[?2004llab6.LOG  lab6-sol.pro
+[?2004hcmcborr1@remote04:~/projects/i471a/submit/lab6$ nsano[K[K[K[Kano lab6-sol.pro 
+[?2004l[?2004h[?1049h[22;0;0t[1;62r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[60;52H(B[0;7m[ Reading... ](B[m[60;51H(B[0;7m[ Read 6 lines ](B[m[H(B[0;7m  GNU nano 5.4                                         lab6-sol.pro                                                  [1;116H(B[m[61d(B[0;7m^G(B[m Help[61;17H(B[0;7m^O(B[m Write Out    (B[0;7m^W(B[m Where Is     (B[0;7m^K(B[m Cut[61;65H(B[0;7m^T(B[m Execute[81G(B[0;7m^C(B[m Location     (B[0;7mM-U(B[m Undo[62d(B[0;7m^X(B[m Exit[62;17H(B[0;7m^R(B[m Read File    (B[0;7m^\(B[m Replace[49G(B[0;7m^U(B[m Paste[62;65H(B[0;7m^J(B[m Justify[81G(B[0;7m^_(B[m Go To Line   (B[0;7mM-E(B[m Redo[2df(1, 2, z) = f(_, _, X).[3dhead(a, tail(z,B), Y) = head(_ , tail(X,_), _).[4dcons(a, cons(b, cons(c,z))) = cons(_, cons(_, cons(_,X))).[5d[H|[T|TT]] = [1,2,3,4].[6d[H|[T1|[T2|T3]]] = [1,2,3,4].[2d[?12l[?25h[?25l[3d[?12l[?25h[?25l[4d[?12l[?25h[?25l[5d[?12l[?25h[?25l[6d[?12l[?25h[?25l[7d[?12l[?25h[?25l[1;69H(B[0;7m*[60d(B[m[K[1;116H[7d[H|[T1|T2]] = [[1 2] 3 4][8d[?12l[?25h[?25l[60;52H(B[0;7m[ Writing... ](B[m[1;69H(B[0;7m [116G(B[m[60;51H(B[0;7m[ Wrote 7 lines ](B[m[8d[?12l[?25h[?25l[60d[J[62d[?12l[?25h[62;1H[?1049l[23;0;0t[?1l>[?2004l[?2004hcmcborr1@remote04:~/projects/i471a/submit/lab6$ nano lab6-sol.pro ls[Knano lab6-sol.pro [Kprolog
+[?2004lWelcome to SWI-Prolog (threaded, 64 bits, version 8.2.4)
+SWI-Prolog comes with ABSOLUTELY NO WARRANTY. This is free software.
+Please run ?- license. for legal details.
+
+For online help and background, visit https://www.swi-prolog.org
+For built-in help, use ?- help(Topic). or ?- apropos(Word).
+
+?- N = 1 + 2.
+N = 1+2.
+
+?- N is 1 + 2.
+N = 3.
+
+?- N is 1 + 2*3.
+N = 7.
+
+?- 
+|    
+|    .
+[1;31m
+ERROR: Stream user_input:18:1 Syntax error: Unexpected end of clause
+[0m?- 5 is 7 mod 2.
+[1;31mfalse.[0m
+
+?- X is 7 mod 2.
+X = 1.
+
+?- X is -7 mod 3.
+X = 2.
+
+?- N is sqrt(4[15G)(4).
+N = 2.0.
+
+?- N = pi.
+N = pi.
+
+?- N is pi.
+N = 3.141592653589793.
+
+?- pi.
+[1;31mERROR: Unknown procedure: pi/0 (DWIM could not correct goal)
+[0m?- pi+[6G[K + 2.
+[1;31mERROR: Unknown procedure: (+)/2 (DWIM could not correct goal)
+[0m?- N is pi + 2.
+N = 5.141592653589793.
+
+?- [?- [K^D
+[32m% halt
+[0m[?2004hcmcborr1@remote04:~/projects/i471a/submit/lab6$ ls
+[?2004llab6.LOG  lab6-sol.pro
+[?2004hcmcborr1@remote04:~/projects/i471a/submit/lab6$ nano lab6-sol.pro 
+[?2004l[?2004h[?1049h[22;0;0t[1;62r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[60;52H(B[0;7m[ Reading... ](B[m[60;51H(B[0;7m[ Read 7 lines ](B[m[H(B[0;7m  GNU nano 5.4                                         lab6-sol.pro                                                  [1;116H(B[m[61d(B[0;7m^G(B[m Help[61;17H(B[0;7m^O(B[m Write Out    (B[0;7m^W(B[m Where Is     (B[0;7m^K(B[m Cut[61;65H(B[0;7m^T(B[m Execute[81G(B[0;7m^C(B[m Location     (B[0;7mM-U(B[m Undo[62d(B[0;7m^X(B[m Exit[62;17H(B[0;7m^R(B[m Read File    (B[0;7m^\(B[m Replace[49G(B[0;7m^U(B[m Paste[62;65H(B[0;7m^J(B[m Justify[81G(B[0;7m^_(B[m Go To Line   (B[0;7mM-E(B[m Redo[2df(1, 2, z) = f(_, _, X).[3dhead(a, tail(z,B), Y) = head(_ , tail(X,_), _).[4dcons(a, cons(b, cons(c,z))) = cons(_, cons(_, cons(_,X))).[5d[H|[T|TT]] = [1,2,3,4].[6d[H|[T1|[T2|T3]]] = [1,2,3,4].[7d[H|[T1|T2]] = [[1 2] 3 4][2d[?12l[?25h[?25l[3d[?12l[?25h[?25l[4d[?12l[?25h[?25l[5d[?12l[?25h[?25l[6d[?12l[?25h[?25l[7d[?12l[?25h[?25l[8d[?12l[?25h[?25l[9d[?12l[?25h[?25l[?12l[?25h[?25l[A[?12l[?25h[?25l[9d[?12l[?25h[?25l[60;51H (B[0;7m[ Writing... ](B[m[K[1;116H[60;51H(B[0;7m[ Wrote 7 lines ](B[m[9d[?12l[?25h[?25l[60d[J[62d[?12l[?25h[62;1H[?1049l[23;0;0t[?1l>[?2004l[?2004hcmcborr1@remote04:~/projects/i471a/submit/lab6$ prolog
+[?2004lWelcome to SWI-Prolog (threaded, 64 bits, version 8.2.4)
+SWI-Prolog comes with ABSOLUTELY NO WARRANTY. This is free software.
+Please run ?- license. for legal details.
+
+For online help and background, visit https://www.swi-prolog.org
+For built-in help, use ?- help(Topic). or ?- apropos(Word).
+
+?- [fi[6G[K?- [[K?- [K[sums[8G[K[7G[K[6G[K?- [[Kquadratic-roots(A,V[23G[KB,C,A[27G[KZ[[28G[K[28G)[20G[29G.proro[33G][4G[34G
+|    .
+[1;31mERROR: Type error: `dict' expected, found `roots(_17202,_17204,_17206,_17208)' (a compound)
+ERROR: In:
+ERROR:   [13] throw(error(type_error(dict,...),_17258))
+ERROR:   [11] '$dicts':'.'(roots(_17302,_17304,_17306,_17308),pro,_17298) at /usr/lib/swi-prolog/boot/dicts.pl:46
+ERROR:   [10] '<meta-call>'(user:user: ...) <foreign>
+ERROR:    [9] <user>
+ERROR: 
+ERROR: Note: some frames are missing due to last-call optimization.
+ERROR: Re-run your program in debug mode (:- debug.) to get more detail.
+[0m?- [quadratic-rp[16G[Koots.rp[22G[K[21G[Kpro[24G)[24G[K[24G][4G[25G[24G']?- [[1@'q
+|    .
+[1;31mERROR: source_sink `'quadratic-roots.pro'' does not exist
+ERROR: In:
+ERROR:   [22] throw(error(existence_error(source_sink,'quadratic-roots.pro'),_19746))
+ERROR:   [18] '$resolve_source_path'('quadratic-roots.pro',_19778,[expand(false),...]) at /usr/lib/swi-prolog/boot/init.pl:2318
+ERROR:   [17] '$load_file'('quadratic-roots.pro',user,[expand(false),...]) at /usr/lib/swi-prolog/boot/init.pl:2292
+ERROR:    [9] <user>
+ERROR: 
+ERROR: Note: some frames are missing due to last-call optimization.
+ERROR: Re-run your program in debug mode (:- debug.) to get more detail.
+[0m?- ?- ['quadratic-roots.pro'].[25G].[K?- [[Pq
+[1;31mERROR: Type error: `dict' expected, found `roots' (an atom)
+ERROR: In:
+ERROR:   [13] throw(error(type_error(dict,roots),_21336))
+ERROR:   [10] '<meta-call>'(user:user: ...) <foreign>
+ERROR:    [9] <user>
+ERROR: 
+ERROR: Note: some frames are missing due to last-call optimization.
+ERROR: Re-run your program in debug mode (:- debug.) to get more detail.
+[0m?- ?- [quadratic-roots.pro].[14G[Pr[14G[1@_r
+[1;31mERROR: Type error: `dict' expected, found `quadratic_roots' (an atom)
+ERROR: In:
+ERROR:   [13] throw(error(type_error(dict,quadratic_roots),_22864))
+ERROR:   [10] '<meta-call>'(user:user: ...) <foreign>
+ERROR:    [9] <user>
+ERROR: 
+ERROR: Note: some frames are missing due to last-call optimization.
+ERROR: Re-run your program in debug mode (:- debug.) to get more detail.
+[0m?- ?- [quadratic_roots.pro].[19G[P.[18G[P.[17G[P.[16G[P.[15G[P.[14G[P.[13G[P.[12G[P.[11G[P.[10G[P.[9G[P.[8G[P.[7G[P.[6G[P.?- [[P.?- [[1@l.[6G[1@a.[7G[1@b.[8G[8G[1@6.[9G[1@-.[10G[1@s.[11G[1@o.[12G[1@l.
+[1;31mERROR: Type error: `dict' expected, found `sol' (an atom)
+ERROR: In:
+ERROR:   [13] throw(error(type_error(dict,sol),_29076))
+ERROR:   [10] '<meta-call>'(user:user: ...) <foreign>
+ERROR:    [9] <user>
+ERROR: 
+ERROR: Note: some frames are missing due to last-call optimization.
+ERROR: Re-run your program in debug mode (:- debug.) to get more detail.
+[0m?- ^D
+[32m% halt
+[0m[?2004hcmcborr1@remote04:~/projects/i471a/submit/lab6$ ls
+[?2004llab6.LOG  lab6-sol.pro
+[?2004hcmcborr1@remote04:~/projects/i471a/submit/lab6$ ['lab6-sol.pro'[[K].
+[?2004lbash: [lab6-sol.pro].: command not found
+[?2004hcmcborr1@remote04:~/projects/i471a/submit/lab6$ prolog
+[?2004lWelcome to SWI-Prolog (threaded, 64 bits, version 8.2.4)
+SWI-Prolog comes with ABSOLUTELY NO WARRANTY. This is free software.
+Please run ?- license. for legal details.
+
+For online help and background, visit https://www.swi-prolog.org
+For built-in help, use ?- help(Topic). or ?- apropos(Word).
+
+?- pl?- p[K?- [K[?- [';ab6[9G[K[8G[K[7G[K[6G[Ka[6G[Klab6-sol.pro[18G'[5G[19G[[19G[K[19G][4G[20G.
+[31mWarning: /home/cmcborr1/projects/i471a/submit/lab6/lab6-sol.pro:1:
+Warning:    Singleton variables: [X]
+[0m[1;31mERROR: /home/cmcborr1/projects/i471a/submit/lab6/lab6-sol.pro:1:
+ERROR:    No permission to modify static procedure `(=)/2'
+[0m[31mWarning: /home/cmcborr1/projects/i471a/submit/lab6/lab6-sol.pro:2:
+Warning:    Singleton variables: [B,Y,X]
+[0m[1;31mERROR: /home/cmcborr1/projects/i471a/submit/lab6/lab6-sol.pro:2:
+ERROR:    No permission to modify static procedure `(=)/2'
+[0m[31mWarning: /home/cmcborr1/projects/i471a/submit/lab6/lab6-sol.pro:3:
+Warning:    Singleton variables: [X]
+[0m[1;31mERROR: /home/cmcborr1/projects/i471a/submit/lab6/lab6-sol.pro:3:
+ERROR:    No permission to modify static procedure `(=)/2'
+[0m[31mWarning: /home/cmcborr1/projects/i471a/submit/lab6/lab6-sol.pro:4:
+Warning:    Singleton variables: [H,T,TT]
+[0m[1;31mERROR: /home/cmcborr1/projects/i471a/submit/lab6/lab6-sol.pro:4:
+ERROR:    No permission to modify static procedure `(=)/2'
+[0m[31mWarning: /home/cmcborr1/projects/i471a/submit/lab6/lab6-sol.pro:5:
+Warning:    Singleton variables: [H,T1,T2,T3]
+[0m[1;31mERROR: /home/cmcborr1/projects/i471a/submit/lab6/lab6-sol.pro:5:
+ERROR:    No permission to modify static procedure `(=)/2'
+[0m[1;31mERROR: /home/cmcborr1/projects/i471a/submit/lab6/lab6-sol.pro:7:0: Syntax error: Unexpected end of file
+[0m[1mtrue.[0m
+
+?- ^D
+[32m% halt
+[0m[?2004hcmcborr1@remote04:~/projects/i471a/submit/lab6$ nano p[Klab6-[K-sol.pro s[K
+[?2004l[?2004h[?1049h[22;0;0t[1;62r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[60;52H(B[0;7m[ Reading... ](B[m[60;51H(B[0;7m[ Read 7 lines ](B[m[H(B[0;7m  GNU nano 5.4                                         lab6-sol.pro                                                  [1;116H(B[m[61d(B[0;7m^G(B[m Help[61;17H(B[0;7m^O(B[m Write Out    (B[0;7m^W(B[m Where Is     (B[0;7m^K(B[m Cut[61;65H(B[0;7m^T(B[m Execute[81G(B[0;7m^C(B[m Location     (B[0;7mM-U(B[m Undo[62d(B[0;7m^X(B[m Exit[62;17H(B[0;7m^R(B[m Read File    (B[0;7m^\(B[m Replace[49G(B[0;7m^U(B[m Paste[62;65H(B[0;7m^J(B[m Justify[81G(B[0;7m^_(B[m Go To Line   (B[0;7mM-E(B[m Redo[2df(1, 2, z) = f(_, _, X).[3dhead(a, tail(z,B), Y) = head(_ , tail(X,_), _).[4dcons(a, cons(b, cons(c,z))) = cons(_, cons(_, cons(_,X))).[5d[H|[T|TT]] = [1,2,3,4].[6d[H|[T1|[T2|T3]]] = [1,2,3,4].[7d[H|[T1|T2]] = [[1 2] 3 4][2d[?12l[?25h[?25l[3d[?12l[?25h[?25l[4d[?12l[?25h[?25l[5d[?12l[?25h[?25l[6d[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[3d[?12l[?25h[?25l[4d[?12l[?25h[?25l[5d[?12l[?25h[?25l[6d[?12l[?25h[?25l[7d[?12l[?25h[?25l[8d[?12l[?25h[?25l[9d[?12l[?25h[?25l[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[60d[J[62d[?12l[?25h[62;1H[?1049l[23;0;0t[?1l>[?2004l[?2004hcmcborr1@remote04:~/projects/i471a/submit/lab6$ nano lab6-sol.pro [12Pprolognano lab6-sol.pro 
+[?2004l[?2004h[?1049h[22;0;0t[1;62r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[60;52H(B[0;7m[ Reading... ](B[m[60;51H(B[0;7m[ Read 7 lines ](B[m[H(B[0;7m  GNU nano 5.4                                         lab6-sol.pro                                                  [1;116H(B[m[61d(B[0;7m^G(B[m Help[61;17H(B[0;7m^O(B[m Write Out    (B[0;7m^W(B[m Where Is     (B[0;7m^K(B[m Cut[61;65H(B[0;7m^T(B[m Execute[81G(B[0;7m^C(B[m Location     (B[0;7mM-U(B[m Undo[62d(B[0;7m^X(B[m Exit[62;17H(B[0;7m^R(B[m Read File    (B[0;7m^\(B[m Replace[49G(B[0;7m^U(B[m Paste[62;65H(B[0;7m^J(B[m Justify[81G(B[0;7m^_(B[m Go To Line   (B[0;7mM-E(B[m Redo[2df(1, 2, z) = f(_, _, X).[3dhead(a, tail(z,B), Y) = head(_ , tail(X,_), _).[4dcons(a, cons(b, cons(c,z))) = cons(_, cons(_, cons(_,X))).[5d[H|[T|TT]] = [1,2,3,4].[6d[H|[T1|[T2|T3]]] = [1,2,3,4].[7d[H|[T1|T2]] = [[1 2] 3 4][2d[?12l[?25h[?25l[3d[?12l[?25h[?25l[4d[?12l[?25h[?25l[5d[?12l[?25h[?25l[6d[?12l[?25h[?25l[7d[?12l[?25h[?25l[8d[?12l[?25h[?25l[9d[?12l[?25h[?25l[60;51H (B[0;7m[ Writing... ](B[m[K[1;116H[60;51H(B[0;7m[ Wrote 7 lines ](B[m[9d[?12l[?25h[?25l[60d[J[62d[?12l[?25h[62;1H[?1049l[23;0;0t[?1l>[?2004l[?2004hcmcborr1@remote04:~/projects/i471a/submit/lab6$ nano lab6-sol.pro [Kprolog
+[?2004lWelcome to SWI-Prolog (threaded, 64 bits, version 8.2.4)
+SWI-Prolog comes with ABSOLUTELY NO WARRANTY. This is free software.
+Please run ?- license. for legal details.
+
+For online help and background, visit https://www.swi-prolog.org
+For built-in help, use ?- help(Topic). or ?- apropos(Word).
+
+?- ?- ['lab6-sol.pro'].?- [[P[17G].[K?- [[1@'[18G'].
+[31mWarning: /home/cmcborr1/projects/i471a/submit/lab6/lab6-sol.pro:1:
+Warning:    Singleton variables: [X]
+[0m[1;31mERROR: /home/cmcborr1/projects/i471a/submit/lab6/lab6-sol.pro:1:
+ERROR:    No permission to modify static procedure `(=)/2'
+[0m[31mWarning: /home/cmcborr1/projects/i471a/submit/lab6/lab6-sol.pro:2:
+Warning:    Singleton variables: [B,Y,X]
+[0m[1;31mERROR: /home/cmcborr1/projects/i471a/submit/lab6/lab6-sol.pro:2:
+ERROR:    No permission to modify static procedure `(=)/2'
+[0m[31mWarning: /home/cmcborr1/projects/i471a/submit/lab6/lab6-sol.pro:3:
+Warning:    Singleton variables: [X]
+[0m[1;31mERROR: /home/cmcborr1/projects/i471a/submit/lab6/lab6-sol.pro:3:
+ERROR:    No permission to modify static procedure `(=)/2'
+[0m[31mWarning: /home/cmcborr1/projects/i471a/submit/lab6/lab6-sol.pro:4:
+Warning:    Singleton variables: [H,T,TT]
+[0m[1;31mERROR: /home/cmcborr1/projects/i471a/submit/lab6/lab6-sol.pro:4:
+ERROR:    No permission to modify static procedure `(=)/2'
+[0m[31mWarning: /home/cmcborr1/projects/i471a/submit/lab6/lab6-sol.pro:5:
+Warning:    Singleton variables: [H,T1,T2,T3]
+[0m[1;31mERROR: /home/cmcborr1/projects/i471a/submit/lab6/lab6-sol.pro:5:
+ERROR:    No permission to modify static procedure `(=)/2'
+[0m[1;31mERROR: /home/cmcborr1/projects/i471a/submit/lab6/lab6-sol.pro:7:0: Syntax error: Unexpected end of file
+[0m[1mtrue.[0m
+
+?- ^D
+[32m% halt
+[0m[?2004hcmcborr1@remote04:~/projects/i471a/submit/lab6$ ls
+[?2004llab6.LOG  lab6-sol.pro
+[?2004hcmcborr1@remote04:~/projects/i471a/submit/lab6$ nano quadratic [K_roots.proi[K[Ko
+[?2004l[?2004h[?1049h[22;0;0t[1;62r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[60;53H(B[0;7m[ New File ](B[m[H(B[0;7m  GNU nano 5.4                                     quadratic_roots.pro                                               [1;116H(B[m[61d(B[0;7m^G(B[m Help[61;17H(B[0;7m^O(B[m Write Out    (B[0;7m^W(B[m Where Is     (B[0;7m^K(B[m Cut[61;65H(B[0;7m^T(B[m Execute[81G(B[0;7m^C(B[m Location     (B[0;7mM-U(B[m Undo[62d(B[0;7m^X(B[m Exit[62;17H(B[0;7m^R(B[m Read File    (B[0;7m^\(B[m Replace[49G(B[0;7m^U(B[m Paste[62;65H(B[0;7m^J(B[m Justify[81G(B[0;7m^_(B[m Go To Line   (B[0;7mM-E(B[m Redo[2d[?12l[?25h[?25l[60;52H(B[0;7m[ Writing... ](B[m[1;116H[60;51H(B[0;7m[ Wrote 0 lines ](B[m[2d[?12l[?25h[?25l[60d[J[62d[?12l[?25h[62;1H[?1049l[23;0;0t[?1l>[?2004l[?2004hcmcborr1@remote04:~/projects/i471a/submit/lab6$ prolog
+[?2004lWelcome to SWI-Prolog (threaded, 64 bits, version 8.2.4)
+SWI-Prolog comes with ABSOLUTELY NO WARRANTY. This is free software.
+Please run ?- license. for legal details.
+
+For online help and background, visit https://www.swi-prolog.org
+For built-in help, use ?- help(Topic). or ?- apropos(Word).
+
+?- [?- ['quadratic_roots[[21G[K[21G'[5G[22G[21G[K[20G[Ks.pro[25G'[5G[26G[26G][4G[27G
+|    .
+[1mtrue.[0m
+
+?- ?- ['quadratic_roots.pro'].[6G[7Plab6-sol[21G?- [[P[17G].[K?- [[7@quadratic_roots[26G[14G-[26G?- [[1@'[25G'].?- [[P[20G(A,B,C,Z).pro].?- N is pi + 2.[K?- [quadratic-roots(A,B,C,Z).pro].?- [[1@'[21G.pro'].[K?- [[P[24G].[K[14G_[26G?- [[7Plab6-sol[19G
+[1;31mERROR: Type error: `dict' expected, found `sol' (an atom)
+ERROR: In:
+ERROR:   [13] throw(error(type_error(dict,sol),_18890))
+ERROR:   [11] '$dicts':'.'(sol,pro,_18930) at /usr/lib/swi-prolog/boot/dicts.pl:46
+ERROR:   [10] '<meta-call>'(user:user: ...) <foreign>
+ERROR:    [9] <user>
+ERROR: 
+ERROR: Note: some frames are missing due to last-call optimization.
+ERROR: Re-run your program in debug mode (:- debug.) to get more detail.
+[0m?- ^D
+[32m% halt
+[0m[?2004hcmcborr1@remote04:~/projects/i471a/submit/lab6$ ls
+[?2004llab6.LOG  lab6-sol.pro	quadratic_roots.pro
+[?2004hcmcborr1@remote04:~/projects/i471a/submit/lab6$ ann[K[K[Knano quadratic_roots.pro 
+[?2004l[?2004h[?1049h[22;0;0t[1;62r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[60;52H(B[0;7m[ Reading... ](B[m[60;51H(B[0;7m[ Read 0 lines ](B[m[H(B[0;7m  GNU nano 5.4                                     quadratic_roots.pro                                               [1;116H(B[m[61d(B[0;7m^G(B[m Help[61;17H(B[0;7m^O(B[m Write Out    (B[0;7m^W(B[m Where Is     (B[0;7m^K(B[m Cut[61;65H(B[0;7m^T(B[m Execute[81G(B[0;7m^C(B[m Location     (B[0;7mM-U(B[m Undo[62d(B[0;7m^X(B[m Exit[62;17H(B[0;7m^R(B[m Read File    (B[0;7m^\(B[m Replace[49G(B[0;7m^U(B[m Paste[62;65H(B[0;7m^J(B[m Justify[81G(B[0;7m^_(B[m Go To Line   (B[0;7mM-E(B[m Redo[2d[?12l[?25h[?25l[1;72H(B[0;7m*[116G(B[m[2dD[?12l[?25h[?25li[?12l[?25h[?25ls[?12l[?25h[?25lc[?12l[?25h[?25lr[?12l[?25h[?25l [?12l[?25h[?25li[?12l[?25h[?25ls[?12l[?25h[?25l [?12l[?25h[?25l[?12l[?25h[?25l [?12l[?25h[?25l [?12l[?25h[?25l[?12l[?25h[?25l [?12l[?25h[?25l [?12l[?25h[?25l [?12l[?25h[?25l [?12l[?25h[?25l[K[?12l[?25h[?25lq[?12l[?25h[?25lu[?12l[?25h[?25la[?12l[?25h[?25ld[?12l[?25h[?25lr[?12l[?25h[?25la[?12l[?25h[?25li[?12l[?25h[?25lt[60d[K[2;9H[?12l[?25h[?25l [?12l[?25h[?25l [?12l[?25h[?25l [?12l[?25h[?25lt[?12l[?25h[?25l [?12l[?25h[?25la[?12l[?25h[?25lt[?12l[?25h[?25li[?12l[?25h[?25lc[?12l[?25h[?25l [?12l[?25h[?25l[?12l[?25h[?25l_[?12l[?25h[?25lr[?12l[?25h[?25lo[?12l[?25h[?25lo[?12l[?25h[?25lt[?12l[?25h[?25ls[?12l[?25h[?25l([?12l[?25h[?25lQ[?12l[?25h[?25l [?12l[?25h[?25lA[?12l[?25h[?25l,[?12l[?25h[?25lC[?12l[?25h[?25l [?12l[?25h[?25lB[?12l[?25h[?25l,[?12l[?25h[?25lC[?12l[?25h[?25l,[?12l[?25h[?25lZ[?12l[?25h[?25lz[?12l[?25h[?25l [?12l[?25h[?25l [?12l[?25h[?25lz[?12l[?25h[?25l)[?12l[?25h[?25l[3d[?12l[?25h[?25l[3;9H[?12l[?25h[?25ln[?12l[?25h[?25la[?12l[?25h[?25lt[?12l[?25h[?25lu[?12l[?25h[?25lr[?12l[?25h[?25la[?12l[?25h[?25ll[?12l[?25h[?25l [?12l[?25h[?25l [?12l[?25h[?25l [?12l[?25h[?25l [?12l[?25h[?25l [?12l[?25h[?25l [?12l[?25h[?25l [?12l[?25h[?25lA[?12l[?25h[?25l [?12l[?25h[?25lA[?12l[?25h[?25l [?12l[?25h[?25l[60;52H(B[0;7m[ Writing... ](B[m[1;72H(B[0;7m [116G(B[m[60;51H(B[0;7m[ Wrote 2 lines ](B[m[3;9H[?12l[?25h[?25l[60d[J[62d[?12l[?25h[62;1H[?1049l[23;0;0t[?1l>[?2004l[?2004hcmcborr1@remote04:~/projects/i471a/submit/lab6$ nano quadratic_roots.pro 
+[?2004l[?2004h[?1049h[22;0;0t[1;62r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[60;52H(B[0;7m[ Reading... ](B[m[60;51H(B[0;7m[ Read 2 lines ](B[m[H(B[0;7m  GNU nano 5.4                                     quadratic_roots.pro                                               [1;116H(B[m[61d(B[0;7m^G(B[m Help[61;17H(B[0;7m^O(B[m Write Out    (B[0;7m^W(B[m Where Is     (B[0;7m^K(B[m Cut[61;65H(B[0;7m^T(B[m Execute[81G(B[0;7m^C(B[m Location     (B[0;7mM-U(B[m Undo[62d(B[0;7m^X(B[m Exit[62;17H(B[0;7m^R(B[m Read File    (B[0;7m^\(B[m Replace[49G(B[0;7m^U(B[m Paste[62;65H(B[0;7m^J(B[m Justify[81G(B[0;7m^_(B[m Go To Line   (B[0;7mM-E(B[m Redo[2dquadratic_roots(A,B,C,z)[?12l[?25h[?25l[60;51H (B[0;7m[ Writing... ](B[m[K[1;116H[60;51H(B[0;7m[ Wrote 2 lines ](B[m[2d[?12l[?25h[?25l[60d[J[62d[?12l[?25h[62;1H[?1049l[23;0;0t[?1l>[?2004l[?2004hcmcborr1@remote04:~/projects/i471a/submit/lab6$ nano quadratic_roots.pro [Knano quadratic_roots.pro 
+[?2004l[?2004h[?1049h[22;0;0t[1;62r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[60;52H(B[0;7m[ Reading... ](B[m[60;51H(B[0;7m[ Read 2 lines ](B[m[H(B[0;7m  GNU nano 5.4                                     quadratic_roots.pro                                               [1;116H(B[m[61d(B[0;7m^G(B[m Help[61;17H(B[0;7m^O(B[m Write Out    (B[0;7m^W(B[m Where Is     (B[0;7m^K(B[m Cut[61;65H(B[0;7m^T(B[m Execute[81G(B[0;7m^C(B[m Location     (B[0;7mM-U(B[m Undo[62d(B[0;7m^X(B[m Exit[62;17H(B[0;7m^R(B[m Read File    (B[0;7m^\(B[m Replace[49G(B[0;7m^U(B[m Paste[62;65H(B[0;7m^J(B[m Justify[81G(B[0;7m^_(B[m Go To Line   (B[0;7mM-E(B[m Redo[2dquadratic_roots(A,B,C,z)[?12l[?25h[?25l[?12l[?25h[?25l[3d[?12l[?25h[?25l[1;72H(B[0;7m*[116G(B[m[3;9H[?12l[?25h[?25l[41m [49m(B[m[?12l[?25h[?25l[41m [49m(B[m[?12l[?25h[?25l (B[m[?12l[?25h[?25l[16G[1K[9G(B[m[?12l[?25h[?25l[?12l[?25h[?25l[61;17H[23X[61;40H(B[0;7mM-F(B[m New Buffer [61;65H[14X[61;79H(B[0;7m^X(B[m Execute Command[K[62;2H(B[0;7mC(B[m Cancel[17G[23X[62;40H(B[0;7mM-N(B[m No Conversion[62;65H[14X[62;79H(B[0;7m^T(B[m Browse[K[60d(B[0;7mFile to insert [from ./]:                                                                                            [60;27H(B[m[?12l[?25h[?25l[?12l[?25h[?25l[60;52H[1K (B[0;7m[ Cancelled ](B[m[K[61;17H(B[0;7m^O(B[m Write Out    (B[0;7m^W(B[m Where Is     (B[0;7m^K(B[m Cut[61;65H(B[0;7m^T(B[m Execute      (B[0;7m^C(B[m Location     (B[0;7mM-U(B[m Undo[62;2H(B[0;7mX(B[m Exit  [17G(B[0;7m^R(B[m Read File    (B[0;7m^\(B[m Replace      (B[0;7m^U(B[m Paste[62;65H(B[0;7m^J(B[m Justify      (B[0;7m^_(B[m Go To Line   (B[0;7mM-E(B[m Redo[3d[?12l[?25h[?25l[3;9H[?12l[?25h[?25lx[?12l[?25h[?25l1[?12l[?25h[?25l[41m [49m(B[m[?12l[?25h[?25l i[?12l[?25h[?25ls[?12l[?25h[?25l[41m [49m(B[m[?12l[?25h[?25l (B[m[?12l[?25h[?25l[41m [49m(B[m[?12l[?25h[?25l d[?12l[?25h[?25l[41m [49m (B[m[?12l[?25h[?25l -[?12l[?25h[?25lb[?12l[?25h[?25lc[?12l[?25h[?25l (B[m[?12l[?25h[?25l (B[m[?12l[?25h[?25l[41m [49m (B[m[?12l[?25h[?25l[41m [49m(B[m[?12l[?25h[?25l (B[m[?12l[?25h[?25l -[?12l[?25h[?25lB[?12l[?25h[?25lV[?12l[?25h[?25l (B[m[?12l[?25h[?25l[41m [49m(B[m[?12l[?25h[?25l (B[m[?12l[?25h[?25l[41m [60d[49m(B[m[K[3;18H[?12l[?25h[?25l[60;52H(B[0;7m[ Writing... ](B[m[1;72H(B[0;7m [116G(B[m[60;51H(B[0;7m[ Wrote 2 lines ](B[m[3;18H[?12l[?25h[?25l[60d[J[62d[?12l[?25h[62;1H[?1049l[23;0;0t[?1l>[?2004l[?2004hcmcborr1@remote04:~/projects/i471a/submit/lab6$ nano pro[K[K[K[K[K[K[K[Kprolog
+[?2004lWelcome to SWI-Prolog (threaded, 64 bits, version 8.2.4)
+SWI-Prolog comes with ABSOLUTELY NO WARRANTY. This is free software.
+Please run ?- license. for legal details.
+
+For online help and background, visit https://www.swi-prolog.org
+For built-in help, use ?- help(Topic). or ?- apropos(Word).
+
+?- x is -2 [11G  [12G+ sqrt [18G([19G)()[19G5)))[20G[K
+|    ^D[1;31mERROR: Stream user_input:7:17 Syntax error: Unexpected end of file
+[0m?- ?- [lab6-sol.pro].?- [K^D
+[32m% halt
+[0m[?2004hcmcborr1@remote04:~/projects/i471a/submit/lab6$ nano pro[K[K[Ka[Klab6-sol.pro 
+[?2004l[?2004h[?1049h[22;0;0t[1;62r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[60;52H(B[0;7m[ Reading... ](B[m[60;51H(B[0;7m[ Read 7 lines ](B[m[H(B[0;7m  GNU nano 5.4                                         lab6-sol.pro                                                  [1;116H(B[m[61d(B[0;7m^G(B[m Help[61;17H(B[0;7m^O(B[m Write Out    (B[0;7m^W(B[m Where Is     (B[0;7m^K(B[m Cut[61;65H(B[0;7m^T(B[m Execute[81G(B[0;7m^C(B[m Location     (B[0;7mM-U(B[m Undo[62d(B[0;7m^X(B[m Exit[62;17H(B[0;7m^R(B[m Read File    (B[0;7m^\(B[m Replace[49G(B[0;7m^U(B[m Paste[62;65H(B[0;7m^J(B[m Justify[81G(B[0;7m^_(B[m Go To Line   (B[0;7mM-E(B[m Redo[2df(1, 2, z) = f(_, _, X).[3dhead(a, tail(z,B), Y) = head(_ , tail(X,_), _).[4dcons(a, cons(b, cons(c,z))) = cons(_, cons(_, cons(_,X))).[5d[H|[T|TT]] = [1,2,3,4].[6d[H|[T1|[T2|T3]]] = [1,2,3,4].[7d[H|[T1|T2]] = [[1 2] 3 4][2d[?12l[?25h[?25l[3d[?12l[?25h[?25l[4d[?12l[?25h[?25l[5d[?12l[?25h[?25l[6d[?12l[?25h[?25l[60d[J[62d[?12l[?25h[62;1H[?1049l[23;0;0t[?1l>[?2004l[?2004hcmcborr1@remote04:~/projects/i471a/submit/lab6$ nano lab6-sol.pro [12Pprolognano lab6-sol.pro [Knano lab6-sol.pro [K[K[K[K[K[K[K[K[K[K[K[K[K[K S[Ks[Kquadratic_roots.pro 
+[?2004l[?2004h[?1049h[22;0;0t[1;62r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[60;52H(B[0;7m[ Reading... ](B[m[60;51H(B[0;7m[ Read 2 lines ](B[m[H(B[0;7m  GNU nano 5.4                                     quadratic_roots.pro                                               [1;116H(B[m[61d(B[0;7m^G(B[m Help[61;17H(B[0;7m^O(B[m Write Out    (B[0;7m^W(B[m Where Is     (B[0;7m^K(B[m Cut[61;65H(B[0;7m^T(B[m Execute[81G(B[0;7m^C(B[m Location     (B[0;7mM-U(B[m Undo[62d(B[0;7m^X(B[m Exit[62;17H(B[0;7m^R(B[m Read File    (B[0;7m^\(B[m Replace[49G(B[0;7m^U(B[m Paste[62;65H(B[0;7m^J(B[m Justify[81G(B[0;7m^_(B[m Go To Line   (B[0;7mM-E(B[m Redo[2dquadratic_roots(A,B,C,z)[3;9Hx1 is -B[41m [A[49m(B[m[?12l[?25h[?25l[3d[?12l[?25h[?25l[2;25H[?12l[?25h[?25l[1;72H(B[0;7m*[116G(B[m[2;25H:[?12l[?25h[?25l [?12l[?25h[?25l [?12l[?25h[?25l:[?12l[?25h[?25l-[?12l[?25h[?25l[3;25H[?12l[?25h[?25l[A :-[?12l[?25h[?25l[3;25H[?12l[?25h[?25l[18G[?12l[?25h[?25l[?12l[?25h[?25l[C[?12l[?25h[?25l (B[m[?12l[?25h[?25l[41m [49m(B[m[?12l[?25h[?25l (B[m[?12l[?25h[?25l[41m [49m(B[m[?12l[?25h[?25l[?12l[?25h[?25l[C[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l(-B[41m [49m(B[m[?12l[?25h[?25l-[?12l[?25h[?25lB[?12l[?25h[?25l)[41m [60d[49m(B[m[K[3;19H[?12l[?25h[?25l/[41m [49m(B[m[?12l[?25h[?25l2[41m [49m(B[m[?12l[?25h[?25l*[41m [49m(B[m[?12l[?25h[?25l[C[41m [49m(B[m[?12l[?25h[?25l (B[m[?12l[?25h[?25la[41m [49m(B[m[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l 2*a[41m [49m(B[m[?12l[?25h[?25l2[?12l[?25h[?25l*[?12l[?25h[?25la[?12l[?25h[?25l)[41m [49m(B[m[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l [?12l[?25h[?25l((-B)/ 2*a)[41m [3;16H[49m(B[m[?12l[?25h[?25l([?12l[?25h[?25l-[?12l[?25h[?25lB[?12l[?25h[?25l+)/ 2*a)[41m [3;20H[49m(B[m[?12l[?25h[?25l[?12l[?25h[?25l +)/ 2*a)[41m [3;20H[49m(B[m[?12l[?25h[?25l+[?12l[?25h[?25ls)/ 2*a)[41m [3;22H[49m(B[m[?12l[?25h[?25lq)/ 2*a)[41m [3;23H[49m(B[m[?12l[?25h[?25lr)/ 2*a)[41m [3;24H[49m(B[m[?12l[?25h[?25lt)/ 2*a)[41m [3;25H[49m(B[m[?12l[?25h[?25l()/ 2*a)[41m [3;26H[49m(B[m[?12l[?25h[?25l))/ 2*a)[41m [3;27H[49m(B[m[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l sqrt())/ 2*a)[41m [3;22H[49m(B[m[?12l[?25h[?25ls[?12l[?25h[?25lq[?12l[?25h[?25lr[?12l[?25h[?25lt[?12l[?25h[?25l([?12l[?25h[?25lB))/ 2*a)[41m [3;28H[49m(B[m[?12l[?25h[?25l*))/ 2*a)[41m [3;29H[49m(B[m[?12l[?25h[?25l*))/ 2*a)[41m [3;30H[49m(B[m[?12l[?25h[?25l2))/ 2*a)[41m [3;31H[49m(B[m[?12l[?25h[?25l-))/ 2*a)[41m [3;32H[49m(B[m[?12l[?25h[?25l))/ 2*a)[41m [49m [3;31H(B[m[?12l[?25h[?25l-))/ 2*a)[41m [3;32H[49m(B[m[?12l[?25h[?25l4))/ 2*a)[41m [3;33H[49m(B[m[?12l[?25h[?25l*))/ 2*a)[41m [3;34H[49m(B[m[?12l[?25h[?25l())/ 2*a)[41m [3;35H[49m(B[m[?12l[?25h[?25l)))/ 2*a)[41m [3;36H[49m(B[m[?12l[?25h[?25l[?12l[?25h[?25lA)))/ 2*a)[41m [3;36H[49m(B[m[?12l[?25h[?25l*)))/ 2*a)[41m [3;37H[49m(B[m[?12l[?25h[?25lC)))/ 2*a)[41m [3;38H[49m(B[m[?12l[?25h[?25l)[?12l[?25h[?25l)[?12l[?25h[?25l)[?12l[?25h[?25l/[?12l[?25h[?25l [?12l[?25h[?25l2[?12l[?25h[?25l*[?12l[?25h[?25la[?12l[?25h[?25l)[?12l[?25h[?25l[C[?12l[?25h[?25l (B[m[?12l[?25h[?25l[4d[?12l[?25h[?25l[4;9H[?12l[?25h[?25lx[?12l[?25h[?25l2[?12l[?25h[?25l[41m [49m(B[m[?12l[?25h[?25l u[?12l[?25h[?25l[41m [49m (B[m[?12l[?25h[?25l i[?12l[?25h[?25ls[?12l[?25h[?25l[41m [49m(B[m[?12l[?25h[?25l ([?12l[?25h[?25l([?12l[?25h[?25l (B[m[?12l[?25h[?25l[41m [49m (B[m[?12l[?25h[?25l[60;33H(B[0;7m[ line 3/4 (75%), col 15/17 (88%), char 75/77 (97%) ](B[m[4;15H[?12l[?25h[?25l (B[m[?12l[?25h[?25l (B[m[?12l[?25h[?25l[41m [49m (B[m[?12l[?25h[?25l (B[m[?12l[?25h[?25l (B[m[?12l[?25h[?25l[16G[1K[9G(B[m[?12l[?25h[?25l[?12l[?25h[?25l[3;47H[?12l[?25h[?25l[4d[?12l[?25h[?25l[4;9Hx1 is ((-B + sqrt(B**2-4*(A*C)))/ 2*a)[60d[K[5d[?12l[?25h[?25l[A[?12l[?25h[?25l [?12l[?25h[?25l [?12l[?25h[?25l [?12l[?25h[?25l [?12l[?25h[?25l [?12l[?25h[?25l [?12l[?25h[?25l [?12l[?25h[?25l [?12l[?25h[?25lx[?12l[?25h[?25l1[?12l[?25h[?25l[1P[?12l[?25h[?25l2 is ((-B + sqrt(B**2-4*(A*C)))/ 2*a)[4;11H[?12l[?25h[?25l [?12l[?25h[?25li[?12l[?25h[?25ls[?12l[?25h[?25l [?12l[?25h[?25l([?12l[?25h[?25l([?12l[?25h[?25l-[?12l[?25h[?25lB[?12l[?25h[?25l [?12l[?25h[?25l+[?12l[?25h[?25l[1P[?12l[?25h[?25l- sqrt(B**2-4*(A*C)))/ 2*a)[4;21H[?12l[?25h[?25l [?12l[?25h[?25ls[?12l[?25h[?25lq[?12l[?25h[?25lr[?12l[?25h[?25lt[?12l[?25h[?25l([?12l[?25h[?25lB[?12l[?25h[?25l*[?12l[?25h[?25l*[?12l[?25h[?25l2[?12l[?25h[?25l-[?12l[?25h[?25l4[?12l[?25h[?25l*[?12l[?25h[?25l([?12l[?25h[?25lA[?12l[?25h[?25l*[?12l[?25h[?25lC[?12l[?25h[?25l)[?12l[?25h[?25l)[?12l[?25h[?25l)[?12l[?25h[?25l/[?12l[?25h[?25l [?12l[?25h[?25l2[?12l[?25h[?25l*[?12l[?25h[?25la[?12l[?25h[?25l)[?12l[?25h[?25l[5d[?12l[?25h[?25l[5;9H[?12l[?25h[?25lz[?12l[?25h[?25l [?12l[?25h[?25li[?12l[?25h[?25ls[?12l[?25h[?25l [?12l[?25h[?25lx[?12l[?25h[?25l1[?12l[?25h[?25l.[?12l[?25h[?25l[A[?12l[?25h[?25l-[?12l[?25h[?25lB[?12l[?25h[?25l [?12l[?25h[?25l-[?12l[?25h[?25l [?12l[?25h[?25ls[?12l[?25h[?25lq[?12l[?25h[?25lr[?12l[?25h[?25lt[?12l[?25h[?25l([?12l[?25h[?25lB[?12l[?25h[?25l*[?12l[?25h[?25l*[?12l[?25h[?25l2[?12l[?25h[?25l-[?12l[?25h[?25l4[?12l[?25h[?25l*[?12l[?25h[?25l([?12l[?25h[?25lA[?12l[?25h[?25l*[?12l[?25h[?25lC[?12l[?25h[?25l)[?12l[?25h[?25l)[?12l[?25h[?25l)[?12l[?25h[?25l/[?12l[?25h[?25l [?12l[?25h[?25l2[?12l[?25h[?25l*[?12l[?25h[?25la[?12l[?25h[?25l)[?12l[?25h[?25l/[?12l[?25h[?25l [?12l[?25h[?25l.[?12l[?25h[?25l[A[?12l[?25h[?25l,[?12l[?25h[?25l [?12l[?25h[?25l.[?12l[?25h[?25l[4d[?12l[?25h[?25l[5;17H[?12l[?25h[?25l[6d[?12l[?25h[?25l[6;9H[?12l[?25h[?25lz[?12l[?25h[?25l [?12l[?25h[?25li[?12l[?25h[?25ls[?12l[?25h[?25l [?12l[?25h[?25lx[?12l[?25h[?25l2[?12l[?25h[?25l.[?12l[?25h[?25l [?12l[?25h[?25l[7d[?12l[?25h[?25l.[?12l[?25h[?25l[60;52H(B[0;7m[ Writing... ](B[m[1;72H(B[0;7m [116G(B[m[60;51H(B[0;7m[ Wrote 7 lines ](B[m[7d.[?12l[?25h[?25l[60d[J[62d[?12l[?25h[62;1H[?1049l[23;0;0t[?1l>[?2004l[?2004hcmcborr1@remote04:~/projects/i471a/submit/lab6$ prolog 
+[?2004lWelcome to SWI-Prolog (threaded, 64 bits, version 8.2.4)
+SWI-Prolog comes with ABSOLUTELY NO WARRANTY. This is free software.
+Please run ?- license. for legal details.
+
+For online help and background, visit https://www.swi-prolog.org
+For built-in help, use ?- help(Topic). or ?- apropos(Word).
+
+?- [?- [K?- [lab6-sol.pro].?- ['quadratic_roots.pro'].?- [lab6-sol.pro].[K?- ['quadratic_roots.pro'].
+[31mWarning: /home/cmcborr1/projects/i471a/submit/lab6/quadratic_roots.pro:3:
+Warning:    Singleton variables: [A,C]
+[0m[1;31mERROR: /home/cmcborr1/projects/i471a/submit/lab6/quadratic_roots.pro:3:
+ERROR:    No permission to modify static procedure `(is)/2'
+[0m[1;31mERROR: /home/cmcborr1/projects/i471a/submit/lab6/quadratic_roots.pro:4:
+ERROR:    No permission to modify static procedure `(is)/2'
+[0m[1;31mERROR: /home/cmcborr1/projects/i471a/submit/lab6/quadratic_roots.pro:5:
+ERROR:    No permission to modify static procedure `(is)/2'
+[0m[1;31mERROR: /home/cmcborr1/projects/i471a/submit/lab6/quadratic_roots.pro:6:1: Syntax error: Unexpected end of clause
+[0m[1mtrue.[0m
+
+?- ?- ['quadratic_roots.pro'].?- [lab6-sol.pro].[K?- ['quadratic_roots.pro'].[6G[7Plab6-sol[21G[6G[7@quadratic_roots[28G?- [lab6-sol.pro].[K?- ['quadratic_roots.pro'].?- [K?- ?- ['quadratic_roots.pro'].?- [K        x1 is ((-B + sqrt(B**2-4*(A*C[41G)[37G[42G[42G)[29G[43G[43G)[19G[44G/ 2*a[49G)[18G[50G
+|    [6G['quadratic_roots.pro'].[29G[K[28G[K[27G[K[26G[K[25G[K[24G[K[23G[K[22G[K[21G[K[20G[K[19G[K[18G[K[17G[K[16G[K[15G[K[14G[K[13G[K[12G[K[11G[K[10G[K[9G[K[8G[K[7G[K[6G[K/[6G[K.
+[1;31mERROR: Arithmetic: `a/0' is not a function
+ERROR: In:
+ERROR:   [10] x1 is ... / 2*a
+ERROR:    [9] <user>
+[0m?-         x1 is ((-B + sqrt(B**2-4*(A*C[41G)[37G[42G[42G)[29G[43G[43G)[19G[44G/ 2*a[49G)[18G[50G
+|    .
+[1;31mERROR: Arithmetic: `a/0' is not a function
+ERROR: In:
+ERROR:   [10] x1 is ... / 2*a
+ERROR:    [9] <user>
+[0m?- ?- x1 is ((-B + sqrt(B**2-4*(A*C)))/ 2*a).?- ['quadratic_roots.pro'].[K?- [lab6-sol.pro].[K?- ['quadratic_roots.pro'].
+[31mWarning: /home/cmcborr1/projects/i471a/submit/lab6/quadratic_roots.pro:3:
+Warning:    Singleton variables: [A,C]
+[0m[1;31mERROR: /home/cmcborr1/projects/i471a/submit/lab6/quadratic_roots.pro:3:
+ERROR:    No permission to modify static procedure `(is)/2'
+[0m[1;31mERROR: /home/cmcborr1/projects/i471a/submit/lab6/quadratic_roots.pro:4:
+ERROR:    No permission to modify static procedure `(is)/2'
+[0m[1;31mERROR: /home/cmcborr1/projects/i471a/submit/lab6/quadratic_roots.pro:5:
+ERROR:    No permission to modify static procedure `(is)/2'
+[0m[1;31mERROR: /home/cmcborr1/projects/i471a/submit/lab6/quadratic_roots.pro:6:1: Syntax error: Unexpected end of clause
+[0m[1mtrue.[0m
+
+?- ^D
+[32m% halt
+[0m[?2004hcmcborr1@remote04:~/projects/i471a/submit/lab6$ nan[K\[K[K[Kls
+[?2004llab6.LOG  lab6-sol.pro	quadratic_roots.pro
+[?2004hcmcborr1@remote04:~/projects/i471a/submit/lab6$ nano quadratic_roots.pro 
+[?2004l[?2004h[?1049h[22;0;0t[1;62r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[60;52H(B[0;7m[ Reading... ](B[m[60;51H(B[0;7m[ Read 7 lines ](B[m[H(B[0;7m  GNU nano 5.4                                     quadratic_roots.pro                                               [1;116H(B[m[61d(B[0;7m^G(B[m Help[61;17H(B[0;7m^O(B[m Write Out    (B[0;7m^W(B[m Where Is     (B[0;7m^K(B[m Cut[61;65H(B[0;7m^T(B[m Execute[81G(B[0;7m^C(B[m Location     (B[0;7mM-U(B[m Undo[62d(B[0;7m^X(B[m Exit[62;17H(B[0;7m^R(B[m Read File    (B[0;7m^\(B[m Replace[49G(B[0;7m^U(B[m Paste[62;65H(B[0;7m^J(B[m Justify[81G(B[0;7m^_(B[m Go To Line   (B[0;7mM-E(B[m Redo[2dquadratic_roots(A,B,C,z) :-[3;9Hx1 is ((-B + sqrt(B**2-4*(A*C)))/ 2*a).[4;9Hx2 is ((-B - sqrt(B**2-4*(A*C)))/ 2*a).[5;9Hz is x1.[6;9Hz is x2.[7d.[2d[?12l[?25h[?25l[3d[?12l[?25h[?25l[4d[?12l[?25h[?25l[5d[?12l[?25h[?25l[6d[?12l[?25h[?25l[7d[?12l[?25h[?25l[8d[?12l[?25h[?25l[A.[?12l[?25h[?25l[?12l[?25h[?25l[6;18H[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[60d[K[4d  [?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[3;48H[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25la[?12l[?25h[?25l)[?12l[?25h[?25l.[?12l[?25h[?25l[1;72H(B[0;7m*[116G(B[m[3;47H [?12l[?25h[?25l[4d[?12l[?25h[?25l.[?12l[?25h[?25l [?12l[?25h[?25l[5;17H[?12l[?25h[?25l[4;47H[?12l[?25h[?25l[A[?12l[?25h[?25l,[?12l[?25h[?25l[4d[?12l[?25h[?25l.[?12l[?25h[?25l[5;17H[?12l[?25h[?25l [?12l[?25h[?25l,[?12l[?25h[?25l[6d[?12l[?25h[?25l[7d.[?12l[?25h[?25l[K[?12l[?25h[?25l[60;52H(B[0;7m[ Writing... ](B[m[1;72H(B[0;7m [116G(B[m[60;51H(B[0;7m[ Wrote 7 lines ](B[m[7d[?12l[?25h[?25l[60d[J[62d[?12l[?25h[62;1H[?1049l[23;0;0t[?1l>[?2004l[?2004hcmcborr1@remote04:~/projects/i471a/submit/lab6$ nano quadratic_roots.pro ls[Knano quadratic_roots.pro [Kprolog 
+[?2004lWelcome to SWI-Prolog (threaded, 64 bits, version 8.2.4)
+SWI-Prolog comes with ABSOLUTELY NO WARRANTY. This is free software.
+Please run ?- license. for legal details.
+
+For online help and background, visit https://www.swi-prolog.org
+For built-in help, use ?- help(Topic). or ?- apropos(Word).
+
+?- ?- ['quadratic_roots.pro'].?- x1 is ((-B + sqrt(B**2-4*(A*C)))/ 2*a).?- ['quadratic_roots.pro'].[K
+[1;31mERROR: /home/cmcborr1/projects/i471a/submit/lab6/quadratic_roots.pro:4:
+ERROR:    Full stop in clause-body?  Cannot redefine ,/2
+[0m[1mtrue.[0m
+
+?- (quadratic [14G[13G[K[12G[K[11G[K[10G[K[9G[K[8G[K[7G[K[6G[K?- ([K?- [KQu?- Q[K?- [Kquadratic [13G_roots:-[20G[K[19G[K :-?- [2@['[21G.pro'].?- [2P[19G :-[K [20G(:-[21G):-():[21GA):-[22G ):-[23GB):-[24G ):-[25GC):-[26G ):-[27GD):-[27G):-[K[27Gz):-[28G ):-[28G):-[K)[29G :-
+|    x1 is roots [17G[16G[K[15G[K[14G[K[13G[K[12G[K((-B +[6G['quadratic_roots.pro'].[6Gx1 is ((-B +[K[18G[18G[18G[6G['quadratic_roots.pro'].[6Gx1 is ((-B + sqrt(B**2-4*(A*C)))/ 2*a).[6G['quadratic_roots.pro'].[K[7Glab6-sol.pro].[K[20G[K[19G[K[18G[K[17G[K[16G[K[15G[K[14G[K[13G[K[12G[K[11G[K[10G[K[9G[K[8G[K[7G[K[6G[K.
+[1;31mERROR: Syntax error: Operator expected
+ERROR: quadratic_roots
+ERROR: ** here **
+ERROR:  (A B C z) :- . 
+[0m?- ?- quadratic_roots (A B C z) :- .[22G[1@,  B[25G[1@,  C[28G[1@,  z) :- .[36G[K[32G:-[K:-
+|    [6Gquadratic_roots (A B C z) :- .[6G[2@['[23G.pro'].[K[6Gx1 is ((-B + sqrt(B**2-4*(A*C)))/ 2*a).[44G[K,
+|    x2 is ((-B + sqrt(B**+[17G[P [17G[1@-  sqrt(B**2=[28G[K-4*(A*C[35G)[31G[36G[36G)[23G[37G[37G)[13G[38G/2[39G[K 2*a[42G[KA[6Gquadratic_roots (A B C z) :- .[K[6Gx2 is ((-B - sqrt(B**2-4*(A*C)))/ 2*A[43G)[12G[44G,
+|    x1 is z,
+|    x2 is z,[13G[K.
+[1;31mERROR: Syntax error: Operator expected
+ERROR: quadratic_roots
+ERROR: ** here **
+ERROR:  (A, B, C, z):- 
+x1 is ((-B + sqrt(B**2-4*(A*C)))/ 2*a),
+x2 is ((-B - sqrt(B**2-4*(A*C)))/ 2*A),
+x1 is z,
+x2 is z . 
+[0m?- ?- quadratic_roots (A, B, C, z):-
+x1 is ((-B + sqrt(B**2-4*(A*C)))/ 2*a),
+x2 is ((-B - sqrt(B**2-4*(A*C)))/ 2*A),
+x1 is z,
+x2 is z.[A[9G[A[40G[A[40G2*a[37G),[K[37GA),
+
+
+
+[1;31mERROR: Syntax error: Operator expected
+ERROR: quadratic_roots
+ERROR: ** here **
+ERROR:  (A, B, C, z):- 
+x1 is ((-B + sqrt(B**2-4*(A*C)))/ 2*A),
+x2 is ((-B - sqrt(B**2-4*(A*C)))/ 2*A),
+x1 is z,
+x2 is z . 
+[0m?- ?- quadratic_roots (A, B, C, z):-
+x1 is ((-B + sqrt(B**2-4*(A*C)))/ 2*A),
+x2 is ((-B - sqrt(B**2-4*(A*C)))/ 2*A),
+x1 is z,
+x2 is z.s z.[8G[K[7G[K[6Gx2 i[Kx2 [Kx2x[K[K[K[A[9G[8G[K[7G[K[6Gx1 i[Kx1 [Kx1x[K[K[K[A[40G[39G[K[38G[K[37G[K[36G[K[35G[K[34G[33G[K[32G[K[31G[K[30G[K[29G[K[28G[K[27G[K[26G[K[25G[K[24G[K[23G[K[22G[K[21G[K[20G[K[19G[K[18G[K[17G[K[16G[K[15G[K[14G[K[13G[12G[K[11G[10G[K[9G[K[8G[K[7G[K[6Gx2 i[Kx2 [Kx2x[K[K[K[A[40G[39G[K[38G[K[37G[K[36G[K[35G[K[34G[33G[K[32G[K[31G[K[30G[K[29G[K[28G[K[27G[K[26G[K[25G[K[24G[K[23G[K[22G[K[21G[K[20G[K[19G[K[18G[K[17G[K[16G[K[15G[K[14G[K[13G[12G[K[11G[10G[K[9G[K[8G[K[7G[K[6Gx1 i[Kx1 [Kx1x[K[K[K[A[35G[34G[33G[K[32G[K.
+[1;31mERROR: Syntax error: Operator expected
+ERROR: quadratic_roots
+ERROR: ** here **
+ERROR:  (A, B, C, z) . 
+[0m?- ?- quadratic_roots (A, B, C, z).[32G:-
+x1 is ((-B + sqrt(B**2-4*(A*C)))/ 2*A),
+x2 is ((-B - sqrt(B**2-4*(A*C)))/ 2*A),
+x1 is z,
+x2 is z.[4A[32G.[K
+[K
+[K
+[K
+[K[4A[33G[32G[K -[33G[K:-.
+|    .
+[1;31mERROR: Syntax error: Operator expected
+ERROR: quadratic_roots
+ERROR: ** here **
+ERROR:  (A, B, C, z) :-. . 
+[0m?- ?- quadratic_roots (A, B, C, z) :-. .[32G.[K[32G:-
+x1 is ((-B + sqrt(B**2-4*(A*C)))/ 2*A),
+x2 is ((-B - sqrt(B**2-4*(A*C)))/ 2*A),
+x1 is z,
+x2 is z.
+[1;31mERROR: Syntax error: Operator expected
+ERROR: quadratic_roots
+ERROR: ** here **
+ERROR:  (A, B, C, z):- 
+x1 is ((-B + sqrt(B**2-4*(A*C)))/ 2*A),
+x2 is ((-B - sqrt(B**2-4*(A*C)))/ 2*A),
+x1 is z,
+x2 is z . 
+[0m?- ?- quadratic_roots (A, B, C, z):-
+x1 is ((-B + sqrt(B**2-4*(A*C)))/ 2*A),
+x2 is ((-B - sqrt(B**2-4*(A*C)))/ 2*A),
+x1 is z,
+x2 is z.[A[9G[A[40G[A[40G[A[35G[19G[P(
+
+
+
+
+[1;31mERROR: Unknown procedure: (:-)/2
+ERROR:   Rules must be loaded from a file
+ERROR:   See FAQ at https://www.swi-prolog.org/FAQ/ToplevelMode.txt
+ERROR: In:
+ERROR:    [9] throw(error(existence_error(procedure,...),_22138))
+ERROR:    [8] '$dwim':dwim_existence_error(error,user:(:-)/2) at /usr/lib/swi-prolog/boot/dwim.pl:113
+ERROR:    [6] '$dwim':correct_goal((quadratic_roots(_22234,_22236,_22238,z):- ...,...),user,['A'=_22258,...|...],_22224) at /usr/lib/swi-prolog/boot/dwim.pl:85
+ERROR: 
+ERROR: Note: some frames are missing due to last-call optimization.
+ERROR: Re-run your program in debug mode (:- debug.) to get more detail.
+[0m?- ^D
+[32m% halt
+[0m[?2004hcmcborr1@remote04:~/projects/i471a/submit/lab6$ prolog [Kls[K[Kls
+[?2004llab6.LOG  lab6-sol.pro	quadratic_roots.pro
+[?2004hcmcborr1@remote04:~/projects/i471a/submit/lab6$ a[Knano quadratic_roots.pro 
+[?2004l[?2004h[?1049h[22;0;0t[1;62r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[60;52H(B[0;7m[ Reading... ](B[m[60;51H(B[0;7m[ Read 7 lines ](B[m[H(B[0;7m  GNU nano 5.4                                     quadratic_roots.pro                                               [1;116H(B[m[61d(B[0;7m^G(B[m Help[61;17H(B[0;7m^O(B[m Write Out    (B[0;7m^W(B[m Where Is     (B[0;7m^K(B[m Cut[61;65H(B[0;7m^T(B[m Execute[81G(B[0;7m^C(B[m Location     (B[0;7mM-U(B[m Undo[62d(B[0;7m^X(B[m Exit[62;17H(B[0;7m^R(B[m Read File    (B[0;7m^\(B[m Replace[49G(B[0;7m^U(B[m Paste[62;65H(B[0;7m^J(B[m Justify[81G(B[0;7m^_(B[m Go To Line   (B[0;7mM-E(B[m Redo[2dquadratic_roots(A,B,C,z) :-[3;9Hx1 is ((-B + sqrt(B**2-4*(A*C)))/ 2*a),[4;9Hx2 is ((-B - sqrt(B**2-4*(A*C)))/ 2*a).[5;9Hz is x1,[6;9Hz is x2.[2d[?12l[?25h[?25l[3d[?12l[?25h[?25l[2;28H[?12l[?25h[?25l[3d[?12l[?25h[?25l[4d[?12l[?25h[?25l[5;17H[?12l[?25h[?25l[4;28H[?12l[?25h[?25l*[?12l[?25h[?25l*[?12l[?25h[?25l2[?12l[?25h[?25l-[?12l[?25h[?25l4[?12l[?25h[?25l*[?12l[?25h[?25l([?12l[?25h[?25lA[?12l[?25h[?25l*[?12l[?25h[?25lC[?12l[?25h[?25l)[?12l[?25h[?25l)[?12l[?25h[?25l)[?12l[?25h[?25l/[?12l[?25h[?25l [?12l[?25h[?25l2[?12l[?25h[?25l*[?12l[?25h[?25la[?12l[?25h[?25l[1;72H(B[0;7m*[116G(B[m[4;45H).[K[?12l[?25h[?25lA).[60d[K[4;46H[?12l[?25h[?25l[A[?12l[?25h[?25l),[K[?12l[?25h[?25lA),[?12l[?25h[?25l[4d[?12l[?25h[?25l[5;17H[?12l[?25h[?25l[6d [?12l[?25h[?25l[7d[?12l[?25h[?25l[6;18H[?12l[?25h[?25l[A[?12l[?25h[?25l[4;46H[?12l[?25h[?25l)[?12l[?25h[?25l.[?12l[?25h[?25l [?12l[?25h[?25l,[?12l[?25h[?25l[5;17H[?12l[?25h[?25l[6d [?12l[?25h[?25l[60;52H(B[0;7m[ Writing... ](B[m[1;72H(B[0;7m [116G(B[m[60;51H(B[0;7m[ Wrote 7 lines ](B[m[6;18H[?12l[?25h[?25l[60d[J[62d[?12l[?25h[62;1H[?1049l[23;0;0t[?1l>[?2004l[?2004hcmcborr1@remote04:~/projects/i471a/submit/lab6$ nano quadratic_roots.pro ls[Kprolog ls[Kprolog 
+[?2004lWelcome to SWI-Prolog (threaded, 64 bits, version 8.2.4)
+SWI-Prolog comes with ABSOLUTELY NO WARRANTY. This is free software.
+Please run ?- license. for legal details.
+
+For online help and background, visit https://www.swi-prolog.org
+For built-in help, use ?- help(Topic). or ?- apropos(Word).
+
+?- ?- quadratic_roots(A, B, C, z):-
+x1 is ((-B + sqrt(B**2-4*(A*C)))/ 2*A),
+x2 is ((-B - sqrt(B**2-4*(A*C)))/ 2*A),
+x1 is z,
+x2 is z.[4A[19G[1@ (
+
+
+
+[9G[4A[32G :-. .
+[K
+[K
+[K
+[K[4A[38G[32G.[K[32G:-
+x1 is ((-B + sqrt(B**2-4*(A*C)))/ 2*A),
+x2 is ((-B - sqrt(B**2-4*(A*C)))/ 2*A),
+x1 is z,
+x2 is z.[3A[37Ga),
+
+
+[9G[4A[22G B C z) :- .
+[K
+[K
+[K
+[K[4A[34G?- [2@['[21G.pro'].[K?- x1 is ((-B + sqrt(B**2-4*(A*C)))/ 2*a).?- ['quadratic_roots.pro'].[K
+[1mtrue.[0m
+
+?- quadratic_roots(2,7,10 [26G, [27G 2[28G[K[27G2[28G)[19G[29G.
+[1;31mfalse.[0m
+
+?- ?- quadratic_roots(2,7,10,2).[27G).[K[27G6).[27G).[K[27G5).
+[1;31mfalse.[0m
+
+?- ?- quadratic_roots(2,7,10,5).[27G-5).
+[1;31mfalse.[0m
+
+?- ?- quadratic_roots(2,7,10,-5).[27G5).[K[27G2).?- [2@['[21G.pro'].[K?- [2P[19G(2,7,10,2).[27G5).[27G2).[27G 2).2).7,10[20G[P,[20G[1@1,,7,10
+[1;31mfalse.[0m
+
+?- ?- quadratic_roots(1,7,10, 2).2[28G).[K[28G5).
+[1;31mfalse.[0m
+
+?- ?- quadratic_roots(1,7,10, 5).[27G5).[K
+[1;31mfalse.[0m
+
+?- ?- quadratic_roots(1,7,10,5).[22G[1@-7
+[1;31mfalse.[0m
+
+?- ?- quadratic_roots(1,-7,10,5).[28G).[K[28G2).
+[1;31mfalse.[0m
+
+?- ?- quadratic_roots(1,-7,10,2).[28G5).[22G[P7[30G[27G 5).[28G2).[20G2,7,10,-5).[27G5).[K[27G2).?- [2@['[21G.pro'].[K?- [2P[19G(A, B, C, z):-
+x1 is ((-B + sqrt(B**2-4*(A*C)))/ 2*A),
+x2 is ((-B - sqrt(B**2-4*(A*C)))/ 2*A),
+x1 is z,
+x2 is z..[8G[K[7G[K[6Gx2 i[Kx2 [Kx2x[K[K[K[A[9G[8G[K[7G[K[6Gx1 i[Kx1 [Kx1x[K[K[K[A[40G[39G[K[38G[K[37G[K[36G[K[35G[K[34G[33G[K[32G[K[31G[K[30G[K[29G[K[28G[K[27G[K[26G[K[25G[K[24G[K[23G[K[22G[K[21G[K[20G[K[19G[K[18G[K[17G[K[16G[K[15G[K[14G[K[13G[12G[K[11G[10G[K[9G[K[8G[K[7G[K[6Gx2 i[Kx2 [Kx2x[K[K[K[A[40G[39G[K[38G[K[37G[K[36G[K[35G[K[34G[33G[K[32G[K[31G[K[30G[K[29G[K[28G[K[27G[K[26G[K[25G[K[24G[K[23G[K[22G[K[21G[K[20G[K[19G[K[18G[K[17G[K[16G[K[15G[K[14G[K[13G[12G[K[11G[10G[K[9G[K[8G[K[7G[K[6Gx1 i[Kx1 [Kx1x[K[K[K[A[34G[33G[32G[K[31G[K[30G[K[29G[K[28G[27G[K[26G[K[25G[24G[K[23G[K[22G[21G[K[20G[K[19G[K[18G[K[17G[K[16G[K[15G[K[14G[K[13G[K[12G[K[11G[K[10G[K[9G[K[8G[K[7G[K[6G[K?- q[K?- [Kx is ((0[11G[K-[11G[K6[11G[K7 _[13G[K+ sqrtqrt([20G)()[20G-)[21G7)[22G*)[23G*)[24G2)[25G-)[26G4)[27G*)[28G1)[29G*)[30G1)[31G0)[33G)[19G[33G)/2[35G[K[34G[K / 2 * 1[42G)[9G[43G[43G)[43G[K
+|    .
+[1;31mfalse.[0m
+
+?- m os [8G[7G[K[6G[K?- m?- [Kn is 1+2/[12G[K.
+[1;31mfalse.[0m
+
+?- n = 1+[9G[K +2 [12G[11G[K 2.
+[1;31mfalse.[0m
+
+?- 
+|    .
+[1;31m
+ERROR: Stream user_input:45:1 Syntax error: Unexpected end of clause
+[0m?- N = 1 + 2.
+N = 1+2.
+
+?- ?- N = 1 + 2.?- n[14G?- N[14G?- [K^D
+[32m% halt
+[0m[?2004hcmcborr1@remote04:~/projects/i471a/submit/lab6$ nano s[Kpr[K[Ksa[K[Kp[Kquadratic_roots.pro 
+[?2004l[?2004h[?1049h[22;0;0t[1;62r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[60;52H(B[0;7m[ Reading... ](B[m[60;51H(B[0;7m[ Read 7 lines ](B[m[H(B[0;7m  GNU nano 5.4                                     quadratic_roots.pro                                               [1;116H(B[m[61d(B[0;7m^G(B[m Help[61;17H(B[0;7m^O(B[m Write Out    (B[0;7m^W(B[m Where Is     (B[0;7m^K(B[m Cut[61;65H(B[0;7m^T(B[m Execute[81G(B[0;7m^C(B[m Location     (B[0;7mM-U(B[m Undo[62d(B[0;7m^X(B[m Exit[62;17H(B[0;7m^R(B[m Read File    (B[0;7m^\(B[m Replace[49G(B[0;7m^U(B[m Paste[62;65H(B[0;7m^J(B[m Justify[81G(B[0;7m^_(B[m Go To Line   (B[0;7mM-E(B[m Redo[2dquadratic_roots(A,B,C,z) :-[3;9Hx1 is ((-B + sqrt(B**2-4*(A*C)))/ 2*A),[4;9Hx2 is ((-B - sqrt(B**2-4*(A*C)))/ 2*A),[5;9Hz is x1,[6;9Hz is x2.[2d[?12l[?25h[?25l[?12l[?25h[?25l[3d[?12l[?25h[?25l[4d[?12l[?25h[?25l[3;48H[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[60d[K[3;26H[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[4d[?12l[?25h[?25l2[?12l[?25h[?25l [?12l[?25h[?25li[?12l[?25h[?25ls[?12l[?25h[?25l[61;17H[23X[61;40H(B[0;7mM-F(B[m New Buffer [61;65H[14X[61;79H(B[0;7m^X(B[m Execute Command[K[62;2H(B[0;7mC(B[m Cancel[17G[23X[62;40H(B[0;7mM-N(B[m No Conversion[62;65H[14X[62;79H(B[0;7m^T(B[m Browse[K[60d(B[0;7mFile to insert [from ./]:                                                                                            [60;27H(B[m[?12l[?25h[?25l[60;52H[1K (B[0;7m[ Cancelled ](B[m[K[61;17H(B[0;7m^O(B[m Write Out    (B[0;7m^W(B[m Where Is     (B[0;7m^K(B[m Cut[61;65H(B[0;7m^T(B[m Execute      (B[0;7m^C(B[m Location     (B[0;7mM-U(B[m Undo[62;2H(B[0;7mX(B[m Exit  [17G(B[0;7m^R(B[m Read File    (B[0;7m^\(B[m Replace      (B[0;7m^U(B[m Paste[62;65H(B[0;7m^J(B[m Justify      (B[0;7m^_(B[m Go To Line   (B[0;7mM-E(B[m Redo[4;14H[?12l[?25h[?25l[1;72H(B[0;7m*[116G(B[m[4;13H[1P[?12l[?25h[?25l[1P[?12l[?25h[?25l= ((-B - sqrt(B**2-4*(A*C)))/ 2*A),[4;13H[?12l[?25h[?25l[A[?12l[?25h[?25ls[?12l[?25h[?25l[1P[?12l[?25h[?25l[1P[?12l[?25h[?25l= ((-B + sqrt(B**2-4*(A*C)))/ 2*A),[3;13H[?12l[?25h[?25l[60;52H(B[0;7m[ Writing... ](B[m[1;72H(B[0;7m [116G(B[m[60;51H(B[0;7m[ Wrote 7 lines ](B[m[3;13H[?12l[?25h[?25l[60;51H (B[0;7m[ Writing... ](B[m[K[1;116H[60;51H(B[0;7m[ Wrote 7 lines ](B[m[3;13H[?12l[?25h[?25l[60d[J[62d[?12l[?25h[62;1H[?1049l[23;0;0t[?1l>[?2004l[?2004hcmcborr1@remote04:~/projects/i471a/submit/lab6$ nano quadratic_roots.pro prolog [K
+[?2004lWelcome to SWI-Prolog (threaded, 64 bits, version 8.2.4)
+SWI-Prolog comes with ABSOLUTELY NO WARRANTY. This is free software.
+Please run ?- license. for legal details.
+
+For online help and background, visit https://www.swi-prolog.org
+For built-in help, use ?- help(Topic). or ?- apropos(Word).
+
+?- ?- N = 1 + 2.?- n[14G[6Gis 1+2.[K?- x is ((7 + sqrt(-7**2-4*1*10)) / 2 * 1).?- quadratic_roots(1,-7,10,2).[K[28G5).[28G2).[28G5).[22G[P7[30G[27G 5).[28G2).[20G2,7,10,-5).[27G5).[K[27G2).?- [2@['[21G.pro'].[K
+[1mtrue.[0m
+
+?- ?- ['quadratic_roots.pro'].?- N = 1 + 2.[K?- n[14G[6Gis 1+2.[K?- x is ((7 + sqrt(-7**2-4*1*10)) / 2 * 1).?- quadratic_roots(1,-7,10,2).[K
+[1;31mfalse.[0m
+
+?- ?- quadratic_roots(1,-7,10,2).?- [2@['[21G.pro'].[K?- N = 1 + 2.[K?- n[14G[6Gis 1+2.[K?- x is ((7 + sqrt(-7**2-4*1*10)) / 2 * 1).?- n is 1+2.[K[6G= 1 + 2.?- N[14G?- ['quadratic_roots.pro'].?- [2P[19G(1,-7,10,2).?- [K?- ?- quadratic_roots(1,-7,10,2).?- [2@['[21G.pro'].[K?- N = 1 + 2.[K?- n[14G[6Gis 1+2.[K?- x is ((7 + sqrt(-7**2-4*1*10)) / 2 * 1).[7G[P [6G[P [6G[1@= 
+[1;31mfalse.[0m
+
+?- ?- x = ((7 + sqrt(-7**2-4*1*10)) / 2 * 1).?- x[1@5 
+[1;31mfalse.[0m
+
+?- ?- x5 = ((7 + sqrt(-7**2-4*1*10)) / 2 * 1). * 1[43G).[9G[43G[37G[1@(22 * 1
+[1;31mfalse.[0m
+
+?- ?- x5 = ((7 + sqrt(-7**2-4*1*10)) / (2 * 1)). (((7 + sqrt(-7**2-4*1*10) ((7 + sqrt(-7**2-4*1*10))2-4*1*10))[33G[P [33G[1@) [10G[34G
+[1;31mfalse.[0m
+
+?- ?- x5 = ((7 + sqrt(-7**2-4*1*10)) / (2 * 1)).?- [Kx6 = 7
+|    .
+[1;31mfalse.[0m
+
+?- 
+|    n = [9G[8G[K[7G[6G[Kn = pi.
+[1;31mfalse.[0m
+
+?- m i[6G[K?- m?- [Kn is 1 + 2.
+[1;31mfalse.[0m
+
+?- x = a.
+[1;31mfalse.[0m
+
+?- X = a.
+X = a.
+
+?- Z = 1.
+Z = 1.
+
+?- ?- Z = 1.?- [Knano pr[11Go[12G[11G[K[10G[K[9G[K[8G[7G[K[6G[K?- n[K?- [Kd?- [K^D
+[32m% halt
+[0m[?2004hcmcborr1@remote04:~/projects/i471a/submit/lab6$ l[Knanoa [K[K[Ko su[K[Ksu[Ks[K[Ks[Kquadratic_roots.pro 
+lab6.LOG             lab6-sol.pro         quadratic_roots.pro  
+cmcborr1@remote04:~/projects/i471a/submit/lab6$ nano quadratic_roots.pro 
+[?2004l[?2004h[?1049h[22;0;0t[1;62r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[60;52H(B[0;7m[ Reading... ](B[m[60;51H(B[0;7m[ Read 7 lines ](B[m[H(B[0;7m  GNU nano 5.4                                     quadratic_roots.pro                                               [1;116H(B[m[61d(B[0;7m^G(B[m Help[61;17H(B[0;7m^O(B[m Write Out    (B[0;7m^W(B[m Where Is     (B[0;7m^K(B[m Cut[61;65H(B[0;7m^T(B[m Execute[81G(B[0;7m^C(B[m Location     (B[0;7mM-U(B[m Undo[62d(B[0;7m^X(B[m Exit[62;17H(B[0;7m^R(B[m Read File    (B[0;7m^\(B[m Replace[49G(B[0;7m^U(B[m Paste[62;65H(B[0;7m^J(B[m Justify[81G(B[0;7m^_(B[m Go To Line   (B[0;7mM-E(B[m Redo[2dquadratic_roots(A,B,C,z) :-[3;9Hx1 = ((-B + sqrt(B**2-4*(A*C)))/ 2*A),[4;9Hx2 = ((-B - sqrt(B**2-4*(A*C)))/ 2*A),[5;9Hz is x1,[6;9Hz is x2.[2d[?12l[?25h[?25l[3d[?12l[?25h[?25l[4d[?12l[?25h[?25l[3;47H[?12l[?25h[?25l[4d[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[60d[K[4;25H[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[1;72H(B[0;7m*[116G(B[m[4;9H[1P[?12l[?25h[?25lX2 = ((-B - sqrt(B**2-4*(A*C)))/ 2*A),[4;10H[?12l[?25h[?25l[A[?12l[?25h[?25l[1P[?12l[?25h[?25lX1 = ((-B + sqrt(B**2-4*(A*C)))/ 2*A),[3;10H[?12l[?25h[?25l[A[?12l[?25h[?25l_[?12l[?25h[?25lr[?12l[?25h[?25lo[?12l[?25h[?25lo[?12l[?25h[?25lt[?12l[?25h[?25ls[?12l[?25h[?25l([?12l[?25h[?25lA[?12l[?25h[?25l,[?12l[?25h[?25lB[?12l[?25h[?25l,[?12l[?25h[?25lC[?12l[?25h[?25l,[?12l[?25h[?25lz[?12l[?25h[?25l)[?12l[?25h[?25l[?12l[?25h[?25l) :-[K[?12l[?25h[?25lZ) :-[?12l[?25h[?25l[3d[?12l[?25h[?25l[?12l[?25h[?25l[4d[?12l[?25h[?25l[?12l[?25h[?25l[5;17H[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25lZ is x1,[11G[?12l[?25h[?25l[1P[?12l[?25h[?25l[1P[?12l[?25h[?25lZ is x1,[10G[?12l[?25h[?25l[6d[?12l[?25h[?25l[1P[?12l[?25h[?25lZ is x2.[10G[?12l[?25h[?25l[60;52H(B[0;7m[ Writing... ](B[m[1;72H(B[0;7m [116G(B[m[60;51H(B[0;7m[ Wrote 7 lines ](B[m[6;10H[?12l[?25h[?25l[60d[J[62d[?12l[?25h[62;1H[?1049l[23;0;0t[?1l>[?2004l[?2004hcmcborr1@remote04:~/projects/i471a/submit/lab6$ nano quadratic_roots.pro 
+[?2004l[?2004h[?1049h[22;0;0t[1;62r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[60;52H(B[0;7m[ Reading... ](B[m[60;51H(B[0;7m[ Read 7 lines ](B[m[H(B[0;7m  GNU nano 5.4                                     quadratic_roots.pro                                               [1;116H(B[m[61d(B[0;7m^G(B[m Help[61;17H(B[0;7m^O(B[m Write Out    (B[0;7m^W(B[m Where Is     (B[0;7m^K(B[m Cut[61;65H(B[0;7m^T(B[m Execute[81G(B[0;7m^C(B[m Location     (B[0;7mM-U(B[m Undo[62d(B[0;7m^X(B[m Exit[62;17H(B[0;7m^R(B[m Read File    (B[0;7m^\(B[m Replace[49G(B[0;7m^U(B[m Paste[62;65H(B[0;7m^J(B[m Justify[81G(B[0;7m^_(B[m Go To Line   (B[0;7mM-E(B[m Redo[2dquadratic_roots(A,B,C,Z) :-[3;9HX1 = ((-B + sqrt(B**2-4*(A*C)))/ 2*A),[4;9HX2 = ((-B - sqrt(B**2-4*(A*C)))/ 2*A),[5;9HZ is x1,[6;9HZ is x2.[2d[?12l[?25h[?25l[3d[?12l[?25h[?25l[4d[?12l[?25h[?25l[5d[?12l[?25h[?25l[5;9H[?12l[?25h[?25lZ[?12l[?25h[?25l[6d[?12l[?25h[?25l[1;72H(B[0;7m*[116G(B[m[6;9H[1P[?12l[?25h[?25lZ is x2.[10G[?12l[?25h[?25l[60;51H (B[0;7m[ Writing... ](B[m[K[1;72H(B[0;7m [116G(B[m[60;51H(B[0;7m[ Wrote 7 lines ](B[m[6;10H[?12l[?25h[?25l[60d[J[62d[?12l[?25h[62;1H[?1049l[23;0;0t[?1l>[?2004l[?2004hcmcborr1@remote04:~/projects/i471a/submit/lab6$ nano quadratic_roots.pro prolog [K[18@nano quadratic_roots.pro[Cprolog [K
+[?2004lWelcome to SWI-Prolog (threaded, 64 bits, version 8.2.4)
+SWI-Prolog comes with ABSOLUTELY NO WARRANTY. This is free software.
+Please run ?- license. for legal details.
+
+For online help and background, visit https://www.swi-prolog.org
+For built-in help, use ?- help(Topic). or ?- apropos(Word).
+
+?- ?- Z = 1.?- X = a.?- x[10G?- n is 1 + 2.[6G= pi.[K?- x6 = 7.?- x5 = ((7 + sqrt(-7**2-4*1*10)) / (2 * 1)).[37G[P[42G).[K?- x[P [43G?- quadratic_roots(1,-7,10,2).[K?- [2@['[21G.pro'].[K
+[31mWarning: /home/cmcborr1/projects/i471a/submit/lab6/quadratic_roots.pro:1:
+Warning:    Singleton variables: [X1,X2]
+[0m[1mtrue.[0m
+
+?- ?- ['quadratic_roots.pro'].?- Z = 1.[K?- X = a.?- Z = 1.?- ['quadratic_roots.pro'].?- [K?- ['quadratic_roots.pro'].?- Z = 1.[K?- X = a.?- Z = 1.?- X = a.?- x[10G?- n is 1 + 2.[6G= pi.[K?- x6 = 7.?- x5 = ((7 + sqrt(-7**2-4*1*10)) / (2 * 1)).[37G[P[42G).[K?- x[P [43G?- quadratic_roots(1,-7,10,2).[K?- [2@['[21G.pro'].[K?- [2P[19G(1,-7,10,2).
+[1;31mERROR: Arithmetic: `x1/0' is not a function
+ERROR: In:
+ERROR:   [11] 2 is x1
+ERROR:   [10] quadratic_roots(1,-7,10,2) at /home/cmcborr1/projects/i471a/submit/lab6/quadratic_roots.pro:4
+ERROR:    [9] <user>
+[0m?- ?- quadratic_roots(1,-7,10,2).?- [K^D
+[32m% halt
+[0m[?2004hcmcborr1@remote04:~/projects/i471a/submit/lab6$ prolog [18@nano quadratic_roots.pro[C
+[?2004l[?2004h[?1049h[22;0;0t[1;62r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[60;52H(B[0;7m[ Reading... ](B[m[60;51H(B[0;7m[ Read 7 lines ](B[m[H(B[0;7m  GNU nano 5.4                                     quadratic_roots.pro                                               [1;116H(B[m[61d(B[0;7m^G(B[m Help[61;17H(B[0;7m^O(B[m Write Out    (B[0;7m^W(B[m Where Is     (B[0;7m^K(B[m Cut[61;65H(B[0;7m^T(B[m Execute[81G(B[0;7m^C(B[m Location     (B[0;7mM-U(B[m Undo[62d(B[0;7m^X(B[m Exit[62;17H(B[0;7m^R(B[m Read File    (B[0;7m^\(B[m Replace[49G(B[0;7m^U(B[m Paste[62;65H(B[0;7m^J(B[m Justify[81G(B[0;7m^_(B[m Go To Line   (B[0;7mM-E(B[m Redo[2dquadratic_roots(A,B,C,Z) :-[3;9HX1 = ((-B + sqrt(B**2-4*(A*C)))/ 2*A),[4;9HX2 = ((-B - sqrt(B**2-4*(A*C)))/ 2*A),[5;9HZ is x1,[6;9HZ is x2.[2d[?12l[?25h[?25l[3d[?12l[?25h[?25l[4d[?12l[?25h[?25l[5d[?12l[?25h[?25l[6d[?12l[?25h[?25l[5;17H[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[4d[?12l[?25h[?25lB[?12l[?25h[?25l [?12l[?25h[?25l-[?12l[?25h[?25l [?12l[?25h[?25ls[?12l[?25h[?25lq[?12l[?25h[?25lr[?12l[?25h[?25lt[?12l[?25h[?25l([?12l[?25h[?25lB[?12l[?25h[?25l*[?12l[?25h[?25l*[?12l[?25h[?25l2[?12l[?25h[?25l-[?12l[?25h[?25l4[?12l[?25h[?25l*[?12l[?25h[?25l([?12l[?25h[?25l[60d[K[4;35H[?12l[?25h[?25l*[?12l[?25h[?25lC[?12l[?25h[?25l)[?12l[?25h[?25l)[?12l[?25h[?25l)[?12l[?25h[?25l/[?12l[?25h[?25l[A[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[4d[?12l[?25h[?25l[60;52H(B[0;7m[ Writing... ](B[m[1;116H[60;51H(B[0;7m[ Wrote 7 lines ](B[m[4;38H[?12l[?25h[?25l[60d[J[62d[?12l[?25h[62;1H[?1049l[23;0;0t[?1l>[?2004l[?2004hcmcborr1@remote04:~/projects/i471a/submit/lab6$ nano quadratic_roots.pro prolog [K[18@nano quadratic_roots.pro[C[Knano quadratic_roots.pro prolog [K[18@nano quadratic_roots.pro[Cprolog [K[18@nano quadratic_roots.pro[Cprolog [K[18@nano quadratic_roots.pro[Cls[Kprolog ls[Knano quadratic_roots.pro prolog [K[18@nano quadratic_roots.pro[C[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kl[K[Klab6-sol.pro 
+[?2004l[?2004h[?1049h[22;0;0t[1;62r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[60;52H(B[0;7m[ Reading... ](B[m[60;51H(B[0;7m[ Read 7 lines ](B[m[H(B[0;7m  GNU nano 5.4                                         lab6-sol.pro                                                  [1;116H(B[m[61d(B[0;7m^G(B[m Help[61;17H(B[0;7m^O(B[m Write Out    (B[0;7m^W(B[m Where Is     (B[0;7m^K(B[m Cut[61;65H(B[0;7m^T(B[m Execute[81G(B[0;7m^C(B[m Location     (B[0;7mM-U(B[m Undo[62d(B[0;7m^X(B[m Exit[62;17H(B[0;7m^R(B[m Read File    (B[0;7m^\(B[m Replace[49G(B[0;7m^U(B[m Paste[62;65H(B[0;7m^J(B[m Justify[81G(B[0;7m^_(B[m Go To Line   (B[0;7mM-E(B[m Redo[2df(1, 2, z) = f(_, _, X).[3dhead(a, tail(z,B), Y) = head(_ , tail(X,_), _).[4dcons(a, cons(b, cons(c,z))) = cons(_, cons(_, cons(_,X))).[5d[H|[T|TT]] = [1,2,3,4].[6d[H|[T1|[T2|T3]]] = [1,2,3,4].[7d[H|[T1|T2]] = [[1 2] 3 4][2d[?12l[?25h[?25l[3d[?12l[?25h[?25lh[?12l[?25h[?25le[?12l[?25h[?25l[4d[?12l[?25h[?25ln[?12l[?25h[?25ls[?12l[?25h[?25l([?12l[?25h[?25la[?12l[?25h[?25l,[?12l[?25h[?25l [?12l[?25h[?25lc[?12l[?25h[?25lo[?12l[?25h[?25ln[?12l[?25h[?25ls[?12l[?25h[?25l([?12l[?25h[?25lb[?12l[?25h[?25l,[?12l[?25h[?25l [?12l[?25h[?25lc[?12l[?25h[?25lo[?12l[?25h[?25ln[?12l[?25h[?25ls[?12l[?25h[?25l([?12l[?25h[?25lc[?12l[?25h[?25l,[?12l[?25h[?25l[60d[K[4;25H[?12l[?25h[?25l)[?12l[?25h[?25l)[?12l[?25h[?25l)[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[1;69H(B[0;7m*[116G(B[m[2;24H [?12l[?25h[?25l,[?12l[?25h[?25l[3d[?12l[?25h[?25lh[?12l[?25h[?25le[?12l[?25h[?25la[?12l[?25h[?25ld[?12l[?25h[?25l([?12l[?25h[?25l_[?12l[?25h[?25l [?12l[?25h[?25l,[?12l[?25h[?25l [?12l[?25h[?25lt[?12l[?25h[?25la[?12l[?25h[?25li[?12l[?25h[?25ll[?12l[?25h[?25l([?12l[?25h[?25lX[?12l[?25h[?25l,[?12l[?25h[?25l_[?12l[?25h[?25l)[?12l[?25h[?25l,[?12l[?25h[?25l [?12l[?25h[?25l_[?12l[?25h[?25l)[?12l[?25h[?25l.[?12l[?25h[?25l [?12l[?25h[?25l,[?12l[?25h[?25l[4d[?12l[?25h[?25l[5d[?12l[?25h[?25l[4;59H[?12l[?25h[?25l,[?12l[?25h[?25l [?12l[?25h[?25l [?12l[?25h[?25l,[?12l[?25h[?25l[5;24H[?12l[?25h[?25l [?12l[?25h[?25l,[?12l[?25h[?25l[6d[?12l[?25h[?25l,[?12l[?25h[?25l3[?12l[?25h[?25l,[?12l[?25h[?25l4[?12l[?25h[?25l][?12l[?25h[?25l.[?12l[?25h[?25l[7d[?12l[?25h[?25l[6;30H[?12l[?25h[?25l [?12l[?25h[?25l,[?12l[?25h[?25l[7;26H[?12l[?25h[?25l.[?12l[?25h[?25l[60;52H(B[0;7m[ Writing... ](B[m[1;69H(B[0;7m [116G(B[m[60;51H(B[0;7m[ Wrote 7 lines ](B[m[7;27H[?12l[?25h[?25l[60d[J[62d[?12l[?25h[62;1H[?1049l[23;0;0t[?1l>[?2004l[?2004hcmcborr1@remote04:~/projects/i471a/submit/lab6$ nano lab6-sol.pro [7@quadratic_roots[C[C[C[C[Cprolog [K[18@nano quadratic_roots.pro[Cprolog [K
+[?2004lWelcome to SWI-Prolog (threaded, 64 bits, version 8.2.4)
+SWI-Prolog comes with ABSOLUTELY NO WARRANTY. This is free software.
+Please run ?- license. for legal details.
+
+For online help and background, visit https://www.swi-prolog.org
+For built-in help, use ?- help(Topic). or ?- apropos(Word).
+
+?- ?- quadratic_roots(1,-7,10,2).?- [2@['[21G.pro'].[K?- Z = 1.[K?- ['quadratic_roots.pro'].?- [2P[19G(1,-7,10,2).?- [K[
+|    [6G'quad[10G[K[9G[K[8G[K[7G[Klab[10G6-s[13Gol.pro[19G'[6G[20G[20G]
+|    .
+[1;31mERROR: /home/cmcborr1/projects/i471a/submit/lab6/lab6-sol.pro:6:20: Syntax error: Operator expected
+[0m[1mtrue.[0m
+
+?- ?- [
+'lab6-sol.pro'].[A?- quadratic_roots(1,-7,10,2).
+[K[A[31G?- [2@['[21G.pro'].[K?- Z = 1.[K?- ['quadratic_roots.pro'].?- [2P[19G(1,-7,10,2).?- [[K
+'lab6-sol.pro'].[A?- [K
+[K[A?- ?- [
+'lab6-sol.pro'].[A?- quadratic_roots(1,-7,10,2).
+[K[A[31G?- [2@['[21G.pro'].[K?- [2P[19G(1,-7,10,2).?- [2@['[21G.pro'].[K?- Z = 1.[K?- X = a.?- Z = 1.?- ['quadratic_roots.pro'].?- [2P[19G(1,-7,10,2).
+[1;31mERROR: Unknown procedure: quadratic_roots/4 (DWIM could not correct goal)
+[0m?- ^D
+[32m% halt
+[0m[?2004hcmcborr1@remote04:~/projects/i471a/submit/lab6$ ls
+[?2004llab6.LOG  lab6-sol.pro	quadratic_roots.pro
+[?2004hcmcborr1@remote04:~/projects/i471a/submit/lab6$ nano quadratic_roots.pro 
+[?2004l[?2004h[?1049h[22;0;0t[1;62r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[60;52H(B[0;7m[ Reading... ](B[m[60;51H(B[0;7m[ Read 7 lines ](B[m[H(B[0;7m  GNU nano 5.4                                     quadratic_roots.pro                                               [1;116H(B[m[61d(B[0;7m^G(B[m Help[61;17H(B[0;7m^O(B[m Write Out    (B[0;7m^W(B[m Where Is     (B[0;7m^K(B[m Cut[61;65H(B[0;7m^T(B[m Execute[81G(B[0;7m^C(B[m Location     (B[0;7mM-U(B[m Undo[62d(B[0;7m^X(B[m Exit[62;17H(B[0;7m^R(B[m Read File    (B[0;7m^\(B[m Replace[49G(B[0;7m^U(B[m Paste[62;65H(B[0;7m^J(B[m Justify[81G(B[0;7m^_(B[m Go To Line   (B[0;7mM-E(B[m Redo[2dquadratic_roots(A,B,C,Z) :-[3;9HX1 = ((-B + sqrt(B**2-4*(A*C)))/ 2*A),[4;9HX2 = ((-B - sqrt(B**2-4*(A*C)))/ 2*A),[5;9HZ is x1,[6;9HZ is x2.[2d[?12l[?25h[?25l[3d[?12l[?25h[?25l[4d[?12l[?25h[?25l[3;47H[?12l[?25h[?25l[60d[J[62d[?12l[?25h[62;1H[?1049l[23;0;0t[?1l>[?2004l[?2004hcmcborr1@remote04:~/projects/i471a/submit/lab6$ nano quadratic_roots.pro ls[Kprolog [11@nano lab6-sol.pro[C
+[?2004l[?2004h[?1049h[22;0;0t[1;62r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[60;52H(B[0;7m[ Reading... ](B[m[60;51H(B[0;7m[ Read 7 lines ](B[m[H(B[0;7m  GNU nano 5.4                                         lab6-sol.pro                                                  [1;116H(B[m[61d(B[0;7m^G(B[m Help[61;17H(B[0;7m^O(B[m Write Out    (B[0;7m^W(B[m Where Is     (B[0;7m^K(B[m Cut[61;65H(B[0;7m^T(B[m Execute[81G(B[0;7m^C(B[m Location     (B[0;7mM-U(B[m Undo[62d(B[0;7m^X(B[m Exit[62;17H(B[0;7m^R(B[m Read File    (B[0;7m^\(B[m Replace[49G(B[0;7m^U(B[m Paste[62;65H(B[0;7m^J(B[m Justify[81G(B[0;7m^_(B[m Go To Line   (B[0;7mM-E(B[m Redo[2df(1, 2, z) = f(_, _, X),[3dhead(a, tail(z,B), Y) = head(_ , tail(X,_), _),[4dcons(a, cons(b, cons(c,z))) = cons(_, cons(_, cons(_,X))),[5d[H|[T|TT]] = [1,2,3,4],[6d[H|[T1|[T2|T3]]] = [1,2,3,4],[7d[H|[T1|T2]] = [[1 2] 3 4].[2d[?12l[?25h[?25l[3d[?12l[?25h[?25l[2;25H[?12l[?25h[?25l[1;69H(B[0;7m*[116G(B[m[2;24H [?12l[?25h[?25l.[?12l[?25h[?25l[3d[?12l[?25h[?25lh[?12l[?25h[?25le[?12l[?25h[?25la[?12l[?25h[?25ld[?12l[?25h[?25l([?12l[?25h[?25l_[?12l[?25h[?25l [?12l[?25h[?25l,[?12l[?25h[?25l [?12l[?25h[?25lt[?12l[?25h[?25la[?12l[?25h[?25li[?12l[?25h[?25ll[?12l[?25h[?25l([?12l[?25h[?25lX[?12l[?25h[?25l,[?12l[?25h[?25l_[?12l[?25h[?25l)[?12l[?25h[?25l,[?12l[?25h[?25l [?12l[?25h[?25l[60d[K[3;46H[?12l[?25h[?25l)[?12l[?25h[?25l,[?12l[?25h[?25l [?12l[?25h[?25l/[?12l[?25h[?25l [?12l[?25h[?25l.[?12l[?25h[?25l[4d[?12l[?25h[?25lo[?12l[?25h[?25ln[?12l[?25h[?25ls[?12l[?25h[?25l[4;59H[?12l[?25h[?25l [?12l[?25h[?25l.[?12l[?25h[?25l[5;24H[?12l[?25h[?25l [?12l[?25h[?25l.[?12l[?25h[?25l[6d[?12l[?25h[?25l[30G[?12l[?25h[?25l [?12l[?25h[?25l.[?12l[?25h[?25l[7;27H[?12l[?25h[?25l[60;52H(B[0;7m[ Writing... ](B[m[1;69H(B[0;7m [116G(B[m[60;51H(B[0;7m[ Wrote 7 lines ](B[m[7;27H[?12l[?25h[?25l[60d[J[62d[?12l[?25h[62;1H[?1049l[23;0;0t[?1l>[?2004l[?2004hcmcborr1@remote04:~/projects/i471a/submit/lab6$ nano lab6-sol.pro [7@quadratic_roots[C[C[C[C[Cls[Knano quadratic_roots.pro [7Plab6-sol[C[C[C[C[C[K./da[K[Klab[K[K[K[K[Kprolog 
+[?2004lWelcome to SWI-Prolog (threaded, 64 bits, version 8.2.4)
+SWI-Prolog comes with ABSOLUTELY NO WARRANTY. This is free software.
+Please run ?- license. for legal details.
+
+For online help and background, visit https://www.swi-prolog.org
+For built-in help, use ?- help(Topic). or ?- apropos(Word).
+
+?- ?- quadratic_roots(1,-7,10,2).?- [[K
+'lab6-sol.pro'].[A?- [[
+[A?- ['lab6-sol.pro'].
+[K[A?- [
+[31mWarning: /home/cmcborr1/projects/i471a/submit/lab6/lab6-sol.pro:1:
+Warning:    Singleton variables: [X]
+[0m[1;31mERROR: /home/cmcborr1/projects/i471a/submit/lab6/lab6-sol.pro:1:
+ERROR:    No permission to modify static procedure `(=)/2'
+[0m[31mWarning: /home/cmcborr1/projects/i471a/submit/lab6/lab6-sol.pro:2:
+Warning:    Singleton variables: [B,Y,X]
+[0m[1;31mERROR: /home/cmcborr1/projects/i471a/submit/lab6/lab6-sol.pro:2:
+ERROR:    No permission to modify static procedure `(=)/2'
+[0m[31mWarning: /home/cmcborr1/projects/i471a/submit/lab6/lab6-sol.pro:3:
+Warning:    Singleton variables: [X]
+[0m[1;31mERROR: /home/cmcborr1/projects/i471a/submit/lab6/lab6-sol.pro:3:
+ERROR:    No permission to modify static procedure `(=)/2'
+[0m[31mWarning: /home/cmcborr1/projects/i471a/submit/lab6/lab6-sol.pro:4:
+Warning:    Singleton variables: [H,T,TT]
+[0m[1;31mERROR: /home/cmcborr1/projects/i471a/submit/lab6/lab6-sol.pro:4:
+ERROR:    No permission to modify static procedure `(=)/2'
+[0m[31mWarning: /home/cmcborr1/projects/i471a/submit/lab6/lab6-sol.pro:5:
+Warning:    Singleton variables: [H,T1,T2,T3]
+[0m[1;31mERROR: /home/cmcborr1/projects/i471a/submit/lab6/lab6-sol.pro:5:
+ERROR:    No permission to modify static procedure `(=)/2'
+[0m[1;31mERROR: /home/cmcborr1/projects/i471a/submit/lab6/lab6-sol.pro:6:21: Syntax error: Operator expected
+[0m[1mtrue.[0m
+
+?- ?- ['lab6-sol.pro'].?- quadratic_roots(1,-7,10,2).?- [[K
+'lab6-sol.pro'].[A?- quadratic_roots(1,-7,10,2).
+[K[A[31G?- ['lab6-sol.pro'].[K?- [K?- ['lab6-sol.pro'].[20G[K
+|    ^D[1;31mERROR: Stream user_input:31:17 Syntax error: Unexpected end of file
+[0m?- ^D
+[32m% halt
+[0m[?2004hcmcborr1@remote04:~/projects/i471a/submit/lab6$ nna[K[Kano lab6-sol.pro 
+[?2004l[?2004h[?1049h[22;0;0t[1;62r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[60;52H(B[0;7m[ Reading... ](B[m[60;51H(B[0;7m[ Read 7 lines ](B[m[H(B[0;7m  GNU nano 5.4                                         lab6-sol.pro                                                  [1;116H(B[m[61d(B[0;7m^G(B[m Help[61;17H(B[0;7m^O(B[m Write Out    (B[0;7m^W(B[m Where Is     (B[0;7m^K(B[m Cut[61;65H(B[0;7m^T(B[m Execute[81G(B[0;7m^C(B[m Location     (B[0;7mM-U(B[m Undo[62d(B[0;7m^X(B[m Exit[62;17H(B[0;7m^R(B[m Read File    (B[0;7m^\(B[m Replace[49G(B[0;7m^U(B[m Paste[62;65H(B[0;7m^J(B[m Justify[81G(B[0;7m^_(B[m Go To Line   (B[0;7mM-E(B[m Redo[2df(1, 2, z) = f(_, _, X).[3dhead(a, tail(z,B), Y) = head(_ , tail(X,_), _).[4dcons(a, cons(b, cons(c,z))) = cons(_, cons(_, cons(_,X))).[5d[H|[T|TT]] = [1,2,3,4].[6d[H|[T1|[T2|T3]]] = [1,2,3,4].[7d[H|[T1|T2]] = [[1 2] 3 4].[2d[?12l[?25h[?25l[3d[?12l[?25h[?25l[4d[?12l[?25h[?25l[5d[?12l[?25h[?25l[6d[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[3;48H[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[60d[K[3;29H[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[2;25H[?12l[?25h[?25l[3d[?12l[?25h[?25l[4d[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[3;48H[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[2;25H[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l)[?12l[?25h[?25l.[?12l[?25h[?25l[3d[?12l[?25h[?25l[A[?12l[?25h[?25l[1;69H(B[0;7m*[116G(B[m7[2;60r8[2dM[1;62r[3;1H[?12l[?25h[?25l[A[?12l[?25h[?25ld[?12l[?25h[?25le[?12l[?25h[?25lf[?12l[?25h[?25l [?12l[?25h[?25l [?12l[?25h[?25l[K[?12l[?25h[?25l([?12l[?25h[?25l[K[?12l[?25h[?25ll[?12l[?25h[?25la[?12l[?25h[?25lb[?12l[?25h[?25l6[?12l[?25h[?25l-[?12l[?25h[?25ls[?12l[?25h[?25lo[?12l[?25h[?25ll[?12l[?25h[?25l.[?12l[?25h[?25lp[?12l[?25h[?25lr[?12l[?25h[?25lo[?12l[?25h[?25l [?12l[?25h[?25l [?12l[?25h[?25l [?12l[?25h[?25l [?12l[?25h[?25l([?12l[?25h[?25l)[?12l[?25h[?25l-[?12l[?25h[?25l>[?12l[?25h[?25l [?12l[?25h[?25l [?12l[?25h[?25l-[?12l[?25h[?25l [?12l[?25h[?25l:[?12l[?25h[?25l-[?12l[?25h[?25l[3d[?12l[?25h[?25l [?12l[?25h[?25lf[?12l[?25h[?25l([?12l[?25h[?25l_[?12l[?25h[?25l,[?12l[?25h[?25l [?12l[?25h[?25l_[?12l[?25h[?25l,[?12l[?25h[?25l [?12l[?25h[?25lX[?12l[?25h[?25l)[?12l[?25h[?25l.[?12l[?25h[?25l [?12l[?25h[?25l,[?12l[?25h[?25l[4d[?12l[?25h[?25lh[?12l[?25h[?25le[?12l[?25h[?25la[?12l[?25h[?25ld[?12l[?25h[?25l([?12l[?25h[?25l_[?12l[?25h[?25l [?12l[?25h[?25l,[?12l[?25h[?25l [?12l[?25h[?25lt[?12l[?25h[?25la[?12l[?25h[?25li[?12l[?25h[?25ll[?12l[?25h[?25l([?12l[?25h[?25lX[?12l[?25h[?25l,[?12l[?25h[?25l_[?12l[?25h[?25l)[?12l[?25h[?25l,[?12l[?25h[?25l [?12l[?25h[?25l_[?12l[?25h[?25l)[?12l[?25h[?25l.[?12l[?25h[?25l [?12l[?25h[?25l,[?12l[?25h[?25l[5d[?12l[?25h[?25lo[?12l[?25h[?25ln[?12l[?25h[?25ls[?12l[?25h[?25l([?12l[?25h[?25l_[?12l[?25h[?25l,[?12l[?25h[?25lX[?12l[?25h[?25l)[?12l[?25h[?25l)[?12l[?25h[?25l)[?12l[?25h[?25l.[?12l[?25h[?25l[6d[?12l[?25h[?25l[5;59H[?12l[?25h[?25l [?12l[?25h[?25l,[?12l[?25h[?25l[6;24H[?12l[?25h[?25l [?12l[?25h[?25l,[?12l[?25h[?25l[?12l[?25h[?25l[7d[?12l[?25h[?25l2[?12l[?25h[?25l,[?12l[?25h[?25l3[?12l[?25h[?25l,[?12l[?25h[?25l4[?12l[?25h[?25l][?12l[?25h[?25l.[?12l[?25h[?25l [?12l[?25h[?25l,[?12l[?25h[?25l[8;27H[?12l[?25h[?25l[60;52H(B[0;7m[ Writing... ](B[m[1;69H(B[0;7m [116G(B[m[60;51H(B[0;7m[ Wrote 8 lines ](B[m[8;27H[?12l[?25h[?25l[60d[J[62d[?12l[?25h[62;1H[?1049l[23;0;0t[?1l>[?2004l[?2004hcmcborr1@remote04:~/projects/i471a/submit/lab6$ nano lab6-sol.pro [11Pprolog[C
+[?2004lWelcome to SWI-Prolog (threaded, 64 bits, version 8.2.4)
+SWI-Prolog comes with ABSOLUTELY NO WARRANTY. This is free software.
+Please run ?- license. for legal details.
+
+For online help and background, visit https://www.swi-prolog.org
+For built-in help, use ?- help(Topic). or ?- apropos(Word).
+
+?- ?- ['lab6-sol.pro'].?- quadratic_roots(1,-7,10,2).?- [[K
+'lab6-sol.pro'].
+[1;31mERROR: /home/cmcborr1/projects/i471a/submit/lab6/lab6-sol.pro:7:20: Syntax error: Operator expected
+[0m[1mtrue.[0m
+
+?- ?- [
+'lab6-sol.pro'].[A?- [K
+[K[A?- ?- [
+'lab6-sol.pro'].[A?- ['lab6-sol.pro'].
+[K[A[21G?- quadratic_roots(1,-7,10,2).?- ['lab6-sol.pro'].[K?- [[K
+'lab6-sol.pro'].
+[1;31mERROR: /home/cmcborr1/projects/i471a/submit/lab6/lab6-sol.pro:7:20: Syntax error: Operator expected
+[0m[1mtrue.[0m
+
+?- ^D
+[32m% halt
+[0m[?2004hcmcborr1@remote04:~/projects/i471a/submit/lab6$ prolog [11@nano lab6-sol.pro[C
+[?2004l[?2004h[?1049h[22;0;0t[1;62r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[60;52H(B[0;7m[ Reading... ](B[m[60;51H(B[0;7m[ Read 8 lines ](B[m[H(B[0;7m  GNU nano 5.4                                         lab6-sol.pro                                                  [1;116H(B[m[61d(B[0;7m^G(B[m Help[61;17H(B[0;7m^O(B[m Write Out    (B[0;7m^W(B[m Where Is     (B[0;7m^K(B[m Cut[61;65H(B[0;7m^T(B[m Execute[81G(B[0;7m^C(B[m Location     (B[0;7mM-U(B[m Undo[62d(B[0;7m^X(B[m Exit[62;17H(B[0;7m^R(B[m Read File    (B[0;7m^\(B[m Replace[49G(B[0;7m^U(B[m Paste[62;65H(B[0;7m^J(B[m Justify[81G(B[0;7m^_(B[m Go To Line   (B[0;7mM-E(B[m Redo[2dlab6-sol():-[3df(1, 2, z) = f(_, _, X),[4dhead(a, tail(z,B), Y) = head(_ , tail(X,_), _),[5dcons(a, cons(b, cons(c,z))) = cons(_, cons(_, cons(_,X))),[6d[H|[T|TT]] = [1,2,3,4],[7d[H|[T1|[T2|T3]]] = [1,2,3,4],[8d[H|[T1|T2]] = [[1 2] 3 4].[2d[?12l[?25h[?25l[3d[?12l[?25h[?25l[A[?12l[?25h[?25l[3d[?12l[?25h[?25l[4d[?12l[?25h[?25l[61;17H             (B[0;7m^W(B[m Begin of Paragr.          (B[0;7m^Y(B[m First Line   [81G       (B[0;7m^T(B[m Go To Text[K[62;2H(B[0;7mC(B[m Cancel[17G             (B[0;7m^O(B[m End of Paragraph          (B[0;7m^V(B[m Last Line[K[61;101H[A(B[0;7mEnter line number, column number:                                                                                    [60;35H(B[m[?12l[?25h[?25l(B[0;7m7(B[m[?12l[?25h[?25l[K[61;17H(B[0;7m^O(B[m Write Out    (B[0;7m^W(B[m Where Is     (B[0;7m^K(B[m Cut          (B[0;7m^T(B[m Execute[81G(B[0;7m^C(B[m Location     (B[0;7mM-U(B[m Undo[62;2H(B[0;7mX(B[m Exit  [17G(B[0;7m^R(B[m Read File    (B[0;7m^\(B[m Replace      (B[0;7m^U(B[m Paste        (B[0;7m^J(B[m Justify[81G(B[0;7m^_(B[m Go To Line   (B[0;7mM-E(B[m Redo[8d[?12l[?25h[?25l[[?12l[?25h[?25lH[?12l[?25h[?25l|[?12l[?25h[?25l[[?12l[?25h[?25lT[?12l[?25h[?25l1[?12l[?25h[?25l|[?12l[?25h[?25lT[?12l[?25h[?25l2[?12l[?25h[?25l][?12l[?25h[?25l][?12l[?25h[?25l [?12l[?25h[?25l=[?12l[?25h[?25l [?12l[?25h[?25l[[?12l[?25h[?25l[[?12l[?25h[?25l1[?12l[?25h[?25l [?12l[?25h[?25l2[?12l[?25h[?25l][?12l[?25h[?25l [?12l[?25h[?25l3[?12l[?25h[?25l [?12l[?25h[?25l4[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[7;30H[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[6;24H[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[5;59H[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[A[?12l[?25h[?25l[3;25H[?12l[?25h[?25l[2;13H[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[1;69H(B[0;7m*[116G(B[m7[2;60r8[2dM[1;62r[3;1H[?12l[?25h[?25l[A[?12l[?25h[?25ll[?12l[?25h[?25la[?12l[?25h[?25lb[?12l[?25h[?25l6[?12l[?25h[?25l[9G[?12l[?25h
