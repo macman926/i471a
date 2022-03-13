@@ -47,7 +47,13 @@
 ;;the 2nd argument to get this alternate function which has the
 ;;advantage that it is tail-recursive.
 (define (unary-add-tr m n)
- 0)
+(letrec (aux-uatr ((acc 0))
+      (if (eq? m 'z)
+          n 
+          ((cons (car m) (aux-uatr (cdr m) n (+ 1 s))))
+          )))
+    (aux-uatr 0) 
+)
 
 (check-equal? (unary-add-tr 'z '(s . z)) '(s . z))
 (check-equal? (unary-add-tr '(s . z) 'z) '(s . z))
@@ -79,7 +85,13 @@
 
 ;;Returns true iff proper-list ls contains only empty lists.
 (define (contains-empty-lists-only? ls)
-  0)
+   (cond
+   ((null? ls) #t)
+   ((empty? ls) #t)
+   ((empty? (car ls)) (contains-empty-list-only? (cdr ls)))
+   (else #f)
+   )
+)
 
 (check-equal? (contains-empty-lists-only? '()) #t)
 (check-equal? (contains-empty-lists-only? '(())) #t)
