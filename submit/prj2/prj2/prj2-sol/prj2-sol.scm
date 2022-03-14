@@ -46,13 +46,13 @@
 ;;Instead of using successor on the result, we can use successor on
 ;;the 2nd argument to get this alternate function which has the
 ;;advantage that it is tail-recursive.
+(define (aux-uatr m n s)
+    (if (eq? m 'z)
+        n
+        (cons (car m) (aux-uatr (cdr m) n (+ 1 s))))
+)
 (define (unary-add-tr m n)
-(letrec (aux-uatr ((acc 0))
-      (if (eq? m 'z)
-          n 
-          ((cons (car m) (aux-uatr (cdr m) n (+ 1 s))))
-          )))
-    (aux-uatr 0) 
+	(aux-uatr m n 0) 
 )
 
 (check-equal? (unary-add-tr 'z '(s . z)) '(s . z))
