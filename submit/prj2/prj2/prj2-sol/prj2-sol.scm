@@ -148,9 +148,19 @@
 ;;when a sub-list is exhausted.  The length of the returned list is
 ;;the length of the longest sub-list in ls and the # of elements in
 ;;each tuple is the length of ls.
-(define (list-tuples ls)
-  0)
-
+(define (nth-tup ls len)
+  (if (null? ls)
+    '0
+    (cons (car(split-firsts ls)    
+  ) (nth-tup (cdr(split-firsts ls)) (- (length ls) 1)))
+  )
+)
+(define (cleanup ls)
+  (list ls)
+)
+(define (list-tuples ls) 
+  (nth-tup ls (length ls))
+)
 (check-equal? (list-tuples '(() ())) '())
 (check-equal? (list-tuples '((a) ())) '((a ())))
 (check-equal? (list-tuples '((a) (1))) '((a 1)))
