@@ -108,8 +108,30 @@
 ;;of each sub-list (again, if a sub-list is empty, then corresponding
 ;;element is returned a '()).  It follows that each element of the
 ;;returned pair will have length equal to that of ls.
+(define (getHeads ls len)
+  (if (null? ls) '()
+    (if (null? (car ls)) '()
+      (if (> 0 len)
+        '()
+        (cons (car (car ls)) (getHeads (cdr ls) (- len         1)))
+        )
+      )
+    )
+  )
+
+(define (getTails ls len)
+  (if (null? ls) '()
+    (if (null? (car ls)) '()
+    (if (> 0 len)'()
+      (cons (cdr (car ls)) 
+         (getTails (cdr ls) (- len 1)))
+        )
+       )
+    )
+  )  
 (define (split-firsts ls (tuple '()) (rest '()))
-  0)
+	(cons (getHeads ls (length ls)) (getTails ls (length ls)))
+)
 
 (check-equal? (split-firsts '((a) ())) '( (a ()) .(() ()) ))
 (check-equal? (split-firsts '((a) (1))) '( (a 1) . (() ()) ))

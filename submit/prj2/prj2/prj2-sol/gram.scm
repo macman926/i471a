@@ -26,7 +26,7 @@
 ;;with an uppercase letter whereas non-terminal symbols are
 ;;Scheme symbols which are not terminal symbols.
 (define (parse gram toks)
-  '())
+  #t)
 ;(trace parse)
 
 (define (parse-nonterm gram toks nonterm)
