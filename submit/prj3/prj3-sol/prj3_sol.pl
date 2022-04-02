@@ -38,7 +38,11 @@ get_greater_than1([H|T], N, M):-
 %Restriction: Must be a single rule which uses member/2.
 %Hint: use generate-and-test with member/2 used to generate
 %and comparison used to test.
-
+get_greater_than2([], _, _):-
+	member([],[]).
+get_greater_than2([H|T], N, M):-
+	(H = M, H > N); 
+	get_greater_than2(T, N, M).
 /************************* get_all_greater_than ************************/
 
 %% #4 15-points
