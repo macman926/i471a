@@ -17,6 +17,10 @@ process(H,N):-
 %get_greater_than1(List, N, M): succeed iff M matches a number in List
 %which is greater than N.
 %
+%%get_greater_than1([],_,_).
+get_greater_than1([H|T], N, M):-
+	M = H, H > N;
+	get_greater_than1(T, N, M). 
 %Example:
 % ?- get_greater_than1([2, 3, 1, 4], 2, M).
 % M = 3 ;
