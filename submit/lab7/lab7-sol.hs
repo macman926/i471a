@@ -16,5 +16,20 @@ thd3 (_,_,v) = v
 sumFirst2 :: Num a => [a]-> a
 sumFirst2 (a:[]) = a
 sumFirst2 (a:b:_) = add a b
---fnFirst2 :: [a] -> (a -> a -> b) -> (a -> a -> b) -> b
+
+fnFirst2 :: [a] -> (a-> a -> b) -> (a -> a -> b) -> b
+fnFirst2 (a:b:[]) f1 f2 = f1 a b
+fnFirst2 (a:b:rest) f1 f2 = f2 a b
+
+-- Exercise 3
+cartesianProduct ls1 ls2 =
+ [(x,y) | x <- ls1, y <- ls2]
+cartesianProductIf ls1 ls2 predicate =
+ [(x,y) | x <- ls1, y <- ls2, predicate x y]
+
+compr1 = [(x,y) | x <- [1 .. 10], y <- [3 * x^2 + 2 * x + 1]]
+
+compr2 = [(x,y) | x <- [1 .. 10], y <- [3 * x^2 + 2 * x + 1], (rem y 3) == 0]
+
+oddEvenPairs a = [(x,y) | x <- [1 .. a], y <- [1 .. a], odd x, even y]
 
