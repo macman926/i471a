@@ -87,14 +87,17 @@ testMapToGreaterThan = do
 -- Hint: use guards for the recursive case
 
 getAllGreaterThan1 :: Ord n => [n] -> n -> [n]
-
+getAllGreaterThan1 [] n = []
+getAllGreaterThan1 (x:ns) n 
+ | x > n = x : getAllGreaterThan1 ns n 
+ | x <= n = getAllGreaterThan1 ns n
 
 testGetAllGreaterThan1 = do
   assertEq "getAllGreaterThan1 empty" (getAllGreaterThan1 [] 4) []
   assertEq "getAllGreaterThan1 all true" (getAllGreaterThan1 [5, 7] 4) [5, 7]
   assertEq "getAllGreaterThan1 not last" (getAllGreaterThan1 [5, 7, 4] 4) [5, 7]
 
-getAllGreaterThan1 _ _ = [] -- TODO
+-- getAllGreaterThan1 _ _ = [] -- TODO
 
 -------------------------- getAllGreaterThan2 ---------------------------
 
