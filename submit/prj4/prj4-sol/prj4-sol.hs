@@ -28,9 +28,9 @@ testIsAllGreaterThan1 = do
 -- <https://hackage.haskell.org/package/base-4.16.1.0/docs/Prelude.html#v:all>
 -- Hint: Use partially applied > as function argument to all
 
--- isAllGreaterThan2 :: Ord n => [n] -> n -> Bool
-  -- isAllGreaterThan2 ns n = all > ns n
-isAllGreaterThan2 ns n = True
+isAllGreaterThan2 :: Ord n => [n] -> n -> Bool
+isAllGreaterThan2 ns n = all (> n) ns
+
 testIsAllGreaterThan2 = do
   assertTrue "isAllGreaterThan2 empty" (isAllGreaterThan2 [] 4)
   assertTrue "isAllGreaterThan2 all true" (isAllGreaterThan2 [5, 7] 4)
@@ -46,15 +46,16 @@ testIsAllGreaterThan2 = do
 -- <https://hackage.haskell.org/package/base-4.16.1.0/docs/Data-List.html#v:foldl>
 -- Hint: use short-circuit &&; define a local auxiliary function for
 -- the argument to foldl.
-
+-- auxer (x:ns) n = ns : [] 
 isAllGreaterThan3 :: Ord n => [n] -> n -> Bool
+isAllGreaterThan3 ns n = foldl (\a x -> x > n && a) True ns
 
 testIsAllGreaterThan3 = do
   assertTrue "isAllGreaterThan3 empty" (isAllGreaterThan3 [] 4)
   assertTrue "isAllGreaterThan3 all true" (isAllGreaterThan3 [5, 7] 4)
   assertFalse "isAllGreaterThan3 last fail" (isAllGreaterThan3 [5, 7, 4] 4)
 
-isAllGreaterThan3 ns n = True -- TODO
+ -- TODO
 
 --------------------------- mapToGreaterThan ----------------------------
 
@@ -66,7 +67,7 @@ isAllGreaterThan3 ns n = True -- TODO
 -- Hint: Use map with a lambda function (\element -> elementExpr)
 
 mapToGreaterThan :: Ord a => [a] -> a -> [Bool]
-
+mapToGreaterThan ns n = map (\a -> a > n) ns
 testMapToGreaterThan = do
   assertEq "mapToGreaterThan empty" (mapToGreaterThan [] 3) []
   assertEq "mapToGreaterThan all"
@@ -76,7 +77,7 @@ testMapToGreaterThan = do
   assertEq "mapToGreaterThan some"
            (mapToGreaterThan [4, 5, 6] 5) [False, False, True]
 
-mapToGreaterThan xs n = [] -- TODO
+-- mapToGreaterThan xs n = [] -- TODO
 
 -------------------------- getAllGreaterThan1 ---------------------------
 
@@ -110,7 +111,6 @@ testGetAllGreaterThan2 = do
   assertEq "getAllGreaterThan2 not last" (getAllGreaterThan2 [5, 7, 4] 4) [5, 7]
 
 getAllGreaterThan2 ns n = [] -- TODO
-
 
 -------------------------- splitIntoLists2 ------------------------------
 
