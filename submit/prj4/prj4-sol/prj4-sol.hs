@@ -8,13 +8,16 @@ import Unit  -- crude assertions for unit tests
 -- Hint: use infix > and short-circuit &&
 
 isAllGreaterThan1 :: Ord n => [n] -> n -> Bool
-
+isAllGreaterThan1 [] _ = True
+isAllGreaterThan1 (z:ns) n = if z <= n then False else isAllGreaterThan1 ns n
+ 
 testIsAllGreaterThan1 = do
   assertTrue "isAllGreaterThan1 empty" (isAllGreaterThan1 [] 4)
   assertTrue "isAllGreaterThan1 all true" (isAllGreaterThan1 [5, 7] 4)
   assertFalse "isAllGreaterThan1 last fail" (isAllGreaterThan1 [5, 7, 4] 4)
 
-isAllGreaterThan1 _ _ = True  -- TODO
+--  isAllGreaterThan1 [] _ = True
+--  isAllGreaterThan1 (z:ns) n = if z <= n then False else isAllGreaterThan1 ns n
 
 
 -------------------------- isAllGreaterThan2 ----------------------------
@@ -25,14 +28,15 @@ isAllGreaterThan1 _ _ = True  -- TODO
 -- <https://hackage.haskell.org/package/base-4.16.1.0/docs/Prelude.html#v:all>
 -- Hint: Use partially applied > as function argument to all
 
-isAllGreaterThan2 :: Ord n => [n] -> n -> Bool
-
+-- isAllGreaterThan2 :: Ord n => [n] -> n -> Bool
+  -- isAllGreaterThan2 ns n = all > ns n
+isAllGreaterThan2 ns n = True
 testIsAllGreaterThan2 = do
   assertTrue "isAllGreaterThan2 empty" (isAllGreaterThan2 [] 4)
   assertTrue "isAllGreaterThan2 all true" (isAllGreaterThan2 [5, 7] 4)
   assertFalse "isAllGreaterThan2 last fail" (isAllGreaterThan2 [5, 7, 4] 4)
 
-isAllGreaterThan2 ns n = True -- TODO
+ -- TODO
 
 -------------------------- isAllGreaterThan3 ---------------------------
 
