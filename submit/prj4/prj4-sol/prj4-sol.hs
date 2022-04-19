@@ -107,13 +107,14 @@ testGetAllGreaterThan1 = do
 -- <https://hackage.haskell.org/package/base-4.16.1.0/docs/Data-List.html#v:filter>
 
 getAllGreaterThan2 :: Ord n => [n] -> n -> [n]
-
+getAllGreaterThan2 [] n = []
+getAllGreaterThan2 ns n =  filter (>n) ns
 testGetAllGreaterThan2 = do
   assertEq "getAllGreaterThan2 empty" (getAllGreaterThan2 [] 4) []
   assertEq "getAllGreaterThan2 all true" (getAllGreaterThan2 [5, 7] 4) [5, 7]
   assertEq "getAllGreaterThan2 not last" (getAllGreaterThan2 [5, 7, 4] 4) [5, 7]
 
-getAllGreaterThan2 ns n = [] -- TODO
+-- getAllGreaterThan2 ns n = [] -- TODO
 
 -------------------------- splitIntoLists2 ------------------------------
 
@@ -125,7 +126,11 @@ getAllGreaterThan2 ns n = [] -- TODO
 -- Hint: use pattern matching to distinguish lists of different lengths.
 
 splitIntoLists2 :: [a] -> [[a]]  
+splitIntoLists2 [] = []
+splitIntoLists2 xs = [take 2 xs] ++ splitIntoLists2 (drop 2 xs)
 
+-- splitIntoLists2 xs = let ll = length xs in if ll `mod` 2 == 0 then (\l sl -> [(take sl l), (drop sl l)]) xs (ll `div` 2) else (\l sl -> [(take sl l), (drop sl l)]) xs ((ll `div` 2) + 1)
+-- splitIntoLists2 xs = let ll length xs in if odd
 testSplitIntoLists2 = do
   -- note: using (assertEq "..." (splitIntoLists2 []) []) does not type check
   assertTrue "splitIntoLists2 empty" (null (splitIntoLists2 []))
@@ -138,7 +143,7 @@ testSplitIntoLists2 = do
   assertEq "splitIntoLists2 6-elements"
             (splitIntoLists2 [2, 2, 2, 1, 4, 1]) [[2, 2], [2, 1], [4, 1]]
 
-splitIntoLists2 _ = [] -- TODO
+-- splitIntoLists2 _ = [] -- TODO
 
 
 -------------------------- splitIntoPairs -------------------------------
