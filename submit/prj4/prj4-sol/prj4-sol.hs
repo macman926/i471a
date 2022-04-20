@@ -216,7 +216,8 @@ testNPrefix = do
 -- by nPrefix: 0, < n, otherwise. 
 
 splitIntoNLists :: [a] -> Int -> [[a]]
-
+splitIntoNLists [] n = []
+splitIntoNLists xs n = [take n xs] ++ splitIntoNLists (drop n xs) n
 testSplitIntoNLists = do
   -- note: using (assertEq "..." (splitIntoNLists [] 2) []) does not type check
   assertTrue "splitIntoNLists empty" (null (splitIntoNLists [] 2))
@@ -233,7 +234,7 @@ testSplitIntoNLists = do
   assertEq "splitIntoNLists 4-elements 3"
            (splitIntoNLists [1, 2, 3, 4] 3) [[1, 2, 3], [4]]
 
-splitIntoNLists _ _ = [] -- TODO
+-- splitIntoNLists _ _ = [] -- TODO
 
 ------------------------------ Run All Tests ----------------------------
 
