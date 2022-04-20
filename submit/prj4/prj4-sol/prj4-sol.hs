@@ -129,7 +129,6 @@ splitIntoLists2 :: [a] -> [[a]]
 splitIntoLists2 [] = []
 splitIntoLists2 xs = [take 2 xs] ++ splitIntoLists2 (drop 2 xs)
 
--- splitIntoLists2 xs = let ll = length xs in if ll `mod` 2 == 0 then (\l sl -> [(take sl l), (drop sl l)]) xs (ll `div` 2) else (\l sl -> [(take sl l), (drop sl l)]) xs ((ll `div` 2) + 1)
 -- splitIntoLists2 xs = let ll length xs in if odd
 testSplitIntoLists2 = do
   -- note: using (assertEq "..." (splitIntoLists2 []) []) does not type check
@@ -158,24 +157,28 @@ testSplitIntoLists2 = do
 -- to match either Nothing or Just x.
 
 splitIntoPairs :: [a] -> Maybe [(a, a)]
+splitIntoPairs [] = Just [] 
+splitIntoPairs [x] = Nothing
+splitIntoPairs [x1,x2] = Just [(x1, x2)]
+splitIntoPairs (x1:x2:xs) = fmap ((x1,x2):) (splitIntoPairs xs)
 
 testSplitIntoPairs = do
   -- note: using (assertEq "..." (splitIntoPairs []) (Just []))
-  -- does not type check
-  assertTrue "splitIntoPairs empty"
+  -- does not type check 
+  assertTrue "splitIntoPairs empty" 
              (case (splitIntoPairs []) of
                (Just x) -> null x
                otherwise -> False)
   assertEq "splitIntoPairs 1-element" (splitIntoPairs [2]) Nothing
   assertEq "splitIntoPairs 2-elements" (splitIntoPairs [1, 2]) (Just [(1, 2)])
-  assertEq "splitIntoPairs 3-elements"
+  assertEq "splitIntoPairs 3-elements" 
             (splitIntoPairs [2, 1, 4]) Nothing
   assertEq "splitIntoPairs 5-elements"
             (splitIntoPairs [2, 2, 2, 1, 4]) Nothing
   assertEq "splitIntoPairs 6-elements"
             (splitIntoPairs [2, 2, 2, 1, 4, 1]) (Just [(2, 2), (2, 1), (4, 1)])
 
-splitIntoPairs _ = Nothing -- TODO
+-- splitIntoPairs _ = Nothing -- TODO
 
 -------------------------------- nPrefix --------------------------------
 
@@ -188,7 +191,8 @@ splitIntoPairs _ = Nothing -- TODO
 -- split apart the first n-elements and the rest of list.
 
 nPrefix :: [a] -> Int -> ([a], [a])
-
+nPrefix x1 0 = ([],x1)
+nPrefix x1 n = if n <= (length x1) then (take n x1, drop n x1) else nPrefix x1 0 
 testNPrefix = do
   -- note: using (assertEq "..." (nPrefix [] 4) ([], [])) does not type check
   assertTrue "testNPrefix empty"
@@ -199,7 +203,7 @@ testNPrefix = do
   assertEq "testNPrefix 2" (nPrefix [1, 2, 3, 4] 2) ([1, 2], [3, 4])
   assertEq "testNPrefix 5" (nPrefix [1, 2, 3, 4] 5) ([], [1, 2, 3, 4])
   
-nPrefix _ _ = ([], []) -- TODO
+-- nPrefix _ _ = ([], []) -- TODO
 
 ----------------------------- splitIntoNLists ---------------------------
 
@@ -244,4 +248,3 @@ testAll = do
   testSplitIntoPairs
   testNPrefix
   testSplitIntoNLists
-  
