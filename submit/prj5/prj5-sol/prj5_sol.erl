@@ -1,8 +1,7 @@
 -module('prj5_sol').
--export([is_all_greater_than/2%, 
-
-%	 start_pred_server/1, stop_pred_server/1,
-%        pred_client/2, pred_server/1,
+-export([is_all_greater_than/2, 
+	 start_pred_server/1, stop_pred_server/1,
+        pred_client/2, pred_server/1 %,
 
 %	 start_update_pred_server/1, stop_update_pred_server/1,
 %         update_pred_client/2, update_pred_server/1,
@@ -34,18 +33,30 @@ is_all_greater_than([X|Xs], N) ->
 % return a true or false message to the client depending on whether or
 % not Pred(Val) is true or false.  It will stop when it receives a
 % 'stop' message from a client.
-%pred_server(Pred) -> 'TODO'.
-
-
+pred_server(Pred) -> 
+	receive
+		{ClientPid, Arg} ->
+		 Result = Pred(Arg),
+		 ClientPid ! { self(), Result},
+		 pred_server(Pred);
+	stop -> 
+		true
+	end.
 % pred_client(ServerPid, List): given the PID ServerPid of a predicate
 % server and a list List of predicate arguments, it will return true iff
 % the predicate server returns true for all arguments in List.
-%pred_client(ServerPid, [N|Ns]) -> 'TODO'.
-
-%start_pred_server(Pred) ->
-%    spawn(prj5_sol, pred_server, [Pred]).
-%stop_pred_server(ServerPid) ->
-%    ServerPid ! stop.
+pred_client(ServerPid, []) -> 
+	ServerPid ! true;
+pred_client(ServerPid, [N|Ns]) -> 
+	ServerPid ! { self(), N}, 
+	receive 
+	 {_, true} ->  pred_client(ServerPid, Ns);
+	 {_, false} -> false
+	end.	
+start_pred_server(Pred) ->
+    spawn(prj5_sol, pred_server, [Pred]).
+stop_pred_server(ServerPid) ->
+    ServerPid ! stop.
 
 % Example Log:
 % N> PID=prj5_sol:start_pred_server(fun (N) -> N > 5 end).
