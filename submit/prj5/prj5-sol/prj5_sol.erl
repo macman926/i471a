@@ -92,15 +92,17 @@ stop_pred_server(ServerPid) ->
 % currently using. It will stop when it receives a 'stop' message from
 % a client.
 update_pred_server(Pred) ->
-	receive
+	receive 
+		{_, [NewPred]} -> 
+			update_pred_server(NewPred);
+			
 		{ClientPid, Arg} ->
-		 Result = Pred(Arg),
-		 ClientPid ! { self(), Result},
-		 update_pred_server(Pred);
+			 Result = Pred(Arg),
+			 ClientPid ! { self(), Result},
+			 update_pred_server(Pred);
+
 	stop -> 
-		true;
-	update {ServerPid, NewPred} -> 
-		update_pred_server_update(ServerPid, NewPred)
+		true
 	end.
 
 % update_pred_client(ServerPid, List): given the PID ServerPid of a predicate
@@ -108,17 +110,18 @@ update_pred_server(Pred) ->
 % the predicate server returns true for all arguments in List.
 update_pred_client(ServerPid, []) -> 
 	ServerPid ! true;
-update_pred_client(ServerPid, [N|Ns]) -> .
-	ServerPID ! {self(), N},
+update_pred_client(ServerPid, [N|Ns]) -> 
+	ServerPid ! {self(), N},
 	receive
-	{_, true} -> pred_client(ServerPid, Ns);
+	{_, true} -> update_pred_client(ServerPid, Ns);
 	{_, false} -> false
 	end.
 % will update update_pred_server having PID ServerPid with NewPred.
 % returns 'ok' if the update is accepted.
-update_pred_server_update(ServerPid, NewPred) -> 
-.
-	
+update_pred_server_update(ServerPid, NewPred) ->	
+	ServerPid ! {ServerPid, [NewPred]},
+	Result =  ok,
+	ServerPid ! Result.
 start_update_pred_server(Pred) ->
     spawn(prj5_sol, update_pred_server, [Pred]).
 stop_update_pred_server(ServerPid) ->
