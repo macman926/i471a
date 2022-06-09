@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="../../assets/styles/article.css" rel="stylesheet" type="text/css" /> 
+    <title>CS 471: Project 2</title>
+    <link href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" 
+       rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML" async=""></script>    
+<link href="prj2/hl-fine_blue.css" rel="stylesheet"/>
+  </head>
+  <body>
+    <nav>
+      <ul>
+	<li><a href="../../index.html" class="material-icons">house</a></li>
+	<li><a href="../../docs/index.html">Docs</a></li>
+	<li><a href="../../exercises/index.html">Exercises</a></li>
+	<li><a href="../../hw/index.html">Homework</a></li>
+	<li><a href="../../labs/index.html">Labs</a></li>
+	<li><a href="../../misc/index.html">Misc</a></li>
+	<li><a href="../../projects/index.html">Projects</a></li>
+	<li><a href="../../slides/index.html">Slides</a></li>
+	<li><a id="loginAction"></a></li>
+      </ul>
+    </nav>
+    <div class="content">
+      <section data-coord="prj2.umt:1:0"><h1 data-coord="prj2.umt:1:0">Project 2</h1><p data-coord="prj2.umt:3:0"><strong data-coord="prj2.umt:3:0">Due</strong>: Mar 11, before midnight.
+</p><p data-coord="prj2.umt:5:0"><strong data-coord="prj2.umt:5:0">Important Reminder</strong>: As per the course <em data-coord="prj2.umt:5:110"><a href="../../misc/academic-honesty-statement/academic-honesty-policy.html" data-coord="prj2.umt:5:110">Academic Honesty Statement</a></em>,
+cheating of any kind will minimally result in your letter grade
+for the entire course being reduced by one level.
+</p><p data-coord="prj2.umt:9:0">This document first provides the aims of this project.  It then lists
+the requirements as explicitly as possible.  It then hints at how
+these requirements can be met.  Finally, it describes how it can be
+submitted.
+</p><section data-coord="prj2.umt:14:0"><h2 data-coord="prj2.umt:14:0">Aims</h2><p data-coord="prj2.umt:17:0">The aims of this project are as follows:
+</p><ul data-coord="prj2.umt:19:0"><li data-coord="prj2.umt:19:0"><p data-coord="prj2.umt:19:4">To get you to think recursively.
+</p></li><li data-coord="prj2.umt:21:0"><p data-coord="prj2.umt:21:4">To expose you to more Scheme programming.
+</p></li></ul></section><section data-coord="prj2.umt:24:0"><h2 data-coord="prj2.umt:24:0">Requirements</h2><p data-coord="prj2.umt:27:0">Implement all except the last of the following functions in a file
+<samp data-coord="prj2.umt:27:67">prj2-sol.scm</samp> (the file may also contain any necessary auxiliary
+functions).
+</p><p data-coord="prj2.umt:31:0">The last function should be implemented in a file called <samp data-coord="prj2.umt:31:57">gram.scm</samp>.
+</p><p data-coord="prj2.umt:33:0">Your solution may not use any of Scheme's imperative features; i.e.,
+you may not use any Scheme built-in with a name ending with the <samp data-coord="prj2.umt:33:133">!</samp>
+character.
+</p><p data-coord="prj2.umt:37:0">Questions 1-5 deal with implementing unary arithmetic based on
+<em data-coord="prj2.umt:37:108"><a href="http://en.wikipedia.org/wiki/Peano_axioms" data-coord="prj2.umt:37:108">Peano's definition</a></em> of the
+<em data-coord="prj2.umt:37:136">natural numbers</em>:
+</p><ul data-coord="prj2.umt:41:0"><li data-coord="prj2.umt:41:0"><p data-coord="prj2.umt:41:4"><samp data-coord="prj2.umt:41:4">0</samp> is a natural number.
+</p></li><li data-coord="prj2.umt:43:0"><p data-coord="prj2.umt:43:4">If <samp data-coord="prj2.umt:43:7">n</samp> is natural number, then so is its successor.
+</p></li></ul><p data-coord="prj2.umt:45:0">Hence we will represent natural numbers with a unary notation in Scheme
+syntax:
+</p><ul data-coord="prj2.umt:48:0"><li data-coord="prj2.umt:48:0"><p data-coord="prj2.umt:48:4">The Scheme symbol <samp data-coord="prj2.umt:48:22">'z</samp> will be used to represent the natural number
+0.
+</p></li><li data-coord="prj2.umt:51:0"><p data-coord="prj2.umt:51:4">If <em data-coord="prj2.umt:51:7">n</em> is the representation of natural number <em data-coord="prj2.umt:51:51">N</em>, then the
+representation of the successor of <em data-coord="prj2.umt:51:104">N</em> will be <samp data-coord="prj2.umt:51:116">(cons 's </samp> <em data-coord="prj2.umt:51:128">n</em><samp data-coord="prj2.umt:51:139">)</samp>, alternately <samp data-coord="prj2.umt:51:156">'(s .</samp> <em data-coord="prj2.umt:51:164">n</em><samp data-coord="prj2.umt:51:171">)</samp>
+</p></li></ul><p data-coord="prj2.umt:55:0">Example representations would be <samp data-coord="prj2.umt:55:33">'z</samp> for 0, <samp data-coord="prj2.umt:55:45">'(s . z)</samp> for 1, 
+<samp data-coord="prj2.umt:55:64">'(s s s . z)</samp> for 3.  In general, the representation for natural
+number <em data-coord="prj2.umt:55:137">N</em> will contain <em data-coord="prj2.umt:55:154">N</em> occurrences of <samp data-coord="prj2.umt:55:173">s</samp>.  
+</p><ol data-coord="prj2.umt:59:0"><li data-coord="prj2.umt:59:0"><p data-coord="prj2.umt:59:4">Write a function <samp data-coord="prj2.umt:59:21">(int-&gt;unary n)</samp> which when given a non-negative
+integer argument <samp data-coord="prj2.umt:59:91">n</samp>, produces its unary representation.
+</p><p data-coord="prj2.umt:62:4">Examples:
+</p><pre data-coord="prj2.umt:65:0">    &gt; (int-&gt;unary 0)
+    'z
+    &gt; (int-&gt;unary 4)
+    '(s s s s . z)
+    &gt; (int-&gt;unary 6)
+    '(s s s s s s . z)
+    &gt;
+</pre><p data-coord="prj2.umt:74:4">See the provided <a href="prj2-sol/prj2-sol.scm" data-coord="prj2.umt:74:46">tests</a> for more examples.
+</p><p data-coord="prj2.umt:76:4"><strong data-coord="prj2.umt:76:4">Hint</strong>: Recurse on <samp data-coord="prj2.umt:76:23">n</samp>. <em data-coord="prj2.umt:76:28">5-points</em>
+</p></li><li data-coord="prj2.umt:78:0"><p data-coord="prj2.umt:78:4">Write a function <samp data-coord="prj2.umt:78:21">(unary-&gt;int n)</samp> which when given a number <samp data-coord="prj2.umt:78:64">n</samp> in
+unary representation, produces the corresponding integer.
+</p><p data-coord="prj2.umt:81:4">Examples:
+</p><pre data-coord="prj2.umt:84:0">    &gt; (unary-&gt;int '(s s s s . z)) 
+    4
+    &gt; (unary-&gt;int '(s s s s s . z)) 
+    5
+    &gt; (unary-&gt;int 'z) 
+    0
+    &gt;     
+</pre><p data-coord="prj2.umt:93:4">See the provided <a href="prj2-sol/prj2-sol.scm" data-coord="prj2.umt:93:46">tests</a> for more examples.
+</p><p data-coord="prj2.umt:95:4"><strong data-coord="prj2.umt:95:4">Hint</strong>: Recurse on <samp data-coord="prj2.umt:95:23">n</samp>. <em data-coord="prj2.umt:95:28">5-points</em>
+</p></li><li data-coord="prj2.umt:97:0"><p data-coord="prj2.umt:97:4">Define a function <samp data-coord="prj2.umt:97:22">(unary-add m n)</samp> which when given two numbers
+<samp data-coord="prj2.umt:97:73">m</samp> and <samp data-coord="prj2.umt:97:81">n</samp> in unary representation, produces the unary
+representation of their sum.  You implementation may not use your
+solutions to (1) and (2) directly or indirectly; instead it should
+be based on the hint below.
+</p><p data-coord="prj2.umt:103:4">Examples:
+</p><pre data-coord="prj2.umt:106:0">    &gt; (unary-add '(s s . z) '(s s s . z))
+    '(s s s s s . z)
+    &gt; (unary-add 'z '(s s s . z))
+    '(s s s . z)
+    &gt;
+</pre><p data-coord="prj2.umt:113:4">See the provided <a href="prj2-sol/prj2-sol.scm" data-coord="prj2.umt:113:46">tests</a> for more examples.
+</p><p data-coord="prj2.umt:115:4"><strong data-coord="prj2.umt:115:4">Hint</strong>: Recall that addition is merely repeated incrementing and
+that \((1 + m) + n = 1 + (m + n)\).  You may also want to consider
+the definition of <samp data-coord="prj2.umt:115:161">my-append</samp> in the slides. <em data-coord="prj2.umt:115:188">10-points</em>
+</p></li><li data-coord="prj2.umt:119:0"><p data-coord="prj2.umt:119:4">Define a tail-recursive function <samp data-coord="prj2.umt:119:37">(unary-add-tr m n)</samp> which when
+given two numbers <samp data-coord="prj2.umt:119:91">m</samp> and <samp data-coord="prj2.umt:119:99">n</samp> in unary representation, produces
+the unary representation of their sum.  All recursion must be tail
+recursive.  Your implementation may not use your solutions to the
+previous exercises directly or indirectly; instead it should be
+based on the hint below.
+</p><p data-coord="prj2.umt:126:4">See the provided <a href="prj2-sol/prj2-sol.scm" data-coord="prj2.umt:126:46">tests</a> for examples.
+</p><p data-coord="prj2.umt:128:4"><strong data-coord="prj2.umt:128:4">Hint</strong>: \((1 + m) + n = m + (1 + n)\). <em data-coord="prj2.umt:128:42">10-points</em>
+</p></li><li data-coord="prj2.umt:130:0"><p data-coord="prj2.umt:130:4">Define a function <samp data-coord="prj2.umt:130:22">(unary-mul m n)</samp> which when given two numbers
+<samp data-coord="prj2.umt:130:73">m</samp> and <samp data-coord="prj2.umt:130:81">n</samp> in unary representation, produces the unary
+representation of their product.  Your implementation may use either
+of your earlier functions (3) or (4).
+</p><p data-coord="prj2.umt:135:4">Examples:
+</p><pre data-coord="prj2.umt:138:0">    &gt; (unary-mul (int-&gt;unary 3) (int-&gt;unary 0))
+    'z
+    &gt; (unary-mul (int-&gt;unary 3) (int-&gt;unary 4))
+    '(s s s s s s s s s s s s . z)
+    &gt; (unary-&gt;int (unary-mul (int-&gt;unary 3) '(s s . z)))
+    6
+    &gt;
+</pre><p data-coord="prj2.umt:147:4">See the provided <a href="prj2-sol/prj2-sol.scm" data-coord="prj2.umt:147:46">tests</a> for more examples.
+</p><p data-coord="prj2.umt:149:4"><strong data-coord="prj2.umt:149:4">Hint</strong>: Recall from elementary school, that multiplication is
+nothing but repeated addition. <em data-coord="prj2.umt:149:101">10-points</em>
+</p></li><li data-coord="prj2.umt:152:0"><p data-coord="prj2.umt:152:4">Write a function <samp data-coord="prj2.umt:152:21">(contains-empty-lists-only? ls)</samp> which
+returns <samp data-coord="prj2.umt:152:73">#t</samp> if all entries in <samp data-coord="prj2.umt:152:96">ls</samp> are <samp data-coord="prj2.umt:152:105">'()</samp>, <samp data-coord="prj2.umt:152:112">#f</samp> otherwise.
+</p><p data-coord="prj2.umt:155:4">See the provided <a href="prj2-sol/prj2-sol.scm" data-coord="prj2.umt:155:46">tests</a> for examples.
+</p><p data-coord="prj2.umt:157:4"><strong data-coord="prj2.umt:157:4">Hint</strong>: Recurse on the list <samp data-coord="prj2.umt:157:32">ls</samp>. <em data-coord="prj2.umt:157:38">5-points</em>
+</p></li><li data-coord="prj2.umt:159:0"><p data-coord="prj2.umt:159:4">Write a function <samp data-coord="prj2.umt:159:21">(split-firsts ls)</samp> which when given a non-empty
+proper list <samp data-coord="prj2.umt:159:86">ls</samp> of proper sub-lists, return a pair.  The first
+element of the returned pair is a proper list containing the first
+elements of each sub-list (if a sub-list is empty, the
+corresponding element is returned as '()).  The second element of
+the returned pair is a proper list containing the remaining
+elements of each sub-list (again, if a sub-list is empty, then
+corresponding element is returned a '()).  It follows that each
+element of the returned pair will have length equal to that of ls.
+</p><p data-coord="prj2.umt:169:4">See the provided <a href="prj2-sol/prj2-sol.scm" data-coord="prj2.umt:169:46">tests</a> for examples.
+</p><p data-coord="prj2.umt:171:4"><strong data-coord="prj2.umt:171:4">Hint</strong>: Add two additional arguments (with default value <samp data-coord="prj2.umt:171:61">'()</samp>)
+to accumulate each element of the returned pair.  Recurse through
+the elements of <samp data-coord="prj2.umt:171:158">ls</samp>.  At each step of the recursion look at
+the first element in <samp data-coord="prj2.umt:171:228">ls</samp>;  if it is a pair, add its head and
+tail to the accumulating arguments and recurse; if it is not a pair
+(it must be <samp data-coord="prj2.umt:171:357">'()</samp>), recurse with <samp data-coord="prj2.umt:171:378">'()</samp> added to the accumulating
+arguments.  <em data-coord="prj2.umt:171:426">15-points</em>
+</p></li><li data-coord="prj2.umt:180:0"><p data-coord="prj2.umt:180:4">Write a function <samp data-coord="prj2.umt:180:21">(list-tuples ls)</samp> which when given a proper-list
+containing <em data-coord="prj2.umt:180:86">n</em> proper-list's, returns a list of <em data-coord="prj2.umt:180:123">n</em>-tuples formed
+by picking up elements of each tuple from each of the <em data-coord="prj2.umt:180:199">n</em>-lists.
+If a particular list does not have any elements, then its tuple
+entry should be '().
+</p><p data-coord="prj2.umt:186:4">Examples:
+</p><pre data-coord="prj2.umt:189:0">    &gt; (list-tuples '((a b) (1 2) (x y)))
+    '((a 1 x) (b 2 y))
+    &gt; (list-tuples '((a b c) (1) (x y)))
+    '((a 1 x) (b () y) (c () ()))
+</pre><p data-coord="prj2.umt:195:4">See the provided <a href="prj2-sol/prj2-sol.scm" data-coord="prj2.umt:195:46">tests</a> for more examples.
+</p><p data-coord="prj2.umt:197:4"><strong data-coord="prj2.umt:197:4">Hint</strong>: Use the previously written <samp data-coord="prj2.umt:197:39">split-firsts</samp> function to
+recurse through each element of <samp data-coord="prj2.umt:197:102">ls</samp> in parallel, bottoming
+out the recursion when <samp data-coord="prj2.umt:197:157">ls</samp> does not contain any non-empty
+sublists. <em data-coord="prj2.umt:197:207">10-points</em>
+</p></li><li data-coord="prj2.umt:202:0"><p data-coord="prj2.umt:202:4">Write a function <samp data-coord="prj2.umt:202:21">(parse gram toks)</samp> which returns <samp data-coord="prj2.umt:202:55">#t</samp> iff the
+tokens list <samp data-coord="prj2.umt:202:84">toks</samp> are a sentence in the language defined by
+grammar <samp data-coord="prj2.umt:202:145">gram</samp>; return <samp data-coord="prj2.umt:202:160">#f</samp> otherwise.
+</p><p data-coord="prj2.umt:206:4">The token list <samp data-coord="prj2.umt:206:19">toks</samp> consists of a list of 2-element lists; the first
+element of each two element list is a Scheme symbol (starting with
+an uppercase letter) representing the token kind and the second
+element is a Scheme string representing the token lexeme.
+</p><p data-coord="prj2.umt:211:4">The grammar is represented as a nested list structure.  Specifically:
+</p><ul data-coord="prj2.umt:213:0"><li data-coord="prj2.umt:213:0"><p data-coord="prj2.umt:213:9">A grammar is represented as a proper list of rules.
+</p></li><li data-coord="prj2.umt:215:0"><p data-coord="prj2.umt:215:9">Each rule is represented as a Scheme pair.
+</p><ul data-coord="prj2.umt:218:0"><li data-coord="prj2.umt:218:0"><p data-coord="prj2.umt:218:13">The first element of a rule pair is a non-terminal symbol.
+</p></li><li data-coord="prj2.umt:221:0"><p data-coord="prj2.umt:221:13">The second element of a rule pair is a list of rule RHSs.
+</p></li></ul></li><li data-coord="prj2.umt:223:0"><p data-coord="prj2.umt:223:9">A rule RHS is represented as a (possibly empty) proper list
+of terminal and non-terminal symbols.
+</p></li></ul><p data-coord="prj2.umt:226:4">Terminal symbols are represented as Scheme symbols starting
+with an uppercase letter whereas non-terminal symbols are
+Scheme symbols which are not terminal symbols. <em data-coord="prj2.umt:226:177">30-points</em>
+</p><p data-coord="prj2.umt:230:4"><strong data-coord="prj2.umt:230:4">Hint</strong>: See the <samp data-coord="prj2.umt:230:20">IFDEF-GRAM</samp> in the provided <a href="prj2-sol/ifdef.scm" data-coord="prj2.umt:230:75">ifdef.scm</a> for an example grammar.
+</p><p data-coord="prj2.umt:233:4">Implement the top-level <samp data-coord="prj2.umt:233:28">parse</samp> function using auxiliary parsing
+functions, where each auxiliary parsing function will be given a
+token list to parse.  Each auxiliary parsing function should
+return <samp data-coord="prj2.umt:233:214">#f</samp> if it is unable to parse a prefix of the token list.
+OTOH, if it is able to parse a prefix of the token list, it should
+return the rest of the token list.
+</p><p data-coord="prj2.umt:240:4">Note that the code can be simplified greatly because Scheme's
+<samp data-coord="prj2.umt:240:70">and</samp> and <samp data-coord="prj2.umt:240:80">or</samp> functions not only have short-circuit semantics,
+but also return the value of the last operand evaluated.
+</p><pre>    <span class="hl opt">&gt; (</span><span class="hl kwa">and</span> <span class="hl opt">#</span>f <span class="hl opt">(/</span> <span class="hl num">1 0</span><span class="hl opt">))</span>
+    <span class="hl opt">#</span>f
+    <span class="hl opt">&gt; (</span><span class="hl kwa">and</span> <span class="hl opt">(&gt;</span> <span class="hl num">1 2</span><span class="hl opt">) (/</span> <span class="hl num">1 0</span><span class="hl opt">))</span>
+    <span class="hl opt">#</span>f
+    <span class="hl opt">&gt; (</span><span class="hl kwa">and</span> <span class="hl opt">(&lt;</span> <span class="hl num">1 2</span><span class="hl opt">) (+ (*</span> <span class="hl num">2 3</span><span class="hl opt">)</span> <span class="hl num">3</span><span class="hl opt">))</span>
+    <span class="hl num">9</span>
+    <span class="hl opt">&gt; (</span><span class="hl kwa">or</span> <span class="hl opt">(+</span> <span class="hl num">1 2</span><span class="hl opt">) (+ (*</span> <span class="hl num">2 3</span><span class="hl opt">)</span> <span class="hl num">3</span><span class="hl opt">))</span>
+    <span class="hl num">3</span>
+    <span class="hl opt">&gt; (</span><span class="hl kwa">or</span> <span class="hl opt">(&gt;</span> <span class="hl num">1 2</span><span class="hl opt">) (+ (*</span> <span class="hl num">2 3</span><span class="hl opt">)</span> <span class="hl num">3</span><span class="hl opt">))</span>
+    <span class="hl num">9</span>
+    <span class="hl opt">&gt;</span> </pre><p data-coord="prj2.umt:259:4">(This behavior is similar to that in many untyped languages like
+Python, JavaScript, Perl and Ruby).
+</p><p data-coord="prj2.umt:262:4">Hence it possible to implement <samp data-coord="prj2.umt:262:35">parse</samp> using the auxiliary
+parsing functions as possible:
+</p><ul data-coord="prj2.umt:265:0"><li data-coord="prj2.umt:265:0"><p data-coord="prj2.umt:265:8">An attempt to <samp data-coord="prj2.umt:265:22">parse</samp> token list <samp data-coord="prj2.umt:265:41">toks</samp> according to grammar
+<samp data-coord="prj2.umt:265:77">gram</samp> should succeed (return <samp data-coord="prj2.umt:265:107">#t</samp>) if no tokens are leftover
+after parsing the start symbol of the grammar.
+</p><p data-coord="prj2.umt:269:1">This can be achieved checking that no tokens are left over
+after calling an auxiliary parsing function <samp data-coord="prj2.umt:269:105">(parse-nonterm
+	gram toks nonterm)</samp> where <samp data-coord="prj2.umt:269:148">nonterm</samp> will be the start symbol
+which will be <samp data-coord="prj2.umt:269:198">(caar gram)</samp>.
+</p></li><li data-coord="prj2.umt:274:0"><p data-coord="prj2.umt:274:8">To parse a non-terminal, it is necessary to lookup all the
+RHS's for that non-terminal in the grammar and then attempt
+each RHS on the token list.
+</p><p data-coord="prj2.umt:278:1">Specifically, <samp data-coord="prj2.umt:278:15">(parse-nonterm gram toks nonterm)</samp> should
+simply delegate to <samp data-coord="prj2.umt:278:78">(parse-rhss gram toks rhss)</samp> where <samp data-coord="prj2.umt:278:114">rhss</samp>
+is a list of RHS's for <samp data-coord="prj2.umt:278:145">nonterm</samp>.
+</p></li><li data-coord="prj2.umt:282:0"><p data-coord="prj2.umt:282:8">To parse a token list via multiples RHS's, it is necessary
+to try parsing the token list using the first RHS; otherwise
+try parsing it using the remaining RHS's.
+</p><p data-coord="prj2.umt:286:8">Specifically, <samp data-coord="prj2.umt:286:22">(parse-rhss gram toks rhss)</samp> will fail
+(return <samp data-coord="prj2.umt:286:71">#f</samp>) if there are no RHS left in <samp data-coord="prj2.umt:286:105">rhss</samp>.  Otherwise,
+it can succeed if it can parse <samp data-coord="prj2.umt:286:157">toks</samp> using the first RHS
+in <samp data-coord="prj2.umt:286:188">rhss</samp>, or if it can parse <samp data-coord="prj2.umt:286:215">toks</samp> using the remaining
+RHS's in <samp data-coord="prj2.umt:286:252">rhss</samp>.
+</p><p data-coord="prj2.umt:292:1">Note that Scheme's <samp data-coord="prj2.umt:292:20">or</samp> has the necessary semantics.
+</p></li><li data-coord="prj2.umt:294:0"><p data-coord="prj2.umt:294:8">To parse a token list via a single RHS it is necessary that
+a prefix of the token list match <strong data-coord="prj2.umt:294:109">all</strong> the symbols in the
+RHS.
+</p><p data-coord="prj2.umt:298:8">Specifically, <samp data-coord="prj2.umt:298:22">(parse-rhs gram toks rhs)</samp> will succeed if
+<samp data-coord="prj2.umt:298:67">rhs</samp> is empty (in which case it will return <samp data-coord="prj2.umt:298:112">toks</samp>), or it is
+possible to parse the first symbol in <samp data-coord="prj2.umt:298:169">rhs</samp> and parse the rest
+of <samp data-coord="prj2.umt:298:198">rhs</samp> using the tokens leftover after parsing the first
+symbol.  Note that <samp data-coord="prj2.umt:298:274">parse-rhs</samp> should return the tokens
+leftover after parsing the rest of the <samp data-coord="prj2.umt:298:351">rhs</samp>.
+</p></li><li data-coord="prj2.umt:305:0"><p data-coord="prj2.umt:305:8">To parse a grammar symbol:
+</p><ul data-coord="prj2.umt:307:0"><li data-coord="prj2.umt:307:0"><p data-coord="prj2.umt:307:12">If the grammar symbol is a terminal, then the first
+token in the token list must match.
+</p></li><li data-coord="prj2.umt:310:0"><p data-coord="prj2.umt:310:12">If the grammar symbol is a non-terminal then it
+must be necessary to parse that non-terminal
+using one of its RHSs.
+</p></li></ul><p data-coord="prj2.umt:314:9">Specifically, <samp data-coord="prj2.umt:314:23">(parse-sym gram toks sym)</samp> will return the
+tail of <samp data-coord="prj2.umt:314:77">toks</samp> if <samp data-coord="prj2.umt:314:87">sym</samp> is a terminal and <samp data-coord="prj2.umt:314:111">toks</samp> is not empty
+and the <samp data-coord="prj2.umt:314:141">kind</samp> of the first element in <samp data-coord="prj2.umt:314:172">toks</samp> matches <samp data-coord="prj2.umt:314:187">sym</samp>.
+When <samp data-coord="prj2.umt:314:201">sym</samp> is a non-terminal, it will simply return the result
+of <samp data-coord="prj2.umt:314:264">(parse-nonterm gram toks sym)</samp>.
+</p></li></ul></li></ol></section><section data-coord="prj2.umt:321:0"><h2 data-coord="prj2.umt:321:0">Provided Files</h2><p data-coord="prj2.umt:324:0">You should use the provided <a href="prj2-sol" data-coord="prj2.umt:324:40">prj2-sol</a> directory as a
+starting point for your project by copying it into your <samp data-coord="prj2.umt:324:120">i471?</samp>
+directory.  It contains the following files:
+</p><dl data-coord="prj2.umt:328:0"><dt data-coord="prj2.umt:328:2"> <a href="prj2-sol/prj2-sol.scm" data-coord="prj2.umt:328:26">prj2-sol.scm</a> </dt><dd data-coord="prj2.umt:329:0"><p data-coord="prj2.umt:329:4">A skeleton file which contains skeleton functions for all except
+the last function you are required to run.
+</p><p data-coord="prj2.umt:332:4">The file is executable so that it can be executed directly via the
+command line as a racket script.  It also contains unit tests for
+each of the functions you are required to implement.
+</p></dd><dt data-coord="prj2.umt:336:2"> <a href="prj2-sol/gram.scm" data-coord="prj2.umt:336:22">gram.scm</a> </dt><dd data-coord="prj2.umt:337:0"><p data-coord="prj2.umt:337:4">A skeleton file which contains skeleton functions for implementing
+the <samp data-coord="prj2.umt:337:79">parse</samp> function you are required to implement.
+</p></dd><dt data-coord="prj2.umt:340:2"> <a href="prj2-sol/ifdef.scm" data-coord="prj2.umt:340:23">ifdef.scm</a></dt><dd data-coord="prj2.umt:341:0"><p data-coord="prj2.umt:341:4">A driver program for the <samp data-coord="prj2.umt:341:29">parse</samp> function.  Specifically, it:
+</p><ul data-coord="prj2.umt:343:0"><li data-coord="prj2.umt:343:0"><p data-coord="prj2.umt:343:9">Provides a Scheme representation of a <samp data-coord="prj2.umt:343:47">IFDEF-GRAM</samp> grammar
+compatible with the grammar from your previous project.
+</p></li><li data-coord="prj2.umt:346:0"><p data-coord="prj2.umt:346:9">Provides a Scheme scanner compatible with your previous
+project.
+</p></li><li data-coord="prj2.umt:349:0"><p data-coord="prj2.umt:349:9">Provides a <samp data-coord="prj2.umt:349:20">main</samp> function which is used when <samp data-coord="prj2.umt:349:55">ifdef.scm</samp> is
+invoked from the command-line:
+</p><ol data-coord="prj2.umt:352:0"><li data-coord="prj2.umt:352:0"><p data-coord="prj2.umt:352:13">If the first argument is <samp data-coord="prj2.umt:352:38">scan</samp>, then it transforms its
+standard input to JSON tokens on standard output
+according to the specifications for your previous
+project.
+</p><p data-coord="prj2.umt:357:6">In fact, it is possible to run the <em data-coord="prj2.umt:357:68"><a href="../prj1/prj1.html" data-coord="prj2.umt:357:68">Project 1</a></em> scan tests:
+</p><pre data-coord="prj2.umt:361:0">	     $ ~/cs471/projects/prj1/extras/run-all-tests.sh \
+	           scan-tests-only
+	     scan ifdef-elif2.defs ... ok
+	     scan ifdef-else.defs ... ok
+	     scan ifdef.defs ... ok
+	     scan nested.defs ... ok
+	     scan parse0.defs ... ok
+	     scan scan.defs ... ok
+	     scan scan0.defs ... ok
+	     scan text.defs ... ok
+</pre></li><li data-coord="prj2.umt:373:0"><p data-coord="prj2.umt:373:13">If the first argument is <samp data-coord="prj2.umt:373:38">parse</samp>, then it will invoke
+the <samp data-coord="prj2.umt:373:77">parse</samp> function to be implemented by you with the
+<samp data-coord="prj2.umt:373:134">IFDEF-GRAM</samp> and the token list resulting from scanning
+standard input using the aforementioned scanner and
+output the result on standard output.
+</p></li></ol></li></ul></dd><dt data-coord="prj2.umt:379:2"> <a href="prj2-sol/scan.sh" data-coord="prj2.umt:379:21">scan.sh</a> </dt><dd data-coord="prj2.umt:380:0"><p data-coord="prj2.umt:380:4">A trivial shell script to meeting the requirements from your
+previous project to make it possible to test the scanner using
+the test scripts from that project.
+</p></dd></dl><p data-coord="prj2.umt:384:0">The <a href="extras" data-coord="prj2.umt:384:14">extras</a> directory contains a shell script
+<a href="extras/test-ifdef-parse.sh" data-coord="prj2.umt:384:85">test-ifdef-parse.sh</a> which can be used to
+test your <samp data-coord="prj2.umt:384:136">parse</samp> function using the test data from your previous
+project.  You can run the script from the directory containing your
+<samp data-coord="prj2.umt:384:260">gram.scm</samp> file:
+</p><pre>$ ~<span class="hl opt">/</span>cs471<span class="hl opt">/</span>projects<span class="hl opt">/</span>prj<span class="hl num">2</span><span class="hl opt">/</span>extras<span class="hl opt">/</span>test-ifdef-parse.sh 
+usage<span class="hl opt">: /</span>home<span class="hl opt">/</span>...<span class="hl opt">/</span>extras<span class="hl opt">/</span>test-ifdef-parse.sh TESTS_DIR
+$ ~<span class="hl opt">/</span>cs471<span class="hl opt">/</span>projects<span class="hl opt">/</span>prj<span class="hl num">2</span><span class="hl opt">/</span>extras<span class="hl opt">/</span>test-ifdef-parse.sh \
+    ~<span class="hl opt">/</span>cs471<span class="hl opt">/</span>projects<span class="hl opt">/</span>prj<span class="hl num">1</span><span class="hl opt">/</span>extras<span class="hl opt">/</span>tests
+parse ifdef-elif2.defs ... ok
+parse ifdef-else.defs ... ok
+parse ifdef.defs ... ok
+parse nested.defs ... ok
+parse parse0.defs ... ok
+parse text.defs ... ok
+parse no-sym-err.defs ... ok<span class="hl opt">:</span> failed as expected
+parse top-elif-err.defs ... ok<span class="hl opt">:</span> failed as expected
+parse top-else-err.defs ... ok<span class="hl opt">:</span> failed as expected
+parse top-endif-err.defs ... ok<span class="hl opt">:</span> failed as expected
+parse unclose-err.defs ... ok<span class="hl opt">:</span> failed as expected
+$ </pre></section><section data-coord="prj2.umt:410:0"><h2 data-coord="prj2.umt:410:0">Submission</h2><p data-coord="prj2.umt:413:0">Before submitting your project, update your README to specify the
+status of your project.  Document any known issues.
+</p><p data-coord="prj2.umt:416:0">Submit using a procedure similar to that used in your previous project.
+</p></section></section>
+    </div> <!-- #content -->
+    <script src="../../assets/scripts/loginAction.js"></script>
+  </body>
+</html>
